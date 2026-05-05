@@ -1,0 +1,5 @@
+---
+{"dg-publish":true,"permalink":"/2-main-theoretical-pillars/theory-notes/pre-lurianic-tikkun/","tags":["history","tikkun"],"dg-note-properties":{"type":"theory","tags":["history","tikkun"],"site":null}}
+---
+
+In pre-[[1. Surface Texts/On Creation\|Lurianic Kabbalah]], [[1. Surface Texts/TIKKUN\|tikkun]] as a concept was present, albeit in unsystematised form, and spoke primarily to the reunification of the masculine and feminine divine aspects through human action. After 1570, tikkun [[2. Main Theoretical Pillars/Theory Notes/Luria's theosophical-theurgical Tikkun\|became]] a central and systematic principle, as it was integral to Luria’s conception of the rectification of the divine flaw ([[3. Concepts/shevirat ha-kelim\|shevirat ha-kelim]], the shattering of the vessels) through human action in nitzotzot, the elevation of the sparks. Indeed, as a principle it is foundational and often more so implied than explicitly named, when investigating functional systems within Kabbalistic thought.

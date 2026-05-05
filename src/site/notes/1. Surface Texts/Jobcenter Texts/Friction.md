@@ -1,0 +1,11 @@
+---
+{"dg-publish":true,"permalink":"/1-surface-texts/jobcenter-texts/friction/","dg-note-properties":{"type":"surface","site":null}}
+---
+
+[[1. Surface Texts/TIKKUN\|Dusty]] is granular, she is [[2. Main Theoretical Pillars/Entropic Love Letter\|friction]]. She is neither gear nor [[anti-accelerationist-infolding\|speed]]. If you are bumping around the far end of a [[3. Concepts/Turning Around#^orbit\|parabolic orbit]], be sure to keep an eye out for Dusty! She will set you right. Dusty carries mounds of dirt in her socks, for to empathise. 
+
+There is no acceleration in the Jobcenter. Jobcenter is [[2. Main Theoretical Pillars/Entropic Love Letter\|friction ontology]]. It’s not quite care and it’s not quite neglect. Jobcenter is maintenance velocity. Jobcenter is [[1. Surface Texts/Jobcenter Texts/Straight Ahead\|material coil]] and me, [[3. Concepts/On Folding\|circling each countervailing spiral force]].  
+  
+Jobcenter is [[agamben-sovereign-messiah\|paternalism]], [[1. Surface Texts/Jobcenter Texts/Power\|grey and wipeable]], just enough or never enough, Jobcenter makes sense. From the cellar to the lift to the 5th floor, through myriad offices, to the back lift, to the sixth floor, back around, to the back lift, to the ninth floor, back around, and then, open a window and climb the roof. Up above, look out! Can you see the passage of effortless power, [[agamben-sovereign-messiah\|that which requires no permission at all]]?
+
+Dusty is neither [[1. Surface Texts/TIKKUN\|forgiveness]] nor [[Redemption\|atonement]]. Dusty does not [[3. Concepts/tikkun-etymology\|repair]], because nothing is broken. She is that which [[3. Concepts/agamben-messianicity-intro\|turns power inwards]]. Dusty is [[3. Concepts/On Folding\|inward-folding]], [[3. Concepts/implication\|implication]]. The [[3. Concepts/Nahman On Paradox\|incompatibility]] of [[3. Concepts/Olam\|the world]] [[1. Surface Texts/One Story of Finitude\|clangs behind my eyelids]]; Dusty kisses [[2. Main Theoretical Pillars/Theory Notes/Implication of the Scream\|unspent tears]]. Dusty is not [[2. Main Theoretical Pillars/bielik-robson-apocalypse\|ignorance nor compensation]]. [[2. Main Theoretical Pillars/Theory Notes/Implication of the Scream\|Dusty is the secret third thing that makes all the difference]].

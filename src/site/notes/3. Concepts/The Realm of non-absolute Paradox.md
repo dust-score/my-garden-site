@@ -1,0 +1,7 @@
+---
+{"dg-publish":true,"permalink":"/3-concepts/the-realm-of-non-absolute-paradox/","tags":["citation","Nahman"],"dg-note-properties":{"type":"citation","translation by":"Artificial Intelligence","author":"Joseph Weiss","source":"Sabbateanism and its Melody","tags":["citation","Nahman"],"pages":"222","site":null}}
+---
+
+> "The difficulties, i.e., the contradictions belonging to the act of the breaking of the vessels, are not absolute contradictions. ... For at the time of the breaking of the vessels, sparks of holiness and broken letters fell, and these letters of the breaking of the vessels still constitute the last residue of rationality ruling in the realm of the breaking of the vessels. Therefore, it is possible to determine that the difficulties formed from the encounter between religion and the sciences are not absolute and can be resolved through the rational residue of their place of formation."
+
+Weiss, "[[5. Citations/6. Papers/Weiss, The Empty Space; Sabbateanism and its Melodies\|Weiss, The Empty Space; Sabbateanism and its Melodies]]," p. 222 

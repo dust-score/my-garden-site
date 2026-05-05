@@ -1,0 +1,7 @@
+---
+{"dg-publish":true,"permalink":"/9-footnotes/citations-from-citations/a/","tags":["footnote"],"dg-note-properties":{"type":"citation","source":"[[5. Citations/6. Papers/Magid - 1995 - Through the Void The Absence of God in R. Naḥman of Bratzlav's Likkutei MoHaRan\|Magid - 1995 - Through the Void The Absence of God in R. Naḥman of Bratzlav's Likkutei MoHaRan]]","tags":["footnote"],"site":null}}
+---
+
+>In another passage (Likkutei MoHaRan 9b-c [§1.8]), R. Nahman likened the creative process to the breath (ruah) of God, again an illusion to a sound that has no linguistic formulation: "How great is the groan and sigh of a Jew, for this [causes] the perfection of his deficiencies. By means of the aspect of breath, which is the spirit of life, the world was created. . . . The newness of the world comes about through breath [ruah, meaning both breath and spirit]." This breath or spirit is depicted here as a sigh or groan that shares the nonlinguistic character of the scream that precedes linguistic prayer.
+
+(footnote taken from [[5. Citations/6. Papers/Magid - 1995 - Through the Void The Absence of God in R. Naḥman of Bratzlav's Likkutei MoHaRan\|Magid - 1995 - Through the Void The Absence of God in R. Naḥman of Bratzlav's Likkutei MoHaRan]], p. 507, 508

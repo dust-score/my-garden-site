@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/3-concepts/turning-around/","tags":["etymology","concept","alpha"],"dg-note-properties":{"type":"concept","tags":["etymology","concept","alpha"],"used_in":["[[TIKKUN]]"]}}
+{"dg-publish":true,"permalink":"/3-concepts/turning-around/","tags":["etymology","concept","alpha"],"dg-note-properties":{"type":"concept","tags":["etymology","concept","alpha"],"used_in":["[[TIKKUN]]"],"site":null}}
 ---
 
 Back, back from, back to the original place. Again, anew, once more. [[9. Footnotes/footnote Re-\|Undoing]].
