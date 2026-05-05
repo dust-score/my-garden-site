@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/2-main-theoretical-pillars/the-messianic-trap/","tags":["agamben","messianism","ai"],"dg-note-properties":{"type":"concept","tags":["agamben","messianism","ai"],"site":null}}
+{"dg-publish":true,"permalink":"/2-main-theoretical-pillars/the-messianic-trap/","tags":["agamben","messianism"],"dg-note-properties":{"type":"concept","tags":["agamben","messianism"],"site":null}}
 ---
 
 When a sovereign claims the authority to decide that the conditions under which the Law was binding have been superseded, they inhabit the role of the   messianic figure. 
