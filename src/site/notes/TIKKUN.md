@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/tikkun/","tags":["alpha","surface","unfinished"],"dg-note-properties":{"tags":["alpha","surface","unfinished"]}}
+{"dg-publish":true,"permalink":"/tikkun/","tags":["alpha","surface","unfinished","gardenEntry"],"dg-note-properties":{"tags":["alpha","surface","unfinished","gardenEntry"]}}
 ---
 
 [[3. Concepts/Turning Around\|Re]]     plete
