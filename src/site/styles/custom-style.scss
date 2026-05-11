@@ -6,7 +6,7 @@ body {
     /* --- Core Brutalist Look --- */
     background-color: #ffffff;  /* Pure white background */
     color: #000000;            /* Pure black text */
-    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-family: 'Times New Roman', Garamond, serif; /* Serif font */
     line-height: 1.5;
     -webkit-font-smoothing: none;  /* Keep text sharp, not smooth */
     -moz-osx-font-smoothing: unset;
@@ -15,25 +15,65 @@ body {
     --accent-color: #ff0000;
     --link-color: #000000;
 
-    /* --- Navigation & Sidebar --- */
+    /* --- Layout: Move Graph to Right Column --- */
+    .main-layout {
+        display: flex;
+        flex-direction: row;
+    }
+    .content {
+        flex: 2; /* Main text takes more space */
+        max-width: 700px;
+        margin: 2rem;
+        padding: 0 1rem;
+    }
+    .graph-container {
+        flex: 1; /* Graph takes less space */
+        position: sticky;
+        top: 2rem;
+        height: 80vh; /* Sticky graph scrolls with page */
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin: 2rem 1rem 1rem 0;
+    }
+    /* Stack vertically on mobile */
+    @media (max-width: 800px) {
+        .main-layout {
+            flex-direction: column;
+        }
+        .graph-container {
+            position: relative;
+            height: 60vh;
+            margin: 1rem;
+        }
+    }
+
+    /* --- Sidebar (Hidden, Click Header to Show) --- */
     .sidebar {
         border: 2px solid #000;
         background: #fff;
+        display: none; /* Hidden by default */
+        position: absolute;
+        z-index: 100;
+        width: 250px;
+        padding: 1rem;
+        box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+    }
+    .sidebar.show {
+        display: block; /* Class added via JavaScript */
     }
     .sidebar h1, .site-title {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Times New Roman', Garamond, serif;
         font-size: 1.2rem;
         font-weight: bold;
         text-transform: uppercase;
         border-bottom: 2px solid #000;
         padding-bottom: 0.5rem;
     }
-    .backlinks, .graph-container {
+    .backlinks {
         border: 1px solid #ccc;
         padding: 1rem;
         margin-top: 1rem;
     }
-    /* Style navigation links like a raw list */
     .sidebar a, .toc a {
         color: #000;
         text-decoration: none;
@@ -51,14 +91,26 @@ body {
         padding-left: 0.5rem;
     }
 
-    /* --- Main Content --- */
-    .content {
-        max-width: 700px;
-        margin: 2rem auto;
-        padding: 0 1rem;
+    /* --- Header Image --- */
+    .site-title {
+        display: none; /* Hide text title */
     }
+    .site-header {
+        background: url('https://via.placeholder.com/150x50/000000/ffffff?text=Your+Logo') no-repeat center center;
+        background-size: contain;
+        height: 50px; /* Adjust to your image's height */
+        width: 150px; /* Adjust to your image's width */
+        cursor: pointer; /* Shows it's clickable for the menu */
+        border: 2px solid #000;
+        margin: 1rem;
+    }
+    .site-header:hover {
+        opacity: 0.8;
+    }
+
+    /* --- Main Content Styling --- */
     h1, h2, h3, h4 {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Times New Roman', Garamond, serif;
         font-weight: bold;
         text-transform: uppercase;
         border-bottom: 2px solid #000;
@@ -75,11 +127,15 @@ body {
         background-color: var(--accent-color);
         text-decoration: none;
     }
+    /* Hide external link arrows */
+    a.external-link::after {
+        display: none !important;
+    }
     pre, code {
         background: #f5f5f5;
         border: 1px solid #ddd;
         border-radius: 0px;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Times New Roman', Garamond, serif;
     }
     blockquote {
         border-left: 4px solid var(--accent-color);
@@ -108,7 +164,7 @@ body {
         color: #fff;
         border: 2px solid #000;
         padding: 0.5rem 1rem;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Times New Roman', Garamond, serif;
         text-transform: uppercase;
         cursor: pointer;
         border-radius: 0px;
