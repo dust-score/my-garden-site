@@ -1,6 +1,6 @@
 body {
     /***
-      BRUTALIST THEME INSPIRED BY sh-w.org
+      BRUTALIST THEME - MINIMAL LAYOUT
     ***/
 
     /* --- Core Brutalist Look --- */
@@ -15,10 +15,16 @@ body {
     --accent-color: #ff0000;
     --link-color: #000000;
 
-    /* --- Layout: Graph on the Right --- */
+    /* --- Hide Header and Sidebar Completely --- */
+    .site-header, .site-title, .sidebar, .page-title {
+        display: none !important;
+    }
+
+    /* --- Layout: Text on Left, Graph on Right --- */
     .main-layout {
         display: flex;
         flex-direction: row;
+        min-height: 100vh;
     }
     .content {
         flex: 2;
@@ -35,6 +41,7 @@ body {
         padding: 1rem;
         margin: 2rem 1rem 1rem 0;
     }
+    /* Stack vertically on mobile */
     @media (max-width: 800px) {
         .main-layout {
             flex-direction: column;
@@ -44,68 +51,6 @@ body {
             height: 60vh;
             margin: 1rem;
         }
-    }
-
-    /* --- Sidebar (Hidden By Default) --- */
-    .sidebar {
-        border: 2px solid #000;
-        background: #fff;
-        display: none;
-        position: absolute;
-        z-index: 100;
-        width: 250px;
-        padding: 1rem;
-        box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
-    }
-    .sidebar.show {
-        display: block;
-    }
-    .sidebar h1, .site-title {
-        font-family: 'Times New Roman', Garamond, serif;
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-bottom: 2px solid #000;
-        padding-bottom: 0.5rem;
-    }
-    .backlinks {
-        border: 1px solid #ccc;
-        padding: 1rem;
-        margin-top: 1rem;
-    }
-    .sidebar a, .toc a {
-        color: #000;
-        text-decoration: none;
-        display: block;
-        padding: 0.2rem 0;
-    }
-    .sidebar a:hover, .toc a:hover {
-        background: #000;
-        color: #fff;
-        text-decoration: none;
-    }
-    .sidebar .active {
-        font-weight: bold;
-        border-left: 4px solid var(--accent-color);
-        padding-left: 0.5rem;
-    }
-
-    /* --- Header Image --- */
-    .site-title {
-        display: none;
-    }
-    .site-header {
-        /* IMPORTANT: Replace the URL below with your own image */
-        background: url('https://raw.githubusercontent.com/dust-score/my-garden-site/main/src/site/img/your-logo.png') no-repeat center center;
-        background-size: contain;
-        height: 50px;
-        width: 150px;
-        cursor: pointer;
-        border: 2px solid #000;
-        margin: 1rem;
-    }
-    .site-header:hover {
-        opacity: 0.8;
     }
 
     /* --- Content Styling --- */
