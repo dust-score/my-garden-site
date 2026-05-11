@@ -26,6 +26,13 @@ main.content {
     max-width: 700px;
     margin: 2rem;
     padding: 0 1rem;
+    font-size: 12px;
+    text-align: justify;
+}
+
+main.content p {
+    font-size: 12px;
+    text-align: justify;
 }
 
 aside {
@@ -41,10 +48,11 @@ aside .sidebar {
     border: 1px solid #ccc;
     padding: 1rem;
     height: 100%;
+    font-size: 12px;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Times New Roman', Garamond, serif;
+    font-family: 'Times New Roman', Garamond, serif !important;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 2px solid #000;
@@ -54,11 +62,20 @@ a {
     color: var(--link-color);
     text-decoration: underline;
     text-decoration-color: var(--accent-color);
+    font-family: 'Times New Roman', Garamond, serif;
 }
 
 a:hover {
     color: #fff;
     background-color: var(--accent-color);
+}
+
+a.external-link::after {
+    display: none;
+}
+
+a[data-note-icon]::after {
+    display: none;
 }
 
 .graph .node {
@@ -69,4 +86,8 @@ a:hover {
 
 .graph .link {
     stroke: #aaa;
+}
+
+* {
+    font-family: 'Times New Roman', Garamond, serif;
 }
