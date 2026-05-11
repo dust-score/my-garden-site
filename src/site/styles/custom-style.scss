@@ -1,16 +1,10 @@
 body {
-    /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-body {
     background-color: #ffffff;
     color: #000000;
     font-family: 'Times New Roman', Garamond, serif;
     line-height: 1.5;
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: unset;
-
     --accent-color: #ff0000;
     --link-color: #000000;
 
@@ -44,14 +38,15 @@ body {
         text-transform: uppercase;
         border-bottom: 2px solid #000;
     }
+
     a {
         color: var(--link-color);
         text-decoration: underline;
         text-decoration-color: var(--accent-color);
-    }
-    a:hover {
-        color: #fff;
-        background-color: var(--accent-color);
+        &:hover {
+            color: #fff;
+            background-color: var(--accent-color);
+        }
     }
 
     .graph-container .node {
