@@ -1,13 +1,120 @@
 body {
     /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+      BRUTALIST THEME INSPIRED BY sh-w.org
+    ***/
+
+    /* --- Core Brutalist Look --- */
+    background-color: #ffffff;  /* Pure white background */
+    color: #000000;            /* Pure black text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    line-height: 1.5;
+    -webkit-font-smoothing: none;  /* Keep text sharp, not smooth */
+    -moz-osx-font-smoothing: unset;
+
+    /* --- Accent Color (Stark Red) --- */
+    --accent-color: #ff0000;
+    --link-color: #000000;
+
+    /* --- Navigation & Sidebar --- */
+    .sidebar {
+        border: 2px solid #000;
+        background: #fff;
+    }
+    .sidebar h1, .site-title {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 2px solid #000;
+        padding-bottom: 0.5rem;
+    }
+    .backlinks, .graph-container {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    /* Style navigation links like a raw list */
+    .sidebar a, .toc a {
+        color: #000;
+        text-decoration: none;
+        display: block;
+        padding: 0.2rem 0;
+    }
+    .sidebar a:hover, .toc a:hover {
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+    }
+    .sidebar .active {
+        font-weight: bold;
+        border-left: 4px solid var(--accent-color);
+        padding-left: 0.5rem;
+    }
+
+    /* --- Main Content --- */
+    .content {
+        max-width: 700px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    h1, h2, h3, h4 {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 2px solid #000;
+        padding-bottom: 0.3rem;
+    }
+    a {
+        color: var(--link-color);
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: var(--accent-color);
+    }
+    a:hover {
+        color: #fff;
+        background-color: var(--accent-color);
+        text-decoration: none;
+    }
+    pre, code {
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 0px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    blockquote {
+        border-left: 4px solid var(--accent-color);
+        margin-left: 0;
+        padding-left: 1rem;
+        font-style: normal;
+    }
+    hr {
+        border: 1px solid #000;
+    }
+
+    /* --- Interactive Graph --- */
+    .graph-container .node {
+        fill: #000;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+    .graph-container .link {
+        stroke: #aaa;
+        stroke-width: 1px;
+    }
+
+    /* --- Buttons & Form Elements --- */
+    button, input[type="submit"] {
+        background: #000;
+        color: #fff;
+        border: 2px solid #000;
+        padding: 0.5rem 1rem;
+        font-family: 'Courier New', Courier, monospace;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 0px;
+    }
+    button:hover {
+        background: #fff;
+        color: #000;
+    }
 }
