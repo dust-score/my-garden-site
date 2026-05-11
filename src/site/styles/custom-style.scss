@@ -4,38 +4,37 @@ body {
     ***/
 
     /* --- Core Brutalist Look --- */
-    background-color: #ffffff;  /* Pure white background */
-    color: #000000;            /* Pure black text */
-    font-family: 'Times New Roman', Garamond, serif; /* Serif font */
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Times New Roman', Garamond, serif;
     line-height: 1.5;
-    -webkit-font-smoothing: none;  /* Keep text sharp, not smooth */
+    -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: unset;
 
-    /* --- Accent Color (Stark Red) --- */
+    /* --- Accent Color --- */
     --accent-color: #ff0000;
     --link-color: #000000;
 
-    /* --- Layout: Move Graph to Right Column --- */
+    /* --- Layout: Graph on the Right --- */
     .main-layout {
         display: flex;
         flex-direction: row;
     }
     .content {
-        flex: 2; /* Main text takes more space */
+        flex: 2;
         max-width: 700px;
         margin: 2rem;
         padding: 0 1rem;
     }
     .graph-container {
-        flex: 1; /* Graph takes less space */
+        flex: 1;
         position: sticky;
         top: 2rem;
-        height: 80vh; /* Sticky graph scrolls with page */
+        height: 80vh;
         border: 1px solid #ccc;
         padding: 1rem;
         margin: 2rem 1rem 1rem 0;
     }
-    /* Stack vertically on mobile */
     @media (max-width: 800px) {
         .main-layout {
             flex-direction: column;
@@ -47,11 +46,11 @@ body {
         }
     }
 
-    /* --- Sidebar (Hidden, Click Header to Show) --- */
+    /* --- Sidebar (Hidden By Default) --- */
     .sidebar {
         border: 2px solid #000;
         background: #fff;
-        display: none; /* Hidden by default */
+        display: none;
         position: absolute;
         z-index: 100;
         width: 250px;
@@ -59,7 +58,7 @@ body {
         box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
     }
     .sidebar.show {
-        display: block; /* Class added via JavaScript */
+        display: block;
     }
     .sidebar h1, .site-title {
         font-family: 'Times New Roman', Garamond, serif;
@@ -93,14 +92,15 @@ body {
 
     /* --- Header Image --- */
     .site-title {
-        display: none; /* Hide text title */
+        display: none;
     }
     .site-header {
-        background: url('https://via.placeholder.com/150x50/000000/ffffff?text=Your+Logo') no-repeat center center;
+        /* IMPORTANT: Replace the URL below with your own image */
+        background: url('https://raw.githubusercontent.com/dust-score/my-garden-site/main/src/site/img/your-logo.png') no-repeat center center;
         background-size: contain;
-        height: 50px; /* Adjust to your image's height */
-        width: 150px; /* Adjust to your image's width */
-        cursor: pointer; /* Shows it's clickable for the menu */
+        height: 50px;
+        width: 150px;
+        cursor: pointer;
         border: 2px solid #000;
         margin: 1rem;
     }
@@ -108,7 +108,7 @@ body {
         opacity: 0.8;
     }
 
-    /* --- Main Content Styling --- */
+    /* --- Content Styling --- */
     h1, h2, h3, h4 {
         font-family: 'Times New Roman', Garamond, serif;
         font-weight: bold;
@@ -127,10 +127,6 @@ body {
         background-color: var(--accent-color);
         text-decoration: none;
     }
-    /* Hide external link arrows */
-    a.external-link::after {
-        display: none !important;
-    }
     pre, code {
         background: #f5f5f5;
         border: 1px solid #ddd;
@@ -147,7 +143,7 @@ body {
         border: 1px solid #000;
     }
 
-    /* --- Interactive Graph --- */
+    /* --- Graph Nodes --- */
     .graph-container .node {
         fill: #000;
         stroke: #fff;
@@ -158,7 +154,7 @@ body {
         stroke-width: 1px;
     }
 
-    /* --- Buttons & Form Elements --- */
+    /* --- Buttons --- */
     button, input[type="submit"] {
         background: #000;
         color: #fff;
