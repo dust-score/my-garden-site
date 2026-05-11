@@ -4,7 +4,7 @@
 
 [[3. Concepts/Turning Around\|Re]]     plete
 
-Re                                                                       stitution  
+Re                                                                        stitution  
 Re             paration
 
 [[1. Surface Texts/Rectification\|Re                                              ctification]]  
