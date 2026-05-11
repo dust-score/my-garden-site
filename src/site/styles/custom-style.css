@@ -1,6 +1,6 @@
 body {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #fff;
+    color: #000;
     font-family: 'Times New Roman', Garamond, serif;
     line-height: 1.5;
     -webkit-font-smoothing: none;
@@ -9,56 +9,64 @@ body {
     --link-color: #000000;
 }
 
-body .site-header, body .site-title, body .sidebar, body .page-title {
+nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-meta, header h1 {
     display: none;
 }
 
-body .main-layout {
+body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-body .content {
+main.content {
     flex: 2;
     max-width: 700px;
     margin: 2rem;
+    padding: 0 1rem;
 }
 
-body .graph-container {
+aside {
     flex: 1;
     position: sticky;
     top: 2rem;
     height: 80vh;
-    border: 1px solid #ccc;
-    padding: 1rem;
     margin: 2rem 1rem 1rem 0;
 }
 
-body h1, body h2, body h3, body h4 {
+aside .sidebar {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    height: 100%;
+}
+
+h1, h2, h3, h4 {
     font-family: 'Times New Roman', Garamond, serif;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 2px solid #000;
 }
 
-body a {
+a {
     color: var(--link-color);
     text-decoration: underline;
     text-decoration-color: var(--accent-color);
 }
 
-body a:hover {
+a:hover {
     color: #fff;
     background-color: var(--accent-color);
 }
 
-body .graph-container .node {
+.graph .node {
     fill: #000;
     stroke: #fff;
     stroke-width: 2px;
 }
 
-body .graph-container .link {
+.graph .link {
     stroke: #aaa;
 }
