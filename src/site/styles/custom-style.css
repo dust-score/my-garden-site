@@ -118,10 +118,6 @@ body.links-note-icon .internal-link[data-note-icon]::before {
 
 #full-graph {
     display: none !important;
-}
-
-#full-graph.show {
-    display: block !important;
     position: fixed !important;
     top: 0 !important;
     right: 0 !important;
@@ -141,7 +137,7 @@ body.links-note-icon .internal-link[data-note-icon]::before {
 }
 
 @media (max-width: 1000px) {
-    #full-graph.show {
+    #full-graph {
         position: relative !important;
         width: 100% !important;
         height: 60vh !important;
