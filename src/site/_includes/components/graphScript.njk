@@ -4,7 +4,6 @@ import { select } from 'd3-selection';
 import { zoom as d3Zoom, zoomIdentity } from 'd3-zoom';
 import { drag as d3Drag } from 'd3-drag';
 
-// Pixi v7 loaded as UMD global
 const { Application, Container, Graphics, Text, Circle } = PIXI;
 
 async function fetchGraphData() {
@@ -41,7 +40,6 @@ function filterLocalGraphData(graphData) {
 
     currentNode.current = true;
 
-    // Depth 1: collect immediate neighbors (neighbors array contains URLs)
     const neighbourhood = new Set();
     neighbourhood.add(currentNode.url);
     if (currentNode.neighbors) {
@@ -53,7 +51,6 @@ function filterLocalGraphData(graphData) {
         return neighbourhood.has(n.url);
     });
 
-    // If current node is not home, exclude the home node unless it's a neighbor
     if (!currentNode.home && currentNode.neighbors) {
         const homeNode = nodes.find(n => n.home);
         if (homeNode && !currentNode.neighbors.includes(homeNode.url)) {
@@ -73,7 +70,6 @@ function getCssVar(variable) {
     return getComputedStyle(document.body).getPropertyValue(variable).trim();
 }
 
-// Resolve CSS color (which may contain calc/hsl) to a hex number Pixi can use
 const _colorProbe = document.createElement('div');
 _colorProbe.style.display = 'none';
 document.body.appendChild(_colorProbe);
@@ -84,17 +80,15 @@ function resolveColor(cssValue) {
     if (match) {
         return (parseInt(match[1]) << 16) + (parseInt(match[2]) << 8) + parseInt(match[3]);
     }
-    return 0x666666;
+    return 0xff0000;
 }
 
-// Lightweight HTML entity decoder
 const _decodeEl = document.createElement('textarea');
 function htmlDecode(input) {
     _decodeEl.innerHTML = input;
     return _decodeEl.value;
 }
 
-// Pre-compute degree map for node sizing
 function buildDegreeMap(links) {
     const degrees = {};
     for (const l of links) {
@@ -122,9 +116,8 @@ function renderGraph(graphData, containerId, isFullScreen) {
     const height = el.offsetHeight || 250;
     if (width === 0) return null;
 
-    const color = resolveColor(getCssVar('--dg-graph-node-color') || getCssVar('--graph-main') || '#666');
-    const mutedColor = resolveColor(getCssVar('--dg-graph-node-color-muted') || getCssVar('--graph-muted') || '#ccc');
-    const textColor = resolveColor(getCssVar('--dg-graph-label-color') || getCssVar('--text-normal') || '#eee');
+    const redColor = 0xff0000;
+    const textColor = resolveColor(getCssVar('--dg-graph-label-color') || getCssVar('--text-normal') || '#000');
     const bodyFont = getComputedStyle(document.body).fontFamily || 'Sans-Serif';
 
     const degreeMap = buildDegreeMap(graphData.links);
@@ -135,7 +128,6 @@ function renderGraph(graphData, containerId, isFullScreen) {
     }));
     const links = graphData.links.map(l => ({ source: l.source, target: l.target }));
 
-    // D3 Force Simulation — stronger repel for full graph to spread nodes
     const chargeStrength = isFullScreen ? -300 : -100;
     const linkDist = isFullScreen ? 80 : 40;
     const radius = Math.min(width, height) / 3;
@@ -146,7 +138,6 @@ function renderGraph(graphData, containerId, isFullScreen) {
         .force('collide', forceCollide(d => nodeRadius(d.id, degreeMap) + 1).iterations(3))
         .force('radial', forceRadial(radius, width / 2, height / 2).strength(0.05));
 
-    // Pixi v7 Application (synchronous constructor)
     const app = new Application({
         width,
         height,
@@ -202,7 +193,6 @@ function renderGraph(graphData, containerId, isFullScreen) {
         }
     }
 
-    // Create node graphics
     for (const n of nodes) {
         const r = nodeRadius(n.id, degreeMap);
 
@@ -222,14 +212,12 @@ function renderGraph(graphData, containerId, isFullScreen) {
         gfx.hitArea = new Circle(0, 0, r + 2);
         gfx._nodeId = n.id;
 
-        // Draw node circle — current node gets main color, others get muted
-        const nodeColor = n.current ? color : mutedColor;
-        gfx.beginFill(nodeColor);
+        gfx.beginFill(redColor);
         gfx.drawCircle(0, 0, r);
         gfx.endFill();
 
         if (n.current) {
-            gfx.lineStyle(0.5, color);
+            gfx.lineStyle(1, 0xffffff);
             gfx.drawCircle(0, 0, r + 1.5);
         }
 
@@ -237,10 +225,26 @@ function renderGraph(graphData, containerId, isFullScreen) {
         gfx.on('pointerover', () => {
             updateHoverInfo(gfx._nodeId);
             oldLabelAlpha = label.alpha;
+            gfx.clear();
+            gfx.beginFill(0xff0000);
+            gfx.drawCircle(0, 0, r + 2);
+            gfx.endFill();
+            if (n.current) {
+                gfx.lineStyle(1, 0xffffff);
+                gfx.drawCircle(0, 0, r + 3);
+            }
             if (!dragging) updateVisuals();
         });
         gfx.on('pointerleave', () => {
             updateHoverInfo(null);
+            gfx.clear();
+            gfx.beginFill(redColor);
+            gfx.drawCircle(0, 0, r);
+            gfx.endFill();
+            if (n.current) {
+                gfx.lineStyle(1, 0xffffff);
+                gfx.drawCircle(0, 0, r + 1.5);
+            }
             label.alpha = oldLabelAlpha;
             if (!dragging) updateVisuals();
         });
@@ -283,7 +287,6 @@ function renderGraph(graphData, containerId, isFullScreen) {
         return a + (b - a) * t;
     }
 
-    // D3 Drag
     select(app.view).call(
         d3Drag()
             .container(() => app.view)
@@ -330,7 +333,6 @@ function renderGraph(graphData, containerId, isFullScreen) {
             })
     );
 
-    // D3 Zoom
     const zoomBehavior = d3Zoom()
         .extent([[0, 0], [width, height]])
         .scaleExtent([0.25, 4])
@@ -348,7 +350,6 @@ function renderGraph(graphData, containerId, isFullScreen) {
         });
     select(app.view).call(zoomBehavior);
 
-    // Animation loop
     let stopAnimation = false;
     const smoothing = 0.15;
 
@@ -369,7 +370,6 @@ function renderGraph(graphData, containerId, isFullScreen) {
             }
         }
 
-        // Draw all links in a single Graphics pass
         linkGfx.clear();
         for (const l of linkRenderData) {
             const src = l.simulationData.source;
@@ -378,7 +378,7 @@ function renderGraph(graphData, containerId, isFullScreen) {
 
             l.currentAlpha = lerp(l.currentAlpha, l.targetAlpha, smoothing);
 
-            linkGfx.lineStyle(1, l.active ? color : mutedColor, l.currentAlpha);
+            linkGfx.lineStyle(1, redColor, l.currentAlpha);
             linkGfx.moveTo(src.x, src.y);
             linkGfx.lineTo(tgt.x, tgt.y);
         }
@@ -389,7 +389,6 @@ function renderGraph(graphData, containerId, isFullScreen) {
 
     requestAnimationFrame(animate);
 
-    // Zoom to fit after simulation settles
     if (isFullScreen || graphData.nodes.length > 4) {
         setTimeout(() => {
             let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
@@ -425,7 +424,6 @@ function renderGraph(graphData, containerId, isFullScreen) {
     };
 }
 
-// --- Initialize ---
 let graphDataCache = null;
 let fullGraphDataCache = null;
 let localGraphCleanup = null;
@@ -476,30 +474,11 @@ function closeFullGraph() {
     }
 }
 
-// Expose to Alpine
 window.__graph = { openFullGraph, closeFullGraph, openExpandedLocal, rerenderLocal: renderLocal };
 
-// Re-render when the style editor changes CSS variables
 document.addEventListener('forestry:css-changed', function() {
     if (graphDataCache) renderLocal();
 });
 
 init();
 </script>
-
-<div id="graph-component" class="graph" x-data="{ showFullGraph: false }">
-    <div class="graph-title-container">
-        <div class="graph-title">Connected Pages</div>
-        <div id="graph-controls">
-            <div class="ctrl-right">
-                <span id="global-graph-btn" x-on:click="showFullGraph = true; window.__graph.openFullGraph()"><i data-lucide="globe" aria-hidden="true"></i></span>
-                <span id="graph-fs-btn" x-on:click="showFullGraph = true; window.__graph.openExpandedLocal()"><i data-lucide="expand" aria-hidden="true"></i></span>
-            </div>
-        </div>
-    </div>
-    <div id="link-graph"></div>
-    <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;" x-on:click.self="window.__graph.closeFullGraph(); showFullGraph = false;">
-        <span id="full-graph-close" x-on:click="window.__graph.closeFullGraph(); showFullGraph = false;"><i data-lucide="x" aria-hidden="true"></i></span>
-        <div id="full-graph-container"></div>
-    </div>
-</div>
