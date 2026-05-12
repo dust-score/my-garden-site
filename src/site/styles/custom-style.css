@@ -82,36 +82,50 @@ body.links-note-icon .internal-link[data-note-icon]::before {
 }
 
 #link-graph {
-    border: none;
-    border-radius: 0;
-    margin-bottom: 0;
-    background-color: transparent;
+    display: none;
 }
 
-#link-graph canvas {
-    border: none;
+#graph-component {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 999;
+}
+
+#graph-component .graph-title-container {
+    display: none;
+}
+
+#graph-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#graph-controls span {
+    cursor: pointer;
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 15px;
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+}
+
+#graph-controls span:hover {
+    color: #fff;
+    background-color: var(--accent-color);
 }
 
 .graph .graph-title-container {
     display: none;
 }
 
-#graph-component .graph .node,
-svg .node,
-circle.node {
-    fill: #ff0000 !important;
-    stroke: #fff !important;
-    stroke-width: 2px !important;
-}
-
-#graph-component .graph .link,
-svg .link,
-line.link {
-    stroke: #aaa !important;
-}
-
 * {
     font-family: 'Garamond', 'Times New Roman', serif;
+}
+
+.external-link {
+    background-image: none !important;
+    padding-right: 0 !important;
 }
 
 @media (max-width: 1000px) {
@@ -129,45 +143,14 @@ line.link {
         max-width: 100%;
         position: relative;
         top: auto;
-        height: 60vh;
+        height: auto;
         margin: 1rem 2rem;
     }
 
-    #link-graph {
-        width: 100%;
+    #graph-component {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 1rem 0;
     }
-
-    .sidebar {
-        position: relative !important;
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-}
-#graph-controls {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 999;
-    opacity: 0.7;
-}
-
-#graph-controls:hover {
-    opacity: 1;
-}
-
-aside .sidebar > *:not(#graph-component) {
-    display: none;
-}
-
-#link-graph {
-    display: none;
-}
-
-#graph-component {
-    width: auto !important;
 }
