@@ -155,3 +155,6 @@ a.internal-link[href*="%5C"], a.internal-link[href*="%5C"] {
 a[href*="/notes/"][href*="%5C"] {
     display: none;
 }
+a[href*="/404"] {
+    display: none;
+}
