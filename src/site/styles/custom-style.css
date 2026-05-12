@@ -27,12 +27,12 @@ main.content {
     max-width: 50%;
     margin: 2rem 0 2rem 2rem;
     padding: 0 1rem;
-    font-size: 18px;
+    font-size: 15px;
     text-align: justify;
 }
 
 main.content p {
-    font-size: 18px;
+    font-size: 15px;
     text-align: justify;
 }
 
@@ -77,16 +77,6 @@ body.links-note-icon .internal-link[data-note-icon]::before {
     background-image: none !important;
 }
 
-.graph .node {
-    fill: #000;
-    stroke: #fff;
-    stroke-width: 2px;
-}
-
-.graph .link {
-    stroke: #aaa;
-}
-
 .backlinks {
     display: none;
 }
@@ -98,10 +88,63 @@ body.links-note-icon .internal-link[data-note-icon]::before {
     background-color: transparent;
 }
 
+#link-graph canvas {
+    border: none;
+}
+
 .graph .graph-title-container {
     display: none;
 }
 
+#graph-component .graph .node,
+svg .node,
+circle.node {
+    fill: #ff0000 !important;
+    stroke: #fff !important;
+    stroke-width: 2px !important;
+}
+
+#graph-component .graph .link,
+svg .link,
+line.link {
+    stroke: #aaa !important;
+}
+
 * {
     font-family: 'Garamond', 'Times New Roman', serif;
+}
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column;
+    }
+
+    main.content {
+        max-width: 100%;
+        margin: 2rem;
+        padding: 0;
+    }
+
+    aside {
+        max-width: 100%;
+        position: relative;
+        top: auto;
+        height: 60vh;
+        margin: 1rem 2rem;
+    }
+
+    #link-graph {
+        width: 100%;
+    }
+
+    .sidebar {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
 }
