@@ -117,23 +117,17 @@ body.links-note-icon .internal-link[data-note-icon]::before {
 }
 
 #full-graph {
-    display: none !important;
     position: fixed !important;
     top: 0 !important;
     right: 0 !important;
     left: auto !important;
     width: 50% !important;
     height: 100vh !important;
-    cursor: pointer;
 }
 
 #full-graph #full-graph-container {
     width: 100% !important;
     height: 100% !important;
-}
-
-#full-graph-close {
-    display: none !important;
 }
 
 @media (max-width: 1000px) {
