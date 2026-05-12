@@ -93,3 +93,7 @@ a[data-note-icon] [data-lucide] {
 * {
     font-family: 'Times New Roman', Garamond, serif;
 }
+body.links-note-icon .internal-link[data-note-icon]::before {
+    display: none !important;
+    background-image: none !important;
+}
