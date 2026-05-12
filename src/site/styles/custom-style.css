@@ -147,14 +147,13 @@ a[data-note-icon]::before {
     content: none !important;
     background-image: none !important;
 }
-a.internal-link[href*="%5C"], a.internal-link[href*="%5C"] {
+
+a.internal-link[href*="%5C"] {
     pointer-events: none;
     text-decoration: none;
     color: inherit;
 }
-a[href*="/notes/"][href*="%5C"] {
-    display: none;
-}
+
 a[href*="/404"] {
     display: none;
 }
