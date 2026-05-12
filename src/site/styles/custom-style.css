@@ -131,3 +131,6 @@ body.links-note-icon .internal-link[data-note-icon]::before {
     width: 100% !important;
     height: 100% !important;
 }
+#full-graph {
+    cursor: pointer;
+}
