@@ -16,15 +16,16 @@ nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-m
 body {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
     padding: 0;
 }
 
 main.content {
-    flex: 2;
-    max-width: 700px;
-    margin: 2rem;
+    flex: 1;
+    max-width: 50%;
+    margin: 2rem 0 2rem 2rem;
     padding: 0 1rem;
     font-size: 14px;
     text-align: justify;
@@ -37,16 +38,17 @@ main.content p {
 
 aside {
     flex: 1;
+    max-width: 50%;
     position: sticky;
     top: 2rem;
     height: 80vh;
-    margin: 2rem 1rem 1rem 0;
+    margin: 2rem 2rem 1rem 1rem;
 }
 
 aside .sidebar {
     display: block;
     border: none;
-    padding: 1rem;
+    padding: 0;
     height: 100%;
     font-size: 14px;
 }
@@ -70,14 +72,9 @@ a:hover {
     background-color: var(--accent-color);
 }
 
-.internal-link i,
-.internal-link svg,
-.internal-link .svg-icon,
-.internal-link [data-lucide],
-a[data-note-icon] i,
-a[data-note-icon] svg,
-a[data-note-icon] [data-lucide] {
+body.links-note-icon .internal-link[data-note-icon]::before {
     display: none !important;
+    background-image: none !important;
 }
 
 .graph .node {
@@ -90,10 +87,20 @@ a[data-note-icon] [data-lucide] {
     stroke: #aaa;
 }
 
+.backlinks {
+    display: none;
+}
+
+#link-graph {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.graph .graph-title-container {
+    display: none;
+}
+
 * {
     font-family: 'Times New Roman', Garamond, serif;
-}
-body.links-note-icon .internal-link[data-note-icon]::before {
-    display: none !important;
-    background-image: none !important;
 }
