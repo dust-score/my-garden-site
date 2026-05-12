@@ -70,7 +70,13 @@ a:hover {
     background-color: var(--accent-color);
 }
 
-a svg, a .svg-icon, a i, a[data-note-icon]::after, .internal-link::after {
+.internal-link i,
+.internal-link svg,
+.internal-link .svg-icon,
+.internal-link [data-lucide],
+a[data-note-icon] i,
+a[data-note-icon] svg,
+a[data-note-icon] [data-lucide] {
     display: none !important;
 }
 
