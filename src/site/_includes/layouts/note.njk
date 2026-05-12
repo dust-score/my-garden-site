@@ -95,12 +95,5 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
       {%include "components/canvasScript.njk"%}
     {% endif %}
     {% include "components/basesScript.njk" %}
-<script>
-document.addEventListener('click', function(e) {
-    if (e.target.id === 'full-graph') {
-        document.getElementById('full-graph').style.display = 'none';
-    }
-});
-</script>
   </body>
 </html>
