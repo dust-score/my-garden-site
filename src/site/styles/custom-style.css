@@ -148,21 +148,26 @@ line.link {
         padding: 0 !important;
     }
 }
-aside {
-    max-width: 50% !important;
-    flex: 1 !important;
+#graph-controls {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 999;
+    opacity: 0.7;
 }
 
-aside .sidebar {
-    width: 100% !important;
-    max-width: 100% !important;
+#graph-controls:hover {
+    opacity: 1;
+}
+
+aside .sidebar > *:not(#graph-component) {
+    display: none;
 }
 
 #link-graph {
-    width: 100% !important;
-    height: 80vh !important;
+    display: none;
 }
 
 #graph-component {
-    width: 100% !important;
+    width: auto !important;
 }
