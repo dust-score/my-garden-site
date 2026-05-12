@@ -148,3 +148,21 @@ line.link {
         padding: 0 !important;
     }
 }
+aside {
+    max-width: 50% !important;
+    flex: 1 !important;
+}
+
+aside .sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+#link-graph {
+    width: 100% !important;
+    height: 80vh !important;
+}
+
+#graph-component {
+    width: 100% !important;
+}
