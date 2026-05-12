@@ -140,3 +140,10 @@ body.links-note-icon .internal-link[data-note-icon]::before {
         margin-top: 1rem;
     }
 }
+.internal-link[data-note-icon]::before,
+.internal-link::before,
+a[data-note-icon]::before {
+    display: none !important;
+    content: none !important;
+    background-image: none !important;
+}
