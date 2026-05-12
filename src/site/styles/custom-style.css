@@ -74,45 +74,15 @@ a:hover {
 
 body.links-note-icon .internal-link[data-note-icon]::before {
     display: none !important;
+}
+
+.external-link {
     background-image: none !important;
+    padding-right: 0 !important;
 }
 
 .backlinks {
     display: none;
-}
-
-#link-graph {
-    display: none;
-}
-
-#graph-component {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    z-index: 999;
-}
-
-#graph-component .graph-title-container {
-    display: none;
-}
-
-#graph-controls {
-    display: flex;
-    gap: 0.5rem;
-}
-
-#graph-controls span {
-    cursor: pointer;
-    font-family: 'Garamond', 'Times New Roman', serif;
-    font-size: 15px;
-    color: #000;
-    text-decoration: underline;
-    text-decoration-color: var(--accent-color);
-}
-
-#graph-controls span:hover {
-    color: #fff;
-    background-color: var(--accent-color);
 }
 
 .graph .graph-title-container {
@@ -121,11 +91,6 @@ body.links-note-icon .internal-link[data-note-icon]::before {
 
 * {
     font-family: 'Garamond', 'Times New Roman', serif;
-}
-
-.external-link {
-    background-image: none !important;
-    padding-right: 0 !important;
 }
 
 @media (max-width: 1000px) {
@@ -143,14 +108,7 @@ body.links-note-icon .internal-link[data-note-icon]::before {
         max-width: 100%;
         position: relative;
         top: auto;
-        height: auto;
+        height: 60vh;
         margin: 1rem 2rem;
-    }
-
-    #graph-component {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin: 1rem 0;
     }
 }
