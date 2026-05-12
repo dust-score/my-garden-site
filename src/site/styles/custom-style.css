@@ -115,22 +115,38 @@ body.links-note-icon .internal-link[data-note-icon]::before {
 #link-graph {
     display: none;
 }
-#full-graph-close {
+
+#full-graph {
     display: none !important;
 }
-#full-graph {
+
+#full-graph.show {
+    display: block !important;
     position: fixed !important;
     top: 0 !important;
     right: 0 !important;
     left: auto !important;
     width: 50% !important;
     height: 100vh !important;
+    cursor: pointer;
 }
 
 #full-graph #full-graph-container {
     width: 100% !important;
     height: 100% !important;
 }
-#full-graph {
-    cursor: pointer;
+
+#full-graph-close {
+    display: none !important;
+}
+
+@media (max-width: 1000px) {
+    #full-graph.show {
+        position: relative !important;
+        width: 100% !important;
+        height: 60vh !important;
+        top: auto !important;
+        right: auto !important;
+        margin-top: 1rem;
+    }
 }
