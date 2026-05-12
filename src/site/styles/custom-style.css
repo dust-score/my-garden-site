@@ -115,3 +115,19 @@ body.links-note-icon .internal-link[data-note-icon]::before {
 #link-graph {
     display: none;
 }
+#full-graph-close {
+    display: none !important;
+}
+#full-graph {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 50% !important;
+    height: 100vh !important;
+}
+
+#full-graph #full-graph-container {
+    width: 100% !important;
+    height: 100% !important;
+}
