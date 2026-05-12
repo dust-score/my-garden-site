@@ -1,7 +1,0 @@
----
-{"dg-publish":true,"permalink":"/2-main-theoretical-pillars/theory-notes/deleuze-repetition/","title":"Difference and Repetition, translated by Paul Patton (New York: Columbia University Press, 1994)","tags":["citation"],"dg-note-properties":{"type":"citation","source":"Elliot R. Wolfson, Retroactive Not Yet: Linear Circularity and  Kabbalistic Temporality","author":"Gilles Deleuze","title":"Difference and Repetition, translated by Paul Patton (New York: Columbia University Press, 1994)","pages":"41","tags":["citation"],"site":null}}
----
-
-_Eternal return cannot mean the return of the Identical because it presupposes a world in which all previous identities have been abolished and dissolved. Returning is being, but only the being of becoming. The eternal return does not bring back “the same,” but returning constitutes the only Same of that which becomes. Returning is the becoming identical of becoming itself. Returning is thus the only identity, the identity of  difference. Repetition in the eternal return, therefore, consists in conceiving the same on the basis of the different._[^1]
-
-[^1]:  Deleuze, Difference and Repetition, 41
