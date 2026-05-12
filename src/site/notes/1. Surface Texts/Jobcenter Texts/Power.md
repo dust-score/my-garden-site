@@ -2,6 +2,9 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/jobcenter-texts/power/","tags":["gardenEntry"],"dg-note-properties":{"type":"surface","site":null}}
 ---
 
+<div class="map-link-container">
+  <a href="#" onclick="document.getElementById('full-graph').style.display=''; window.__graph.openFullGraph(); return false;" style="position: fixed; top: 2rem; right: 2rem; z-index: 999; font-family: 'Garamond', 'Times New Roman', serif; font-size: 15px; color: #000; text-decoration: underline; text-decoration-color: #ff0000;">Map</a>
+</div>
 [[2. Main Theoretical Pillars/The Messianic Trap\|Power]] gurgles down fluorescent halls adjoining [[2. Main Theoretical Pillars/Entropic Love Letter\| rectangular prism]] one to the next, neither culminating nor abating but only trundling, steadily, [[1. Surface Texts/Jobcenter Texts/Friction\|held back]]. Jobcenter aesthetosphere: easeless, banal, compensatory. 
 
 
