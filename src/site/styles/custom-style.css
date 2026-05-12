@@ -112,23 +112,3 @@ body.links-note-icon .internal-link[data-note-icon]::before {
         margin: 1rem 2rem;
     }
 }
-#link-graph {
-    display: none;
-}
-
-#graph-component .graph-title-container {
-    display: none;
-}
-
-aside .sidebar {
-    justify-content: center;
-    align-items: center;
-}
-
-aside .sidebar-container {
-    display: none;
-}
-
-#graph-controls {
-    display: none;
-}
