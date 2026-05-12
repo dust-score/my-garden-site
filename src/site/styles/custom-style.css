@@ -112,3 +112,6 @@ body.links-note-icon .internal-link[data-note-icon]::before {
         margin: 1rem 2rem;
     }
 }
+#link-graph {
+    display: none;
+}
