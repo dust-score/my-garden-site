@@ -147,17 +147,19 @@ function renderGraph(graphData, containerId, isFullScreen) {
         .force('radial', forceRadial(radius, width / 2, height / 2).strength(0.05));
 
     // Pixi v7 Application (synchronous constructor)
-    const app = new Application({
-        width,
-        height,
-        antialias: true,
-        autoStart: false,
-        autoDensity: true,
-        backgroundAlpha: 0,
-        resolution: window.devicePixelRatio,
-    });
+const app = new Application({
+    width,
+    height,
+    antialias: true,
+    autoStart: false,
+    autoDensity: true,
+    backgroundAlpha: 0,
+    resolution: window.devicePixelRatio,
+    forceCanvas: true,
+    eventMode: 'static',
+});
     el.appendChild(app.view);
-
+app.view.style.touchAction = 'auto';
     const stage = app.stage;
     stage.interactive = true;
     stage.hitArea = app.screen;
