@@ -183,3 +183,14 @@ a.is-unresolved:active {
     pointer-events: auto !important;
     touch-action: auto !important;
 }
+@media (max-width: 1000px) {
+    #full-graph {
+        pointer-events: auto !important;
+    }
+    
+    #full-graph-container,
+    #full-graph-container canvas {
+        pointer-events: auto !important;
+        touch-action: manipulation !important;
+    }
+}
