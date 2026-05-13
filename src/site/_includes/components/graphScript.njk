@@ -405,8 +405,8 @@ app.view.style.touchAction = 'auto';
             const padding = 50;
             const gw = (maxX - minX) + padding * 2;
             const gh = (maxY - minY) + padding * 2;
-            const k = Math.min(width / gw, height / gh, 2);
-            const cx = (minX + maxX) / 2;
+const k = Math.min(width / gw, height / gh, 2) * 1.3;
+const cx = (minX + maxX) / 2;
             const cy = (minY + maxY) / 2;
 
             const transform = zoomIdentity
