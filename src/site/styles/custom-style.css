@@ -37,12 +37,7 @@ main.content p {
 }
 
 aside {
-    flex: 1;
-    max-width: 50%;
-    position: sticky;
-    top: 2rem;
-    height: 80vh;
-    margin: 2rem 2rem 1rem 1rem;
+    display: none;
 }
 
 aside .sidebar {
