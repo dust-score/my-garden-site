@@ -11,7 +11,7 @@
     {% endfor %}
   </head>
   <body class="theme-{{meta.baseTheme}} markdown-preview-view markdown-rendered markdown-preview-section {% if settings.dgShowFileTree !== true %}no-filetree{% endif %} {% if settings.dgHomeLink === true and settings.dgShowFileTree !== true %}has-navbar{% endif %} {{meta.bodyClasses}}">
-<a href="#" onclick="document.getElementById('full-graph').style.display=''; window.__graph.openFullGraph(); return false;" style="position:fixed;top:2rem;right:2rem;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;text-decoration:underline;text-decoration-color:#ff0000">Map</a>
+<a href="#" onclick="document.getElementById('full-graph').style.display=''; window.__graph.openFullGraph(); return false;" style="position:fixed;top:2rem;right:2rem;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#fff;background-color:#ff0000;text-decoration:none;padding:0 2px">Map</a>
 {%include "components/notegrowthhistory.njk"%}
     {% if settings.dgShowFileTree !== true %}
       {%include "components/navbar.njk"%}
