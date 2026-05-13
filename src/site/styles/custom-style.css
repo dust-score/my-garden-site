@@ -101,7 +101,7 @@ body.links-note-icon .internal-link[data-note-icon]::before {
     main.content {
         max-width: 100%;
         margin: 2rem;
-        padding: 0;
+        padding: 0 0 2rem 0;
     }
 
     aside {
@@ -111,7 +111,21 @@ body.links-note-icon .internal-link[data-note-icon]::before {
         height: 60vh;
         margin: 1rem 2rem;
     }
+
+    #full-graph {
+        position: relative !important;
+        width: 100% !important;
+        height: 60vh !important;
+        top: auto !important;
+        right: auto !important;
+        margin-top: 1rem;
+    }
+
+    body > a[style*="position:fixed"][style*="top:2rem"][style*="right:2rem"] {
+        display: none !important;
+    }
 }
+
 #link-graph {
     display: none;
 }
@@ -130,16 +144,6 @@ body.links-note-icon .internal-link[data-note-icon]::before {
     height: 100% !important;
 }
 
-@media (max-width: 1000px) {
-    #full-graph {
-        position: relative !important;
-        width: 100% !important;
-        height: 60vh !important;
-        top: auto !important;
-        right: auto !important;
-        margin-top: 1rem;
-    }
-}
 .internal-link[data-note-icon]::before,
 .internal-link::before,
 a[data-note-icon]::before {
@@ -170,21 +174,8 @@ a.is-unresolved:active {
     cursor: default;
     background-color: transparent !important;
 }
+
 .markdown-preview-view a.is-unresolved {
     text-decoration: none !important;
     border-bottom: none !important;
-}
-#full-graph-container {
-    pointer-events: auto !important;
-    touch-action: auto !important;
-}
-
-#full-graph-container canvas {
-    pointer-events: auto !important;
-    touch-action: auto !important;
-}
-@media (max-width: 1000px) {
-    body > a[style*="position:fixed"][style*="top:2rem"][style*="right:2rem"] {
-        display: none !important;
-    }
 }
