@@ -37,7 +37,20 @@ main.content p {
 }
 
 aside {
-    display: none;
+    flex: 1;
+    max-width: 50%;
+    position: sticky;
+    top: 2rem;
+    height: 80vh;
+    margin: 2rem 2rem 1rem 1rem;
+}
+
+aside .sidebar {
+    display: block;
+    border: none;
+    padding: 0;
+    height: 100%;
+    font-size: 14px;
 }
 
 h1, h2, h3, h4 {
