@@ -170,3 +170,7 @@ a.is-unresolved:active {
     cursor: default;
     background-color: transparent !important;
 }
+.markdown-preview-view a.is-unresolved {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
