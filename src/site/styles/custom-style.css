@@ -24,7 +24,7 @@ body {
 
 main.content {
     flex: 1;
-    max-width: 50%;
+    max-width: 700px;
     margin: 2rem 0 2rem 2rem;
     padding: 0 1rem;
     font-size: 15px;
@@ -38,14 +38,6 @@ main.content p {
 
 aside {
     display: none;
-}
-
-aside .sidebar {
-    display: block;
-    border: none;
-    padding: 0;
-    height: 100%;
-    font-size: 14px;
 }
 
 h1, h2, h3, h4 {
@@ -86,39 +78,6 @@ body.links-note-icon .internal-link[data-note-icon]::before {
 
 * {
     font-family: 'Garamond', 'Times New Roman', serif;
-}
-
-@media (max-width: 1000px) {
-    body {
-        flex-direction: column;
-    }
-
-    main.content {
-        max-width: 100%;
-        margin: 2rem;
-        padding: 0 0 2rem 0;
-    }
-
-    aside {
-        max-width: 100%;
-        position: relative;
-        top: auto;
-        height: 60vh;
-        margin: 1rem 2rem;
-    }
-
-    #full-graph {
-        position: relative !important;
-        width: 100% !important;
-        height: 60vh !important;
-        top: auto !important;
-        right: auto !important;
-        margin-top: 1rem;
-    }
-
-    body > a[style*="position:fixed"][style*="top:2rem"][style*="right:2rem"] {
-        display: none !important;
-    }
 }
 
 #link-graph {
@@ -173,4 +132,33 @@ a.is-unresolved:active {
 .markdown-preview-view a.is-unresolved {
     text-decoration: none !important;
     border-bottom: none !important;
+}
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column;
+    }
+
+    main.content {
+        max-width: 100%;
+        margin: 2rem;
+        padding: 0 0 2rem 0;
+    }
+
+    aside {
+        display: none;
+    }
+
+    #full-graph {
+        position: relative !important;
+        width: 100% !important;
+        height: 60vh !important;
+        top: auto !important;
+        right: auto !important;
+        margin-top: 1rem;
+    }
+
+    body > a[style*="position:fixed"][style*="top:2rem"][style*="right:2rem"] {
+        display: none !important;
+    }
 }
