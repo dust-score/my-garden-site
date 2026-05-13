@@ -156,7 +156,7 @@ a.internal-link[href*="%5C"] {
 
 a[href*="/404"] {
     pointer-events: none;
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: #000 !important;
     cursor: default;
-} 
+}
