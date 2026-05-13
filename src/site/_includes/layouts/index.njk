@@ -11,8 +11,7 @@
     {% endfor %}
   </head>
   <body class="theme-{{meta.baseTheme}} markdown-preview-view markdown-rendered markdown-preview-section {% if settings.dgShowFileTree !== true %}no-filetree{% endif %} {% if settings.dgHomeLink === true and settings.dgShowFileTree !== true %}has-navbar{% endif %} {{meta.bodyClasses}}">
-<a href="#" onclick="document.getElementById('full-graph').style.display='';window.__graph.openFullGraph();return false" style="position:fixed;top:2rem;right:2rem;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;background:none;text-decoration:none;padding:0 2px;border:1px solid #000" onmouseover="this.style.color='#000';this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.color='#000';this.style.background='none';this.style.borderColor='#000'" class="map-link-desktop">Map</a>    {% if settings.dgShowFileTree !== true %}
-      {%include "components/navbar.njk"%}
+<a href="#" onclick="document.getElementById('full-graph').style.display='';window.__graph.openFullGraph();return false" style="position:fixed;top:2rem;right:2rem;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;background:none;text-decoration:none;padding:0 2px;border:1px solid #000" onmouseover="this.style.color='#000';this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.color='#000';this.style.background='none';this.style.borderColor='#000'">Map</a>      {%include "components/navbar.njk"%}
     {%else%}
       {%include "components/filetree.njk"%}
     {% endif %}
