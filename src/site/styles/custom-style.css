@@ -150,8 +150,9 @@ a[data-note-icon]::before {
 
 a.internal-link[href*="%5C"] {
     pointer-events: none;
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: #000 !important;
+    cursor: default;
 }
 
 a[href*="/404"] {
