@@ -174,3 +174,12 @@ a.is-unresolved:active {
     text-decoration: none !important;
     border-bottom: none !important;
 }
+#full-graph-container {
+    pointer-events: auto !important;
+    touch-action: auto !important;
+}
+
+#full-graph-container canvas {
+    pointer-events: auto !important;
+    touch-action: auto !important;
+}
