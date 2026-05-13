@@ -157,9 +157,16 @@ a.internal-link[href*="%5C"] {
     cursor: default;
 }
 
-a[href*="/404"] {
+a.is-unresolved,
+a.is-unresolved:link,
+a.is-unresolved:visited,
+a.is-unresolved:hover,
+a.is-unresolved:active {
     pointer-events: none;
     text-decoration: none !important;
+    text-decoration-line: none !important;
+    text-decoration-color: transparent !important;
     color: #000 !important;
     cursor: default;
+    background-color: transparent !important;
 }
