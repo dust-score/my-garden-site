@@ -184,18 +184,7 @@ a.is-unresolved:active {
     touch-action: auto !important;
 }
 @media (max-width: 1000px) {
-    #full-graph {
-        pointer-events: auto !important;
-    }
-    
-    #full-graph-container,
-    #full-graph-container canvas {
-        pointer-events: auto !important;
-        touch-action: manipulation !important;
-    }
-}
-@media (max-width: 1000px) {
-    .map-link-desktop {
+    body > a[style*="position:fixed"][style*="top:2rem"][style*="right:2rem"] {
         display: none !important;
     }
 }
