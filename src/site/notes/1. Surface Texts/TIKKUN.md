@@ -3,7 +3,7 @@
 ---
 
 
-[[1. Surface Texts/Re\|Re]]                           plete
+[[1. Surface Texts/Re\|Re]]                               plete
 
 Re                         stitution  
 Re                         paration
