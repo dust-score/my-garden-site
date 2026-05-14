@@ -214,3 +214,6 @@ table, tr, td, th {
     background-color: #ff0000 !important;
     border-color: #ff0000 !important;
 }
+.re-table td:first-child {
+    padding-right: inherit !important;
+}
