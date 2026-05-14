@@ -4,7 +4,7 @@
 
 <div class="desktop-only">
 <table style="border:none;border-collapse:collapse;width:100%;">
-<tr><td style="border:none;">[[1. Surface Texts/Re\|Re]]</td><td style="border:none;width:40%;"></td><td style="border:none;">plete</td></tr>
+<tr><td style="border:none;"><a href="/3-concepts/turning-around/">Re</a></td><td style="border:none;width:40%;"></td><td style="border:none;">plete</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;">Re</td><td style="border:none;width:40%;"></td><td style="border:none;">stitution</td></tr>
 <tr><td style="border:none;">Re</td><td style="border:none;width:40%;"></td><td style="border:none;">paration</td></tr>
@@ -27,7 +27,7 @@
 
 <div class="mobile-only">
 <table style="border:none;border-collapse:collapse;width:100%;">
-<tr><td style="border:none;">[[1. Surface Texts/Re\|Re]]</td><td style="border:none;width:20%;"></td><td style="border:none;">plete</td></tr>
+<tr><td style="border:none;"><a href="/3-concepts/turning-around/">Re</a></td><td style="border:none;width:20%;"></td><td style="border:none;">plete</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;">Re</td><td style="border:none;width:20%;"></td><td style="border:none;">stitution</td></tr>
 <tr><td style="border:none;">Re</td><td style="border:none;width:20%;"></td><td style="border:none;">paration</td></tr>
