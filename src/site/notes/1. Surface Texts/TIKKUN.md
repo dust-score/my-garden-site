@@ -4,8 +4,8 @@
 
                             
 
-Re                         stitution  
-Re                         paration
+                           
+                         
 
 Re                      ctification  
 Re                       demption
@@ -23,5 +23,7 @@ Re                      con ciliare
 
 | [[1. Surface Texts/Re\|Re]]   |           plete  |
 | --- | --- |
-|     |     |
+|   Re  |  stitution   |
+| --- | --- |
+| Re | paration
 
