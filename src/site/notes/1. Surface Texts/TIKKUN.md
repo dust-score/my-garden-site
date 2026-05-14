@@ -5,7 +5,7 @@
 <div class="desktop-only">
 [[1. Surface Texts/Re\|Re]]                                                                       plete
 
-Re                                                             stitution  
+[[1. Surface Texts/Re\|Re]]                                                             stitution  
 Re                                   paration
 
 Re                                 ctification  
