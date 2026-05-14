@@ -190,11 +190,3 @@ a.is-unresolved:active {
         display: block;
     }
 }
-pre {
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    font-family: 'Garamond', 'Times New Roman', serif !important;
-    font-size: 15px !important;
-    white-space: pre !important;
-}
