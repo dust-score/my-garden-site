@@ -2,28 +2,52 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/tikkun/","tags":["alpha","surface","unfinished","gardenEntry"],"dg-note-properties":{"tags":["alpha","surface","unfinished","gardenEntry"]}}
 ---
 
-
 <div class="desktop-only">
 <div class="re-table">
 <table style="border:none;border-collapse:collapse;margin-left:0;table-layout:fixed;">
-<tr><td style="border:none;width:300px;"><a href="/1-surface-texts/re/">Re</a></td><td style="border:none;text-align:right;">plete</td></tr>
+<tr><td style="border:none;width:300px;"><a href="/1-surface-texts/re/">Re</a></td><td style="border:none;">plete</td></tr>
 <tr><td></td><td></td></tr>
-<tr><td style="border:none;width:200px;">Re</td><td style="border:none;text-align:right;">stitution</td></tr>
-<tr><td style="border:none;width:120px;">Re</td><td style="border:none;text-align:right;">paration</td></tr>
+<tr><td style="border:none;width:200px;">Re</td><td style="border:none;">stitution</td></tr>
+<tr><td style="border:none;width:120px;">Re</td><td style="border:none;">paration</td></tr>
 <tr><td></td><td></td></tr>
-<tr><td style="border:none;width:140px;">Re</td><td style="border:none;text-align:right;">ctification</td></tr>
-<tr><td style="border:none;width:60px;">Re</td><td style="border:none;text-align:right;">demption</td></tr>
+<tr><td style="border:none;width:140px;">Re</td><td style="border:none;">ctification</td></tr>
+<tr><td style="border:none;width:60px;">Re</td><td style="border:none;">demption</td></tr>
 <tr><td></td><td></td></tr>
-<tr><td style="border:none;width:60px;">Re</td><td style="border:none;text-align:right;">con ciliation</td></tr>
+<tr><td style="border:none;width:60px;">Re</td><td style="border:none;">con ciliation</td></tr>
 <tr><td></td><td></td></tr>
-<tr><td style="border:none;width:100px;">Re</td><td style="border:none;text-align:right;">con stitution</td></tr>
-<tr><td style="border:none;width:160px;">Re</td><td style="border:none;text-align:right;">integration</td></tr>
+<tr><td style="border:none;width:100px;">Re</td><td style="border:none;">con stitution</td></tr>
+<tr><td style="border:none;width:160px;">Re</td><td style="border:none;">integration</td></tr>
 <tr><td></td><td></td></tr>
-<tr><td style="border:none;width:260px;">Re</td><td style="border:none;text-align:right;">plicare</td></tr>
+<tr><td style="border:none;width:260px;">Re</td><td style="border:none;">plicare</td></tr>
 <tr><td></td><td></td></tr>
-<tr><td style="border:none;width:40px;">Re</td><td style="border:none;text-align:right;">parare</td></tr>
+<tr><td style="border:none;width:40px;">Re</td><td style="border:none;">parare</td></tr>
 <tr><td></td><td></td></tr>
-<tr><td style="border:none;width:350px;">Re</td><td style="border:none;text-align:right;">con ciliare</td></tr>
+<tr><td style="border:none;width:350px;">Re</td><td style="border:none;">con ciliare</td></tr>
+</table>
+</div>
+</div>
+
+<div class="mobile-only">
+<div class="re-table">
+<table style="border:none;border-collapse:collapse;margin-left:0;table-layout:fixed;">
+<tr><td style="border:none;width:80px;"><a href="/1-surface-texts/re/">Re</a></td><td style="border:none;">plete</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">stitution</td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">paration</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">ctification</td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">demption</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">con ciliation</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">con stitution</td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">integration</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">plicare</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">parare</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td style="border:none;width:80px;">Re</td><td style="border:none;">con ciliare</td></tr>
 </table>
 </div>
 </div>
