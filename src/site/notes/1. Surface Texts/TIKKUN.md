@@ -23,6 +23,6 @@ Re                                                    
 
 Re           parare
 
-Re                                                                                                      con ciliare
+Re                                                                                                    con ciliare
 
 
