@@ -6,24 +6,24 @@
 <div class="desktop-only">
 <div class="re-table">
 <table style="border:none;border-collapse:collapse;margin-left:0;">
-<tr><td style="border:none;padding-right:300px;"><a href="/1-surface-texts/re/">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">plete</td></tr>
+<tr><td class="r1" style="border:none;"><a href="/1-surface-texts/re/">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">plete</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:200px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">stitution</td></tr>
-<tr><td style="border:none;padding-right:120px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">paration</td></tr>
+<tr><td class="r2" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">stitution</td></tr>
+<tr><td class="r3" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">paration</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:140px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">ctification</td></tr>
-<tr><td style="border:none;padding-right:60px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">demption</td></tr>
+<tr><td class="r4" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">ctification</td></tr>
+<tr><td class="r5" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">demption</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:60px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con ciliation</td></tr>
+<tr><td class="r6" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con ciliation</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:100px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con stitution</td></tr>
-<tr><td style="border:none;padding-right:160px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">integration</td></tr>
+<tr><td class="r7" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con stitution</td></tr>
+<tr><td class="r8" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">integration</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:260px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">plicare</td></tr>
+<tr><td class="r9" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">plicare</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:40px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">parare</td></tr>
+<tr><td class="r10" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">parare</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:350px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con ciliare</td></tr>
+<tr><td class="r11" style="border:none;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con ciliare</td></tr>
 </table>
 </div>
 </div>
