@@ -3,7 +3,6 @@
 ---
 
 <div class="desktop-only">
-<pre>
 [[1. Surface Texts/Re\|Re]]                                                                       plete
 
 Re                                                             stitution  
@@ -22,11 +21,9 @@ Re                                                                          plic
 Re             parare
 
 Re                                                                                        con ciliare
-</pre>
 </div>
 
 <div class="mobile-only">
-<pre>
 [[1. Surface Texts/Re\|Re]]                           plete
 
 Re                         stitution  
@@ -45,5 +42,4 @@ Re           plicare
 Re            parare
 
 Re     con ciliare
-</pre>
 </div>
