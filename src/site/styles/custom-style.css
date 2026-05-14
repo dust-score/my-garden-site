@@ -214,17 +214,3 @@ table, tr, td, th {
     background-color: #ff0000 !important;
     border-color: #ff0000 !important;
 }
-.re-table td:first-child {
-    padding-right: inherit !important;
-}
-.r1 { padding-right: 300px !important; }
-.r2 { padding-right: 200px !important; }
-.r3 { padding-right: 120px !important; }
-.r4 { padding-right: 140px !important; }
-.r5 { padding-right: 60px !important; }
-.r6 { padding-right: 60px !important; }
-.r7 { padding-right: 100px !important; }
-.r8 { padding-right: 160px !important; }
-.r9 { padding-right: 260px !important; }
-.r10 { padding-right: 40px !important; }
-.r11 { padding-right: 350px !important; }
