@@ -25,5 +25,5 @@ Re                      con ciliare
 | --- | --- |
 |   Re  |  stitution   |
 | --- | --- |
-| Re | paration
+| Re | paration |
 
