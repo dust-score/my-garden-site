@@ -202,3 +202,15 @@ table, tr, td, th {
 .re-table a {
     font-weight: normal !important;
 }
+.re-table a {
+    color: #000 !important;
+    text-decoration: none !important;
+    border: 1px solid #000 !important;
+    padding: 0 2px !important;
+}
+
+.re-table a:hover {
+    color: #000 !important;
+    background-color: #ff0000 !important;
+    border-color: #ff0000 !important;
+}
