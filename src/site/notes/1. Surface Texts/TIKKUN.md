@@ -7,16 +7,16 @@
 Re                         stitution  
 Re                         paration
 
-Re     ctification  
-Re      demption
+Re                      ctification  
+Re                       demption
 
 Re              con     ciliation
 
 Re             con     stitution
 Re                    integration
 
-Re           plicare
+Re                           plicare
 
-Re            parare
+Re                            parare
 
-Re     con ciliare
+Re                      con ciliare
