@@ -2,7 +2,6 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/tikkun/","tags":["alpha","surface","unfinished","gardenEntry"],"dg-note-properties":{"tags":["alpha","surface","unfinished","gardenEntry"]}}
 ---
 
-
 [[1. Surface Texts/Re\|Re]]                               plete
 
 Re                         stitution  
