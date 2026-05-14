@@ -2,12 +2,12 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/tikkun/","tags":["alpha","surface","unfinished"],"dg-note-properties":{"tags":["alpha","surface","unfinished"]}}
 ---
 
-[[3. Concepts/Turning Around\|Re]]     plete
+Re     plete
 
-Re                                                                       stitution  
-Re             paration
+Re                                                                               stitution  
+Re                                                                     paration
 
-[[1. Surface Texts/Rectification\|Re                                              ctification]]  
+Re                                              ctification  
 Re                        demption
 
 Re                        con        ciliation
@@ -20,7 +20,7 @@ Re                                                    
 
   
 
-Re                                                                                               [[3. Concepts/On Folding\|plicare]]
+Re                                                                                               plicare
 
 Re           parare
 

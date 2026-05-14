@@ -6,7 +6,7 @@ We are a part of history, and history—as it is well known—is a condition and
 
 *Walid Daqqa, political prisoner; trans. Nour Eldin Hussein*
 
-There is a place that engenders just so much talk or none at all. This is a place to trade in total legibility to a system of death for sub-par answers to an amorphous need; to bear witness to the foreclosure of the intangible on all fronts. It’s the point of emanation for a disavowed grief, a subtle despair, which has become a yardstick for the worth of any and all acts at all. It is one place for recognising.
+There is a place that engenders just so much talk or none at all. This is a place to trade in total legibility to a system of death for sub-par answers to an amorphous need; to bear witness to the foreclosure of the intangible on all fronts. It’s the point of emanation for a disavowed grief which has become a yardstick for the worth of any and all acts at all. It is one place for recognising.
 
 It’s true that the constitution of this despair is specific to its present, [[1. Surface Texts/technologically disseminated\|technologically disseminated]] precursors. In its special contemporary flavour it’s an experience specific to the present moment; through it, however, I move closer and closer to an oceanic and boundless past.
 
