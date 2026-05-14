@@ -21,7 +21,7 @@ Re                            parare
 
 Re                      con ciliare
 
-| [[1. Surface Texts/Re\|Re]]   |   plete  |
+| [[1. Surface Texts/Re\|Re]]   |           plete  |
 | --- | --- |
 |     |     |
 
