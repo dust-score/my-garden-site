@@ -175,3 +175,18 @@ a.is-unresolved:active {
         display: none !important;
     }
 }
+.desktop-only {
+    display: block;
+}
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+}
