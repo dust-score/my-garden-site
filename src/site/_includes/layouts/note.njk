@@ -16,10 +16,6 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
   <body class="theme-{{meta.baseTheme}} markdown-preview-view markdown-rendered markdown-preview-section {% if settings.dgShowFileTree !== true %}no-filetree{% endif %} {% if settings.dgHomeLink === true and settings.dgShowFileTree !== true %}has-navbar{% endif %} {{meta.bodyClasses}}">
 <a href="#" onclick="document.getElementById('full-graph').style.display='';window.__graph.openFullGraph();return false" style="position:fixed;top:2rem;right:2rem;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;background:none;text-decoration:none;padding:0 2px;border:1px solid #000" onmouseover="this.style.color='#000';this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.color='#000';this.style.background='none';this.style.borderColor='#000'">Map</a>   
 <a href="#" onclick="document.getElementById('bg-image').style.display='block';return false" style="position:fixed;top:4.5rem;right:2rem;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;background:none;text-decoration:none;padding:0 2px;border:1px solid #000" onmouseover="this.style.color='#000';this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.color='#000';this.style.background='none';this.style.borderColor='#000'">Image</a>
-
-<div id="bg-image" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9998;background:rgba(255,255,255,0.9);cursor:pointer;" onclick="this.style.display='none'">
-<img src="YOUR-IMAGE-URL" style="max-width:80%;max-height:80%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">
-</div>
 {%include "components/notegrowthhistory.njk"%}
     
     {% if settings.dgShowFileTree !== true %}
@@ -33,6 +29,11 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     {% endif %}
 
     <main class="content cm-s-obsidian print {{contentClasses}}">
+{% if image %}
+<div id="page-image" style="display:none;position:fixed;top:0;left:0;width:50%;height:100%;z-index:0;opacity:0.3;pointer-events:none;">
+<img src="{{ image }}" style="width:100%;height:100%;object-fit:cover;">
+</div>
+{% endif %}
       <header>
         {% if settings.dgShowInlineTitle === true %}
           <h1 data-note-icon="{% if noteIcon %}{{noteIcon}}{% else %}{{meta.noteIconsSettings.default}}{% endif %}">{% if title %}{{ title }}{% else %}{{ page.fileSlug }}{% endif %}</h1>
@@ -73,6 +74,9 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
       {% for imp in dynamics.notes.beforeContent %}
         {% include imp %}
       {% endfor %}
+{% if image %}
+<a href="#" onclick="var img=document.getElementById('page-image');if(img.style.display==='none'){img.style.display='block'}else{img.style.display='none'}return false" style="float:right;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;background:none;text-decoration:none;padding:0 2px;border:1px solid #000" onmouseover="this.style.color='#000';this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.color='#000';this.style.background='none';this.style.borderColor='#000'">Image</a>
+{% endif %}
       {{ content | hideDataview | taggify | link | safe}}
       {% for imp in dynamics.common.afterContent %}
         {% include imp %}
