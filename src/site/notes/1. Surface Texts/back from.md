@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/back-from/","tags":["concept"],"dg-note-properties":{"tags":["concept"]}}
+{"dg-publish":true,"tags":["concept"],"permalink":"/1-surface-texts/back-from/","dgPassFrontmatter":true,"dg-note-properties":{"tags":["concept"]}}
 ---
 
 Reconciliation… What does that mean? Retribution seems sufficient, as a word, since it is well known that there can never be a final blow when retribution runs the game. Restitution… To what state? What whole could ever be re-covered in its entirety from the dank and muggy past?

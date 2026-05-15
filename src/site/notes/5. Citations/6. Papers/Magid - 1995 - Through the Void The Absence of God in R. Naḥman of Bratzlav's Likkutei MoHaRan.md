@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/5-citations/6-papers/magid-1995-through-the-void-the-absence-of-god-in-r-na-man-of-bratzlav-s-likkutei-mo-ha-ran/","tags":["paper"],"dg-note-properties":{"type":"paper","tags":["paper"],"site":null}}
+{"type":"paper","tags":["paper"],"site":null,"dg-publish":true,"permalink":"/5-citations/6-papers/magid-1995-through-the-void-the-absence-of-god-in-r-na-man-of-bratzlav-s-likkutei-mo-ha-ran/","dgPassFrontmatter":true,"dg-note-properties":{"type":"paper","tags":["paper"],"site":null}}
 ---
 
 [[Magid - 1995 - Through the Void The Absence of God in R. Naḥman of Bratzlav's Likkutei MoHaRan.pdf|PDF too large to embed]]

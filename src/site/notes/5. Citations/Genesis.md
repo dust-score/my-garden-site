@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/5-citations/genesis/","title":"Genesis 1:10, 31","tags":["citation"],"dg-note-properties":{"type":"citation","title":"Genesis 1:10, 31","source":"https://www.biblegateway.com/passage/?search=Genesis%201-2&version=NIV","tags":["citation"],"site":null}}
+{"type":"citation","title":"Genesis 1:10, 31","source":"https://www.biblegateway.com/passage/?search=Genesis%201-2&version=NIV","tags":["citation"],"site":null,"dg-publish":true,"permalink":"/5-citations/genesis/","dgPassFrontmatter":true,"dg-note-properties":{"type":"citation","title":"Genesis 1:10, 31","source":"https://www.biblegateway.com/passage/?search=Genesis%201-2&version=NIV","tags":["citation"],"site":null}}
 ---
 
 Genesis 1:10, 31

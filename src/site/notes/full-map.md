@@ -1,4 +1,4 @@
 ---
-{"dg-publish":true,"permalink":"/full-map/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/full-map/","dgPassFrontmatter":true,"dg-note-properties":{}}
 ---
 
