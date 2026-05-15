@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/re/","dgPassFrontmatter":true,"dg-note-properties":{}}
+{"dg-publish":true,"image":"/img/user/images/wipe-2.png","permalink":"/1-surface-texts/re/","dgPassFrontmatter":true,"dg-note-properties":{"image":"/img/user/images/wipe-2.png"}}
 ---
 
 
