@@ -231,3 +231,19 @@ a.is-unresolved:active {
     background-color: transparent !important;
     padding: 0 !important;
 }
+/* Full image previews for internal links */
+.link-preview-image {
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+.link-preview-image img {
+    max-height: 90vh !important;
+    max-width: 90vw !important;
+    object-fit: contain !important;
+}
+
+.link-preview-container {
+    max-height: none !important;
+    overflow: visible !important;
+}
