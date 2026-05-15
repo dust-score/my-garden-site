@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/jobcenter-texts/straight-ahead/","dg-note-properties":{"type":"surface","site":null}}
+{"type":"surface","site":null,"dg-publish":true,"permalink":"/1-surface-texts/jobcenter-texts/straight-ahead/","dgPassFrontmatter":true,"dg-note-properties":{"type":"surface","site":null}}
 ---
 
 I get on the track and then I'm off the track again. How do you get off the [[1. Surface Texts/Jobcenter Texts/Straight Ahead\|brightly lit track]]? You can [[3. Concepts/On Folding\|open up a fold]]. It's not a motion towards but an evasion that moves before you think it, it's a [[3. Concepts/agamben-messianicity-intro\|refusal sideways]].
