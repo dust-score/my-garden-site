@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/9-footnotes/footnote-re/","tags":["footnote","etymology"],"dg-note-properties":{"type":"footnote","tags":["footnote","etymology"],"source":"https://www.etymonline.com/word/re-","site":null}}
 ---
 
-Origin and history of _re-_
+Origin and history of _re-_, lifted from etymonline
 
 [[1. Surface Texts/Jobcenter Texts/Repetition\|re-]]
 
