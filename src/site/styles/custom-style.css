@@ -247,3 +247,11 @@ a.is-unresolved:active {
     max-height: none !important;
     overflow: visible !important;
 }
+/* Remove scroll from all link previews and show full content */
+.hover-popup,
+.popover,
+.link-preview {
+    max-height: none !important;
+    overflow: visible !important;
+    height: auto !important;
+}
