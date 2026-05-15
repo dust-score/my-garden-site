@@ -18,7 +18,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
   image = {{ image | dump }}
 </div>
 <a href="#" onclick="document.getElementById('full-graph').style.display='';window.__graph.openFullGraph();return false" style="position:fixed;top:2rem;right:2rem;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;background:none;text-decoration:none;padding:0 2px;border:1px solid #000" onmouseover="this.style.color='#000';this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.color='#000';this.style.background='none';this.style.borderColor='#000'">Map</a>
-{% if image %}
+{% if page.url and page.url.includes('re') %}
 <a href="#" onclick="toggleImage()" style="position:fixed;top:2rem;left:33%;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;background:none;text-decoration:none;padding:0 2px;border:1px solid #000" onmouseover="this.style.color='#000';this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.color='#000';this.style.background='none';this.style.borderColor='#000'">Image</a>
 {% endif %}
 {%include "components/notegrowthhistory.njk"%}
