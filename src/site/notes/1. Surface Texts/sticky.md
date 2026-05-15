@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/sticky/","tags":["vignette","surface","unfinished"],"dg-note-properties":{"type":"surface","tags":["vignette","surface","unfinished"],"site":null,"image":"src/site/10-attachments/pasted-image-20260512174434.png"}}
+{"dg-publish":true,"permalink":"/1-surface-texts/sticky/","tags":["vignette","surface","unfinished"],"dg-note-properties":{"type":"surface","tags":["vignette","surface","unfinished"],"site":null,"image":"/10-attachments/pasted-image-20260512174434.png"}}
 ---
 
 We are a part of history, and history—as it is well known—is a condition and an action in the past. Except us: [[5. Citations/On Parallel Time\|We are a past continuous and never ending.]] We address you all from it presently, so that it does not become your future. 
