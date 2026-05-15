@@ -15,9 +15,6 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
   </head>
   <body class="theme-{{meta.baseTheme}} markdown-preview-view markdown-rendered markdown-preview-section {% if settings.dgShowFileTree !== true %}no-filetree{% endif %} {% if settings.dgHomeLink === true and settings.dgShowFileTree !== true %}has-navbar{% endif %} {{meta.bodyClasses}}">
 <a href="#" onclick="document.getElementById('full-graph').style.display='';window.__graph.openFullGraph();return false" style="position:fixed;top:2rem;right:2rem;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;background:none;text-decoration:none;padding:0 2px;border:1px solid #000" onmouseover="this.style.color='#000';this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.color='#000';this.style.background='none';this.style.borderColor='#000'">Map</a>
-{% if image %}
-<a href="#" onclick="toggleImage()" style="position:fixed;top:2rem;left:33%;z-index:9999;font-family:'Garamond','Times New Roman',serif;font-size:15px;color:#000;background:none;text-decoration:none;padding:0 2px;border:1px solid #000" onmouseover="this.style.color='#000';this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.color='#000';this.style.background='none';this.style.borderColor='#000'">Image</a>
-{% endif %}
 {%include "components/notegrowthhistory.njk"%}
     {% if settings.dgShowFileTree !== true %}
       {%include "components/navbar.njk"%}
@@ -28,11 +25,6 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
       {%include "components/searchContainer.njk"%}
     {% endif %}
     <main class="content cm-s-obsidian print {{contentClasses}}">
-{% if image %}
-<div id="page-image" style="display:none;position:fixed;top:0;left:0;width:60%;height:100%;z-index:0;opacity:0.2;pointer-events:none;transition:width 0.4s ease;">
-<img src="{{ image }}" style="width:100%;height:100%;object-fit:cover;">
-</div>
-{% endif %}
       <header>
       {% if settings.dgShowInlineTitle === true %}
         <h1>{% if title %}{{ title }}{% else %}{{ page.fileSlug }}{% endif %}</h1>
@@ -88,20 +80,5 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     {% endfor %}
     {%include "components/lucideIcons.njk"%}
     {%include "components/basesScript.njk"%}
-{% if image %}
-<script>
-function toggleImage() {
-  var img = document.getElementById('page-image');
-  if (img.style.display === 'none') {
-    img.style.display = 'block';
-    img.style.width = '60%';
-  } else if (img.style.width === '60%') {
-    img.style.width = '75%';
-  } else {
-    img.style.display = 'none';
-  }
-}
-</script>
-{% endif %}
   </body>
 </html>
