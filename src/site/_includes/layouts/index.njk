@@ -103,49 +103,5 @@ function toggleImage() {
 }
 </script>
 {% endif %}
-    </body>
-  </html>                </a>
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endif %}
-      </div>
-      {% for imp in dynamics.common.header %}
-        {% include imp %}
-      {% endfor %}
-      {% for imp in dynamics.index.header %}
-        {% include imp %}
-      {% endfor %}
-      </header>
-      {% for imp in dynamics.common.beforeContent %}
-        {% include imp %}
-      {% endfor %}
-      {% for imp in dynamics.index.beforeContent %}
-        {% include imp %}
-      {% endfor %}
-      {{ content | hideDataview | taggify | link | safe}}
-      {% for imp in dynamics.common.afterContent %}
-        {% include imp %}
-      {% endfor %}
-      {% for imp in dynamics.index.afterContent %}
-        {% include imp %}
-      {% endfor %}
-    </main>
-
-    {% if settings.dgShowBacklinks === true or settings.dgShowLocalGraph === true or settings.dgShowToc === true or dynamics.sidebar.top.length > 0 or dynamics.sidebar.bottom.length > 0%}
-      {%include "components/sidebar.njk" %}
-    {%endif%}
-
-    {% if settings.dgLinkPreview === true %}
-      {%include "components/linkPreview.njk"%}
-    {% endif %}
-    {% for imp in dynamics.common.footer %}
-      {% include imp %}
-    {% endfor %}
-    {% for imp in dynamics.index.footer %}
-      {% include imp %}
-    {% endfor %}
-    {%include "components/lucideIcons.njk"%}
-    {%include "components/basesScript.njk"%}
-    </body>
-  </html>
+  </body>
+</html>
