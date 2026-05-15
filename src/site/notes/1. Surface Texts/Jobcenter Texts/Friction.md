@@ -1,5 +1,5 @@
 ---
-{"type":"surface","dg-publish":true,"site":null,"permalink":"/1-surface-texts/jobcenter-texts/friction/","dgPassFrontmatter":true,"dg-note-properties":{"type":"surface","site":null}}
+{"dg-publish":true,"permalink":"/1-surface-texts/jobcenter-texts/friction/","dg-note-properties":{"type":"surface","site":null}}
 ---
 
 [[1. Surface Texts/TIKKUN\|Dusty]] is granular, she is [[2. Main Theoretical Pillars/Entropic Love Letter\|friction]]. She is neither gear nor [[1. Surface Texts/Jobcenter Texts/anti-accelerationist-infolding\|speed]]. If you are bumping around the far end of a [[3. Concepts/Turning Around#^orbit\|parabolic orbit]], be sure to keep an eye out for Dusty! She will set you right. Dusty carries mounds of dirt in her socks, for to empathise. 

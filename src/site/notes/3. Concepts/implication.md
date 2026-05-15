@@ -1,5 +1,5 @@
 ---
-{"type":"concept","tags":["concept","implication","methodology","alpha"],"dg-publish":true,"site":null,"permalink":"/3-concepts/implication/","dgPassFrontmatter":true,"dg-note-properties":{"type":"concept","tags":["concept","implication","methodology","alpha"],"site":null}}
+{"dg-publish":true,"permalink":"/3-concepts/implication/","tags":["concept","implication","methodology","alpha"],"dg-note-properties":{"type":"concept","tags":["concept","implication","methodology","alpha"],"site":null}}
 ---
 
 Implication: the condition of being folded into something, so that neither [[3. Concepts/Turning Around\|re—]]mains the same.

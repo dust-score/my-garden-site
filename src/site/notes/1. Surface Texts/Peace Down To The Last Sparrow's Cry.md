@@ -1,5 +1,5 @@
 ---
-{"type":"surface","tags":["poetry","surface"],"site":null,"dg-publish":true,"permalink":"/1-surface-texts/peace-down-to-the-last-sparrow-s-cry/","dgPassFrontmatter":true,"dg-note-properties":{"type":"surface","tags":["poetry","surface"],"site":null}}
+{"dg-publish":true,"permalink":"/1-surface-texts/peace-down-to-the-last-sparrow-s-cry/","tags":["poetry","surface"],"dg-note-properties":{"type":"surface","tags":["poetry","surface"],"site":null}}
 ---
 
 Let there be no heaven and no earth,  
