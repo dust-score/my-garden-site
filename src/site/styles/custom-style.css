@@ -231,3 +231,18 @@ a.is-unresolved:active {
     background-color: transparent !important;
     padding: 0 !important;
 }
+/* Hide header in link previews */
+.hover-popup header,
+.popover header,
+.link-preview header,
+[class*="preview"] header {
+    display: none !important;
+}
+
+/* Hide the h1 title in previews */
+.hover-popup h1,
+.popover h1,
+.link-preview h1,
+[class*="preview"] h1 {
+    display: none !important;
+}
