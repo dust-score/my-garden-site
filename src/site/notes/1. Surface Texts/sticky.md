@@ -8,7 +8,7 @@ We are a part of history, and history—as it is well known—is a condition and
 
 There is a place that engenders just so much talk or none at all. This is a place to trade in total legibility to a system of death for sub-par answers to an amorphous need; to bear witness to the foreclosure of the intangible on all fronts. It's the point of emanation for a disavowed grief which has become a yardstick for the worth of any and all acts at all. It is one place for recognising.
 
-It's true that the constitution of this despair is specific to its present, [[1. Surface Texts/technologically disseminated\|technologically disseminated]] precursors. In its special contemporary flavour it's an experience specific to the present moment; through it, however, I move closer and closer to an oceanic and boundless past.
+It's true that the constitution of this despair is specific to its present, [[1. Surface Texts/technologically disseminated\|technologically disseminated]]precursors. In its special contemporary flavour it's an experience specific to the present moment; through it, however, I move closer and closer to an oceanic and boundless past.
 
 When it snowed this winter I could walk through the falling snow in a posture that had lain dormant in my arsenal since childhood; hunched forward, feeling obliquely British in that the stance was almost ironical. There was  life for a small self lost to a decade of wet winters.
 
