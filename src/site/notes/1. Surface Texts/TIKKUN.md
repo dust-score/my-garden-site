@@ -2,14 +2,7 @@
 {"tags":["alpha","surface","unfinished","gardenEntry"],"dg-publish":true,"dg-home":true,"permalink":"/1-surface-texts/tikkun/","dgPassFrontmatter":true,"dg-note-properties":{"tags":["alpha","surface","unfinished","gardenEntry"]}}
 ---
 
----
-tags:
-  - alpha
-  - surface
-  - unfinished
-dg-publish: true
-dg-home: true
----
+
 <div class="desktop-only">
 <div class="re-table">
 <table style="border:none;border-collapse:collapse;margin-left:0;">
