@@ -99,7 +99,6 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     {% include "components/basesScript.njk" %}
 <script>
 (function() {
-  // Wait for page to fully load
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
@@ -107,10 +106,8 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
   }
   
   function init() {
-    // Mobile check AFTER page is ready
     if (window.innerWidth <= 1000) return;
     
-    // Create background overlay
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
     overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;display:none;';
@@ -118,12 +115,10 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     
     var imageCache = {};
     
-    // Remove headers from ALL link previews
     var style = document.createElement('style');
     style.textContent = '[id*="preview"] header, [id*="preview"] h1, [id*="preview"] .header-meta, [id*="preview"] .site-header, [id*="preview"] .page-title { display: none !important; }';
     document.head.appendChild(style);
     
-    // Detect image note links
     var links = document.querySelectorAll('a.internal-link');
     console.log('Found links:', links.length);
     
@@ -164,19 +159,22 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
         });
     });
     
-    // Kill native previews when our overlay is active
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        mutation.addedNodes.forEach(function(node) {
-          if (overlay.style.display === 'block') {
-            if (node.id === 'image-overlay' || (node.tagName === 'IMG' && node !== overlay.firstChild)) {
-              node.remove();
-            }
-          }
-        });
-      });
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
+    // Block native preview on image-note links
+    document.addEventListener('mouseover', function(e) {
+      var link = e.target.closest('a.image-note-link');
+      if (link) {
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }
+    }, true);
+    
+    document.addEventListener('pointerover', function(e) {
+      var link = e.target.closest('a.image-note-link');
+      if (link) {
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }
+    }, true);
   }
 })();
 </script>
