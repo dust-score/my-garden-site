@@ -78,7 +78,6 @@
     var spaceLeft = elem_props.left;
     var spaceRight = viewportWidth - (elem_props.left + elem_props.width);
 
-    // Prefer edge placement away from the pointer: top/bottom and left/right.
     var placeVertical = spaceBelow >= tooltipWrapper.offsetHeight + gap ? "bottom" : "top";
     var placeHorizontal = spaceRight >= tooltipWrapper.offsetWidth + gap ? "right" : "left";
 
@@ -94,7 +93,6 @@
       tooltipWrapper.style.left = (elem_props.left - tooltipWrapper.offsetWidth - gap) + "px";
     }
 
-    // Clamp to viewport edges.
     var currentTop = parseFloat(tooltipWrapper.style.top);
     var currentLeft = parseFloat(tooltipWrapper.style.left);
 
@@ -230,6 +228,10 @@
     linkElement.addEventListener('mouseenter', function (event) {
       clearTimeout(opacityTimeout);
       clearTimeout(contentTimeout);
+      // Skip native preview for image-note links
+      if (linkElement.classList.contains('image-note-link')) {
+        return;
+      }
       showTooltip(event);
     });
 
