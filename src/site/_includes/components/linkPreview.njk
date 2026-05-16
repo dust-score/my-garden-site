@@ -114,7 +114,7 @@
     if (!elem) return;
     
     // Skip if this is an image-note link
-    if (elem.classList.contains('image-note-link')) {
+    if (elem.classList.contains('image-note-link') || elem.getAttribute('href').indexOf('data-imgprev') > -1) {
       return;
     }
     
