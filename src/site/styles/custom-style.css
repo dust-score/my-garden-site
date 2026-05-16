@@ -246,11 +246,15 @@ a.is-unresolved:active {
     pointer-events: none;
 }
 
-#image-preview-overlay img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0.3;
+#image-preview-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* Remove "t-k-n" title and header from all preview tooltips */
@@ -264,14 +268,4 @@ a.is-unresolved:active {
     #image-preview-overlay {
         display: none !important;
     }
-}
-#image-preview-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    pointer-events: none;
 }
