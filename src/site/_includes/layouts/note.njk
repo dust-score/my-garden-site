@@ -148,11 +148,12 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
         });
     });
     
-    // Hide all dynamically-added preview elements when hovering image note
+    // Hide native preview elements when hovering image note (but not our overlay)
     var observer = new MutationObserver(function(mutations) {
       if (!activeImageLink) return;
       mutations.forEach(function(mutation) {
         mutation.addedNodes.forEach(function(node) {
+          if (node.id === 'image-preview-overlay') return;
           if (node.tagName === 'DIV' || node.tagName === 'IMG' || node.tagName === 'HEADER' || node.tagName === 'P') {
             node.style.display = 'none';
           }
