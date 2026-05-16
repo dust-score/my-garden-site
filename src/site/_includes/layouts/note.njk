@@ -115,12 +115,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     
     var imageCache = {};
     
-    var style = document.createElement('style');
-    style.textContent = '[id*="preview"] header, [id*="preview"] h1, [id*="preview"] .header-meta, [id*="preview"] .site-header, [id*="preview"] .page-title { display: none !important; }';
-    document.head.appendChild(style);
-    
     var links = document.querySelectorAll('a.internal-link');
-    console.log('Found links:', links.length);
     
     links.forEach(function(link) {
       var href = link.getAttribute('href');
@@ -129,10 +124,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
       fetch(href)
         .then(function(res) { return res.text(); })
         .then(function(html) {
-          var isImageNote = html.indexOf('image-note') > -1;
-          console.log('Link:', href, 'Is image note:', isImageNote);
-          
-          if (isImageNote) {
+          if (html.indexOf('image-note') > -1) {
             imageCache[href] = html;
             link.classList.add('image-note-link');
             
@@ -140,41 +132,23 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
               var parser = new DOMParser();
               var doc = parser.parseFromString(imageCache[href], 'text/html');
               var img = doc.querySelector('img');
-              console.log('Image found:', !!img, 'Src:', img ? img.src : 'none');
               if (img) {
                 overlay.innerHTML = '<img src="' + img.src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
                 overlay.style.display = 'block';
               }
-              e.stopPropagation();
-              e.stopImmediatePropagation();
+              // Hide tooltip for image notes
+              var tooltip = document.getElementById('tooltip-content');
+              if (tooltip) tooltip.style.display = 'none';
             });
             
             link.addEventListener('mouseleave', function() {
               overlay.style.display = 'none';
+              var tooltip = document.getElementById('tooltip-content');
+              if (tooltip) tooltip.style.display = '';
             });
           }
-        })
-        .catch(function(err) {
-          console.log('Fetch error for', href, err);
         });
     });
-    
-    // Block native preview on image-note links
-    document.addEventListener('mouseover', function(e) {
-      var link = e.target.closest('a.image-note-link');
-      if (link) {
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-      }
-    }, true);
-    
-    document.addEventListener('pointerover', function(e) {
-      var link = e.target.closest('a.image-note-link');
-      if (link) {
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-      }
-    }, true);
   }
 })();
 </script>
