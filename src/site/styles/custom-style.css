@@ -287,3 +287,24 @@ div[class*="hover"] {
     max-height: none !important;
     overflow: visible !important;
 }
+/* Hide native preview for image-note links */
+a.image-note-link ~ #image-overlay {
+    display: none !important;
+}
+
+/* Remove headers from ALL link previews */
+#image-overlay + header,
+div[id*="preview"] header,
+div[id*="preview"] h1,
+div[id*="preview"] .header-meta,
+div[id*="preview"] .site-header,
+div[id*="preview"] .page-title {
+    display: none !important;
+}
+
+/* Disable image preview on mobile */
+@media (max-width: 1000px) {
+    #image-preview-overlay {
+        display: none !important;
+    }
+}
