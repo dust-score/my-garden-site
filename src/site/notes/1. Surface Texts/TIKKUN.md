@@ -11,8 +11,8 @@
 <tr><td style="border:none;padding-right:10px;">Re</td><td></td><td></td><td></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">paration</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td></td><td></td><td></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">ctification</td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">demption</td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td></td><td></td><td></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">[[1. Surface Texts/altogether otherwise\|ctification]]</td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">[[1. Surface Texts/tikkun-associative-words\|demption]]</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciliation</td></tr>
@@ -23,9 +23,9 @@
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td></td><td></td><td style="border:none;text-align:right;">plicare</td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td></td><td></td><td style="border:none;text-align:right;">[[3. Concepts/On Folding\|plicare]]</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">parare</td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">[[1. Surface Texts/Hearing Residues, Seeing Residues\|parare]]</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td><td></td><td></td><td></td><td></td></td><td></td><td style="border:none;text-align:right;">con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciliare</td></tr>
 </table>
@@ -40,17 +40,17 @@
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">stitution</td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">paration</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">ctification</td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">demption</td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">[[1. Surface Texts/altogether otherwise\|ctification]]</td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">[[1. Surface Texts/tikkun-associative-words\|demption]]</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con ciliation</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con stitution</td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">integration</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">plicare</td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">[[3. Concepts/On Folding\|plicare]]</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:2px;"></td><td style="border:none;text-align:right;">parare</td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:2px;"></td><td style="border:none;text-align:right;">[[1. Surface Texts/Hearing Residues, Seeing Residues\|parare]]</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con ciliare</td></tr>
 </table>
