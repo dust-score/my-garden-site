@@ -98,50 +98,42 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     {% endif %}
     {% include "components/basesScript.njk" %}
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Intercept link hovers
-  document.querySelectorAll('a.internal-link').forEach(link => {
-    link.addEventListener('mouseenter', function(e) {
-      const href = this.getAttribute('href');
-      if (!href) return;
-      
-      // Fetch the linked note
-      fetch(href)
-        .then(res => res.text())
-        .then(html => {
-          // Check if it's an image note
-          if (html.includes('<!-- image-note -->')) {
-            // Extract the first image from the note
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const img = doc.querySelector('img');
-            
-            if (img) {
-              // Prevent normal preview
-              e.preventDefault();
-              
-              // Create full-image overlay behind text
-              let overlay = document.getElementById('image-preview-overlay');
-              if (!overlay) {
-                overlay = document.createElement('div');
-                overlay.id = 'image-preview-overlay';
-                overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;display:none;';
-                document.body.appendChild(overlay);
+(function() {
+  // Create overlay once
+  var overlay = document.createElement('div');
+  overlay.id = 'image-preview-overlay';
+  overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;display:none;';
+  document.body.appendChild(overlay);
+  
+  // Attach hover listeners to all internal links
+  var links = document.querySelectorAll('a.internal-link');
+  for (var i = 0; i < links.length; i++) {
+    (function(link) {
+      link.addEventListener('mouseenter', function() {
+        var href = link.getAttribute('href');
+        if (!href) return;
+        
+        fetch(href)
+          .then(function(res) { return res.text(); })
+          .then(function(html) {
+            if (html.indexOf('image-note') > -1) {
+              var div = document.createElement('div');
+              div.innerHTML = html;
+              var img = div.querySelector('img');
+              if (img) {
+                overlay.innerHTML = '<img src="' + img.src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+                overlay.style.display = 'block';
               }
-              
-              overlay.innerHTML = `<img src="${img.src}" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">`;
-              overlay.style.display = 'block';
-              
-              // Hide overlay when mouse leaves
-              link.addEventListener('mouseleave', function() {
-                overlay.style.display = 'none';
-              }, {once: true});
             }
-          }
-        });
-    });
-  });
-});
+          });
+      });
+      
+      link.addEventListener('mouseleave', function() {
+        overlay.style.display = 'none';
+      });
+    })(links[i]);
+  }
+})();
 </script>
   </body>
 </html>
