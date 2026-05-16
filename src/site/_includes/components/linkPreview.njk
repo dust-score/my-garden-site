@@ -112,6 +112,12 @@
   function showTooltip(event) {
     var elem = event.currentTarget || event.target;
     if (!elem) return;
+    
+    // Skip if this is an image-note link
+    if (elem.classList.contains('image-note-link')) {
+      return;
+    }
+    
     var url = elem.getAttribute("href");
     if (url.indexOf("http") === -1 || url.indexOf(window.location.host) !== -1) {
       tooltipWrapper.style.display = 'block';
@@ -225,7 +231,7 @@
       hideTooltip();
     });
 
-        linkElement.addEventListener('mouseenter', function (event) {
+    linkElement.addEventListener('mouseenter', function (event) {
       clearTimeout(opacityTimeout);
       clearTimeout(contentTimeout);
       showTooltip(event);
