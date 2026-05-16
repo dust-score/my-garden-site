@@ -308,3 +308,7 @@ div[id*="preview"] .page-title {
         display: none !important;
     }
 }
+#tooltip-content > div:first-child,
+#tooltip-content > header {
+    display: none !important;
+}
