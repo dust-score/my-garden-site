@@ -93,8 +93,8 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;display:none;';
-    document.body.insertBefore(overlay, document.body.firstChild);
+overlay.style.cssText = 'position:fixed;top:5vh;left:5vw;width:90vw;height:90vh;z-index:0;pointer-events:none;display:none;';
+document.body.insertBefore(overlay, document.body.firstChild);
     
     var links = document.querySelectorAll('a.internal-link');
     
