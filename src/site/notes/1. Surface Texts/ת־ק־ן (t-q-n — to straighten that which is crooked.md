@@ -1,0 +1,5 @@
+---
+{"dg-publish":true,"permalink":"/1-surface-texts/t-q-n-to-straighten-that-which-is-crooked/","dgPassFrontmatter":true,"dg-note-properties":{}}
+---
+
+A cognate with the Aramaic תַּקֵּן (_taqqēn_, “to set in order, prepare, repair”). Through Aramaic it entered later Hebrew as the standard term for “repair” in both physical and spiritual registers. Unlike the more common root for “repair” in Biblical Hebrew, ע־ש־ה (’-š-h, to make or do) or ח־ז־ק (ḥ-z-q, to strengthen), t-q-n appears in Mishnaic and Talmudic Hebrew as a technical term denoting the act of setting right, putting in order, or rectifying a physical or functional deformity. Its earliest attested usages are concrete: to prepare olives for pressing (Mishnah Menachot 8:4), to insert a wick into a lamp (Shabbat 2:5), or to straighten a bent beam or implement. In the medieval period, the plural _tiqqunim_ came to denote scribal corrections of Torah scrolls (e.g., _tiqqunei soferim_).
