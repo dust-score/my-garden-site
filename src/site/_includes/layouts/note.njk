@@ -110,11 +110,10 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;display:none;';
-    document.body.appendChild(overlay);
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;display:none;background:rgba(0,0,0,0);';
+    document.body.insertBefore(overlay, document.body.firstChild);
     
     var imageCache = {};
-    var activeImageLink = false;
     
     var links = document.querySelectorAll('a.internal-link');
     
@@ -130,7 +129,6 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
             link.classList.add('image-note-link');
             
             link.addEventListener('mouseenter', function() {
-              activeImageLink = true;
               var parser = new DOMParser();
               var doc = parser.parseFromString(imageCache[href], 'text/html');
               var img = doc.querySelector('img');
@@ -141,26 +139,11 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
             });
             
             link.addEventListener('mouseleave', function() {
-              activeImageLink = false;
               overlay.style.display = 'none';
             });
           }
         });
     });
-    
-    // Hide native preview elements when hovering image note (but not our overlay)
-    var observer = new MutationObserver(function(mutations) {
-      if (!activeImageLink) return;
-      mutations.forEach(function(mutation) {
-        mutation.addedNodes.forEach(function(node) {
-          if (node.id === 'image-preview-overlay') return;
-          if (node.tagName === 'DIV' || node.tagName === 'IMG' || node.tagName === 'HEADER' || node.tagName === 'P') {
-            node.style.display = 'none';
-          }
-        });
-      });
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
   }
 })();
 </script>
