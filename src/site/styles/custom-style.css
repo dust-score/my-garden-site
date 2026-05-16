@@ -234,18 +234,7 @@ a.is-unresolved:active {
 
 /* ===== IMAGE PREVIEW SYSTEM ===== */
 
-/* Image preview overlay - sits behind all content */
-#image-preview-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-}
-
+/* Image preview overlay - behind text, above background */
 #image-preview-overlay {
     display: none;
     position: fixed;
