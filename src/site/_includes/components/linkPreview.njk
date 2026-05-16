@@ -225,13 +225,9 @@
       hideTooltip();
     });
 
-    linkElement.addEventListener('mouseenter', function (event) {
+        linkElement.addEventListener('mouseenter', function (event) {
       clearTimeout(opacityTimeout);
       clearTimeout(contentTimeout);
-      // Skip native preview for image-note links
-      if (linkElement.classList.contains('image-note-link')) {
-        return;
-      }
       showTooltip(event);
     });
 
