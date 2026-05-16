@@ -253,40 +253,6 @@ a.is-unresolved:active {
     opacity: 0.3;
 }
 
-/* Hide headers in all link previews */
-div[class*="popup"] header,
-div[class*="preview"] header,
-div[class*="hover"] header,
-div[class*="popup"] h1,
-div[class*="preview"] h1,
-div[class*="hover"] h1,
-div[class*="popup"] .page-title,
-div[class*="preview"] .page-title,
-div[class*="hover"] .page-title,
-div[class*="popup"] .site-header,
-div[class*="preview"] .site-header,
-div[class*="hover"] .site-header,
-div[class*="popup"] .header-meta,
-div[class*="preview"] .header-meta,
-div[class*="hover"] .header-meta {
-    display: none !important;
-}
-
-/* Make image previews full-size without scroll */
-div[class*="popup"] img,
-div[class*="preview"] img,
-div[class*="hover"] img {
-    max-height: none !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-}
-
-div[class*="popup"],
-div[class*="preview"],
-div[class*="hover"] {
-    max-height: none !important;
-    overflow: visible !important;
-}
 /* Remove "t-k-n" title and header from all preview tooltips */
 #tooltip-content > div:first-child,
 #tooltip-content > header {
@@ -299,4 +265,3 @@ div[class*="hover"] {
         display: none !important;
     }
 }
-
