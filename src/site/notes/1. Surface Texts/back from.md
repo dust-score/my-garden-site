@@ -4,7 +4,7 @@
 
 Reconciliation… What does that mean? Retribution seems sufficient, as a word, since it is well known that there can never be a final blow when retribution runs the game. Restitution… To what state? What whole could ever be re-covered in its entirety from the dank and muggy past?
 
-  
+   
 
 Re- acknowledges a turning back, but without implication. 
 
