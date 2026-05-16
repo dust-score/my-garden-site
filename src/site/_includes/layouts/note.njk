@@ -114,7 +114,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     document.body.appendChild(overlay);
     
     var imageCache = {};
-    var currentImageLink = null;
+    var activeImageHref = null;
     
     var links = document.querySelectorAll('a.internal-link');
     
@@ -127,10 +127,9 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
         .then(function(html) {
           if (html.indexOf('image-note') > -1) {
             imageCache[href] = html;
-            link.classList.add('image-note-link');
             
-            link.addEventListener('mouseenter', function(e) {
-              currentImageLink = link;
+            link.addEventListener('mouseenter', function() {
+              activeImageHref = href;
               var parser = new DOMParser();
               var doc = parser.parseFromString(imageCache[href], 'text/html');
               var img = doc.querySelector('img');
@@ -138,27 +137,20 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
                 overlay.innerHTML = '<img src="' + img.src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
                 overlay.style.display = 'block';
               }
+              // Hide tooltip
+              var tooltip = document.getElementById('tooltip-content');
+              if (tooltip) tooltip.style.display = 'none';
             });
             
             link.addEventListener('mouseleave', function() {
-              currentImageLink = null;
+              activeImageHref = null;
               overlay.style.display = 'none';
+              var tooltip = document.getElementById('tooltip-content');
+              if (tooltip) tooltip.style.display = '';
             });
           }
         });
     });
-    
-    // Watch for tooltip and hide it only when hovering an image-note link
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        mutation.addedNodes.forEach(function(node) {
-          if (node.id === 'tooltip-content' && currentImageLink) {
-            node.style.display = 'none';
-          }
-        });
-      });
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
   }
 })();
 </script>
