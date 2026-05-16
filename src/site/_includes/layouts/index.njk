@@ -97,7 +97,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     document.body.appendChild(overlay);
     
     var imageCache = {};
-    var activeImageLink = null;
+    var activeImageLink = false;
     
     var links = document.querySelectorAll('a.internal-link');
     
@@ -126,20 +126,18 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
             link.addEventListener('mouseleave', function() {
               activeImageLink = false;
               overlay.style.display = 'none';
-              var tooltip = document.getElementById('tooltip-content');
-              if (tooltip) tooltip.style.opacity = '';
             });
           }
         });
     });
     
-    // Watch for tooltip and make it transparent when on an image note
+    // Hide all dynamically-added preview elements when hovering image note
     var observer = new MutationObserver(function(mutations) {
+      if (!activeImageLink) return;
       mutations.forEach(function(mutation) {
         mutation.addedNodes.forEach(function(node) {
-          if (node.id === 'tooltip-content' && activeImageLink) {
-            node.style.opacity = '0';
-            node.style.pointerEvents = 'none';
+          if (node.tagName === 'DIV' || node.tagName === 'IMG' || node.tagName === 'HEADER' || node.tagName === 'P') {
+            node.style.display = 'none';
           }
         });
       });
