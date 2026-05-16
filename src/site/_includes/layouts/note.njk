@@ -124,7 +124,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
       fetch(href)
         .then(function(res) { return res.text(); })
         .then(function(html) {
-          if (html.indexOf('image-note') > -1) {
+         if (html.indexOf('data-image-note') > -1) {
             imageCache[href] = html;
             link.classList.add('image-note-link');
             
