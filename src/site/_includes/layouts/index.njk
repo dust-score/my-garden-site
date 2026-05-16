@@ -82,67 +82,85 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     {%include "components/basesScript.njk"%}
 <script>
 (function() {
-  // Only run on desktop (screen width > 1000px, matching your mobile breakpoint)
-  if (window.innerWidth <= 1000) return;
+  // Wait for page to fully load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
   
-  // Create background overlay
-  var overlay = document.createElement('div');
-  overlay.id = 'image-preview-overlay';
-  overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;display:none;';
-  document.body.appendChild(overlay);
-  
-  var imageCache = {};
-  
-  // Remove headers from ALL link previews
-  var style = document.createElement('style');
-  style.textContent = '#image-overlay + header, .image-overlay-line + header, [id*="preview"] header, [id*="preview"] h1, [id*="preview"] .header-meta, [id*="preview"] .site-header { display: none !important; }';
-  document.head.appendChild(style);
-  
-  // Detect image note links
-  var links = document.querySelectorAll('a.internal-link');
-  links.forEach(function(link) {
-    var href = link.getAttribute('href');
-    if (!href) return;
+  function init() {
+    // Mobile check AFTER page is ready
+    if (window.innerWidth <= 1000) return;
     
-    fetch(href)
-      .then(function(res) { return res.text(); })
-      .then(function(html) {
-        if (html.indexOf('image-note') > -1) {
-          imageCache[href] = html;
-          link.classList.add('image-note-link');
+    // Create background overlay
+    var overlay = document.createElement('div');
+    overlay.id = 'image-preview-overlay';
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;display:none;';
+    document.body.appendChild(overlay);
+    
+    var imageCache = {};
+    
+    // Remove headers from ALL link previews
+    var style = document.createElement('style');
+    style.textContent = '[id*="preview"] header, [id*="preview"] h1, [id*="preview"] .header-meta, [id*="preview"] .site-header, [id*="preview"] .page-title { display: none !important; }';
+    document.head.appendChild(style);
+    
+    // Detect image note links
+    var links = document.querySelectorAll('a.internal-link');
+    console.log('Found links:', links.length);
+    
+    links.forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (!href) return;
+      
+      fetch(href)
+        .then(function(res) { return res.text(); })
+        .then(function(html) {
+          var isImageNote = html.indexOf('image-note') > -1;
+          console.log('Link:', href, 'Is image note:', isImageNote);
           
-          link.addEventListener('mouseenter', function(e) {
-            var parser = new DOMParser();
-            var doc = parser.parseFromString(imageCache[href], 'text/html');
-            var img = doc.querySelector('img');
-            if (img) {
-              overlay.innerHTML = '<img src="' + img.src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-              overlay.style.display = 'block';
-            }
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-          });
-          
-          link.addEventListener('mouseleave', function() {
-            overlay.style.display = 'none';
-          });
-        }
-      });
-  });
-  
-  // Kill native previews when our overlay is active
-  var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      mutation.addedNodes.forEach(function(node) {
-        if (overlay.style.display === 'block') {
-          if (node.id === 'image-overlay' || (node.tagName === 'IMG' && node.id !== 'image-preview-overlay')) {
-            node.remove();
+          if (isImageNote) {
+            imageCache[href] = html;
+            link.classList.add('image-note-link');
+            
+            link.addEventListener('mouseenter', function(e) {
+              var parser = new DOMParser();
+              var doc = parser.parseFromString(imageCache[href], 'text/html');
+              var img = doc.querySelector('img');
+              console.log('Image found:', !!img, 'Src:', img ? img.src : 'none');
+              if (img) {
+                overlay.innerHTML = '<img src="' + img.src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+                overlay.style.display = 'block';
+              }
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+            });
+            
+            link.addEventListener('mouseleave', function() {
+              overlay.style.display = 'none';
+            });
           }
-        }
+        })
+        .catch(function(err) {
+          console.log('Fetch error for', href, err);
+        });
+    });
+    
+    // Kill native previews when our overlay is active
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        mutation.addedNodes.forEach(function(node) {
+          if (overlay.style.display === 'block') {
+            if (node.id === 'image-overlay' || (node.tagName === 'IMG' && node !== overlay.firstChild)) {
+              node.remove();
+            }
+          }
+        });
       });
     });
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
 })();
 </script>
   </body>
