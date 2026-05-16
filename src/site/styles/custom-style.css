@@ -231,18 +231,59 @@ a.is-unresolved:active {
     background-color: transparent !important;
     padding: 0 !important;
 }
-/* Hide header in link previews */
-.hover-popup header,
-.popover header,
-.link-preview header,
-[class*="preview"] header {
+
+/* ===== IMAGE PREVIEW SYSTEM ===== */
+
+/* Image preview overlay - sits behind all content */
+#image-preview-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#image-preview-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.3;
+}
+
+/* Hide headers in all link previews */
+div[class*="popup"] header,
+div[class*="preview"] header,
+div[class*="hover"] header,
+div[class*="popup"] h1,
+div[class*="preview"] h1,
+div[class*="hover"] h1,
+div[class*="popup"] .page-title,
+div[class*="preview"] .page-title,
+div[class*="hover"] .page-title,
+div[class*="popup"] .site-header,
+div[class*="preview"] .site-header,
+div[class*="hover"] .site-header,
+div[class*="popup"] .header-meta,
+div[class*="preview"] .header-meta,
+div[class*="hover"] .header-meta {
     display: none !important;
 }
 
-/* Hide the h1 title in previews */
-.hover-popup h1,
-.popover h1,
-.link-preview h1,
-[class*="preview"] h1 {
-    display: none !important;
+/* Make image previews full-size without scroll */
+div[class*="popup"] img,
+div[class*="preview"] img,
+div[class*="hover"] img {
+    max-height: none !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+}
+
+div[class*="popup"],
+div[class*="preview"],
+div[class*="hover"] {
+    max-height: none !important;
+    overflow: visible !important;
 }
