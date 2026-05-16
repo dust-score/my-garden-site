@@ -265,3 +265,13 @@ a.is-unresolved:active {
         display: none !important;
     }
 }
+#image-preview-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
