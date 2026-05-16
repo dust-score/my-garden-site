@@ -299,11 +299,4 @@ div[class*="hover"] {
         display: none !important;
     }
 }
-#tooltip-content > div:first-child,
-#tooltip-content > header {
-    display: none !important;
-}
-/* Make the native tooltip invisible (but still present) when hovering image-note links */
-body:has(a.image-note-link:hover) #tooltip-content {
-    visibility: hidden !important;
-}
+
