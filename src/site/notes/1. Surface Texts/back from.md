@@ -4,7 +4,7 @@
 
 Re- is described by Watkins as a Latin combining form conceivably deriving from the Indo-European root *wret-* , a metathetical variant of *wert-*, “to turn”. 
 
-It [[1. Surface Texts/implies\|implies]] a turning back, an undoing, a [[1. Surface Texts/return to an original\|return to an original]]; repetition as in once more, restoration to a former state. This delineating the outline of a right, a natural desire, and also the point at which isms can intermingle and skew off-track, (the claim which can be stated with authority to one's own heritage, for example, versus the hardening of narratives into exclusionary coherence in the furtherance of the sovereign power of transpersonal entities) I wanted to take a closer look at the history of Tikkun.
+It [[1. Surface Texts/implies\|implies]] a turning back, an undoing, a [[1. Surface Texts/return to an original\|return to an original]]; repetition as in once more, restoration to a former state. This, delineating the outline of a right, a natural desire, and also the point at which isms can intermingle and skew off-track, (the claim which can be stated with authority to one's own heritage, for example, versus the hardening of narratives into exclusionary coherence in the furtherance of the sovereign power of transpersonal entities) I wanted to take a closer look at the history of Tikkun. 
 
 Reconciliation… What does that mean? Retribution seems sufficient, as a word, since it is well known that there can never be a final blow when retribution runs the game. Restitution… To what state? What whole could ever be re-covered in its entirety from the dank and muggy past?
 
