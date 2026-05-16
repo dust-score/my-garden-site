@@ -105,18 +105,23 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
   overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;display:none;';
   document.body.appendChild(overlay);
   
-  // Attach hover listeners to all internal links
+  // Store which links are image notes
+  var imageNoteLinks = [];
+  
+  // First pass: detect image notes
   var links = document.querySelectorAll('a.internal-link');
   for (var i = 0; i < links.length; i++) {
     (function(link) {
-      link.addEventListener('mouseenter', function() {
-        var href = link.getAttribute('href');
-        if (!href) return;
-        
-        fetch(href)
-          .then(function(res) { return res.text(); })
-          .then(function(html) {
-            if (html.indexOf('image-note') > -1) {
+      var href = link.getAttribute('href');
+      if (!href) return;
+      
+      fetch(href)
+        .then(function(res) { return res.text(); })
+        .then(function(html) {
+          if (html.indexOf('image-note') > -1) {
+            imageNoteLinks.push(link);
+            // Add hover behavior
+            link.addEventListener('mouseenter', function(e) {
               var div = document.createElement('div');
               div.innerHTML = html;
               var img = div.querySelector('img');
@@ -124,13 +129,27 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
                 overlay.innerHTML = '<img src="' + img.src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
                 overlay.style.display = 'block';
               }
-            }
-          });
-      });
-      
-      link.addEventListener('mouseleave', function() {
-        overlay.style.display = 'none';
-      });
+              // Stop the normal preview from appearing
+              e.stopPropagation();
+              e.preventDefault();
+            });
+            
+            link.addEventListener('mouseleave', function() {
+              overlay.style.display = 'none';
+            });
+            
+            // Block the normal preview entirely for image notes
+            link.addEventListener('mouseover', function(e) {
+              e.stopPropagation();
+              e.preventDefault();
+            }, true);
+            
+            link.addEventListener('pointerenter', function(e) {
+              e.stopPropagation();
+              e.preventDefault();
+            }, true);
+          }
+        });
     })(links[i]);
   }
 })();
