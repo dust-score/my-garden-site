@@ -15,15 +15,13 @@ he again.
 
 Amos Weisz, translation 
 
-_HÖRRESTE, SEHRESTE, im  
-Schlafsaal eintausendundeins,_
-
-_tagnächtlich  
-die Bären-Polka:_
-
-_sie schulen dich um,_
-
-_du wirst wieder  
-er._
-
-Paul Celan
+<div style="text-align: right;">
+_HÖRRESTE, SEHRESTE, im<br>
+Schlafsaal eintausendundeins,_<br><br>
+_tagnächtlich<br>
+die Bären-Polka:_<br><br>
+_sie schulen dich um,_<br><br>
+_du wirst wieder<br>
+er._<br><br>
+_Paul Celan_
+</div>
