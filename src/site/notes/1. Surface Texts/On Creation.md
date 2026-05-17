@@ -1,5 +1,5 @@
 ---
-{"type":"surface","tags":["surface","theory","luria","beta","unfinished"],"site":null,"dg-publish":true,"permalink":"/1-surface-texts/on-creation/","dgPassFrontmatter":true,"dg-note-properties":{"type":"surface","tags":["surface","theory","luria","beta","unfinished"],"site":null}}
+{"type":"surface","tags":["surface","theory","luria","beta","unfinished"],"dg-publish":true,"permalink":"/1-surface-texts/on-creation/","dgPassFrontmatter":true,"dg-note-properties":{"type":"surface","tags":["surface","theory","luria","beta","unfinished"]}}
 ---
 
 
