@@ -12,4 +12,6 @@
 
 _"The fundamental flaw of everything in olam is finitude, the consequence of which is incompleteness and/or inconsistency."_
 
+The world (_olam_) is the place where God is cloaked in godself.
+
 [[5. Citations/6. Papers/“Tikkun” Viewed from the Perspective of Systems PhilosophyPhilosophy Martin Zwick\|“Tikkun” Viewed from the Perspective of Systems PhilosophyPhilosophy Martin Zwick]]
