@@ -52,6 +52,10 @@ aside .sidebar {
     height: 100%;
     font-size: 14px;
 }
+/* Collapse empty aside so text doesn't appear shifted */
+aside:empty {
+    display: none;
+}
 
 h1, h2, h3, h4 {
     font-family: 'Garamond', 'Times New Roman', serif !important;
