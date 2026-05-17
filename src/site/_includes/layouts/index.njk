@@ -64,12 +64,9 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
         {% include imp %}
       {% endfor %}
     </main>
-    <script src="https://unpkg.com/lucide@latest"></script>
+
     {% if settings.dgShowBacklinks === true or settings.dgShowLocalGraph === true or settings.dgShowToc === true or dynamics.sidebar.top.length > 0 or dynamics.sidebar.bottom.length > 0%}
-    {%include "components/sidebar.njk"%}
-    {% endif %}
-    {% if settings.dgShowBacklinks === true or settings.dgShowLocalGraph === true or settings.dgShowToc === true or dynamics.sidebar.top.length > 0 or dynamics.sidebar.bottom.length > 0%}
-     {%include "components/sidebar.njk"%}
+      {%include "components/sidebar.njk" %}
     {%endif%}
 
     {% if settings.dgLinkPreview === true %}
@@ -96,8 +93,8 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:0;pointer-events:none;display:none;';
-document.body.insertBefore(overlay, document.body.firstChild);
+    overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:0;pointer-events:none;display:none;';
+    document.body.insertBefore(overlay, document.body.firstChild);
     
     var links = document.querySelectorAll('a.internal-link');
     
@@ -111,7 +108,6 @@ document.body.insertBefore(overlay, document.body.firstChild);
           var parser = new DOMParser();
           var doc = parser.parseFromString(html, 'text/html');
           
-          // Check for our unique marker
           if (doc.getElementById('imgnote-marker')) {
             link.classList.add('image-note-link');
             var img = doc.querySelector('img');
@@ -129,40 +125,6 @@ document.body.insertBefore(overlay, document.body.firstChild);
           }
         });
     });
-  }
-})();
-</script>
-<script>
-(function() {
-  // Ensure Lucide is available before the Map button uses it
-  if (typeof lucide === 'undefined') {
-    var script = document.createElement('script');
-    script.src = 'https://unpkg.com/lucide@latest';
-    script.onload = function() {
-      if (window.__graph) {
-        // Override openFullGraph to avoid lucide errors
-        var origOpen = window.__graph.openFullGraph;
-        window.__graph.openFullGraph = function() {
-          try { origOpen(); } catch(e) {
-            // If lucide still fails, just show the graph container
-            var full = document.getElementById('full-graph');
-            if (full) full.style.display = '';
-          }
-        };
-      }
-    };
-    document.head.appendChild(script);
-  } else {
-    // Already loaded – just patch
-    if (window.__graph) {
-      var origOpen = window.__graph.openFullGraph;
-      window.__graph.openFullGraph = function() {
-        try { origOpen(); } catch(e) {
-          var full = document.getElementById('full-graph');
-          if (full) full.style.display = '';
-        }
-      };
-    }
   }
 })();
 </script>
