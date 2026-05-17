@@ -1,3 +1,4 @@
+/* ===== BASE STYLES ===== */
 body {
     background-color: #fff;
     color: #000;
@@ -7,52 +8,49 @@ body {
     -moz-osx-font-smoothing: unset;
     --accent-color: #ff0000;
     --link-color: #000000;
-}
-
-nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-meta, header h1 {
-    display: none;
-}
- 
-body {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    display: block;          /* ← overwrite the flex that created two columns */
     min-height: 100vh;
     margin: 0;
     padding: 0;
 }
- 
+
+/* Hide all headers, nav, filetree, site title, page title, header meta */
+nav.navbar,
+.filetree-wrapper,
+.site-header,
+.site-title,
+.page-title,
+.header-meta,
+header h1 {
+    display: none;
+}
+
+/* ===== MAIN CONTENT ===== */
 main.content {
-    flex: 1;
     max-width: 700px;
     margin: 2rem 0 2rem 2rem;
     padding: 0 1rem;
     font-size: 15px;
     text-align: justify;
+    float: none;             /* ensure it's not affected by leftover floats */
+    width: auto;
 }
- 
+
 main.content p {
     font-size: 15px;
     text-align: justify;
 }
 
+/* ===== SIDEBAR (hide completely) ===== */
 aside {
-    flex: 1;
-    max-width: 50%;
-    position: sticky;
-    top: 2rem;
-    height: 80vh;
-    margin: 2rem 2rem 1rem 1rem;
+    display: none !important;
 }
 
 aside .sidebar {
-    display: block;
-    border: none;
-    padding: 0;
-    height: 100%;
-    font-size: 14px;
+    display: none;
 }
 
+/* ===== HEADINGS ===== */
 h1, h2, h3, h4 {
     font-family: 'Garamond', 'Times New Roman', serif !important;
     font-weight: bold;
@@ -60,6 +58,7 @@ h1, h2, h3, h4 {
     border-bottom: 2px solid #000;
 }
 
+/* ===== LINKS ===== */
 a {
     color: #000 !important;
     text-decoration: none !important;
@@ -74,6 +73,18 @@ a:hover {
     border-color: #ff0000;
 }
 
+a.internal-link {
+    /* keep consistent with other links */
+}
+
+a.internal-link[data-note-icon]::before,
+.internal-link::before,
+a[data-note-icon]::before {
+    display: none !important;
+    content: none !important;
+    background-image: none !important;
+}
+
 body.links-note-icon .internal-link[data-note-icon]::before {
     display: none !important;
 }
@@ -83,20 +94,46 @@ body.links-note-icon .internal-link[data-note-icon]::before {
     padding-right: 0 !important;
 }
 
+.markdown-preview-view a.is-unresolved {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+a.is-unresolved,
+a.is-unresolved:link,
+a.is-unresolved:visited,
+a.is-unresolved:hover,
+a.is-unresolved:active {
+    pointer-events: none;
+    text-decoration: none !important;
+    border: none !important;
+    color: #000 !important;
+    cursor: default;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+a.internal-link[href*="%5C"] {
+    pointer-events: none;
+    text-decoration: none !important;
+    border: none !important;
+    color: #000 !important;
+    cursor: default;
+    padding: 0 !important;
+}
+
+/* ===== BACKLINKS ===== */
 .backlinks {
     display: none;
 }
 
-.graph .graph-title-container {
-    display: none;
-}
-
-* {
-    font-family: 'Garamond', 'Times New Roman', serif;
-}
-
+/* ===== GRAPH ===== */
+.graph,
+.graph-title-container,
+#graph-controls,
+#graph-component,
 #link-graph {
-    display: none;
+    display: none !important;
 }
 
 #full-graph {
@@ -113,32 +150,48 @@ body.links-note-icon .internal-link[data-note-icon]::before {
     height: 100% !important;
 }
 
-.internal-link[data-note-icon]::before,
-.internal-link::before,
-a[data-note-icon]::before {
-    display: none !important;
-    content: none !important;
-    background-image: none !important;
+/* ===== TABLES ===== */
+table, tr, td, th {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-.markdown-preview-view a.is-unresolved {
+.re-table td {
+    font-weight: normal !important;
+}
+
+.re-table a {
+    color: #000 !important;
     text-decoration: none !important;
-    border-bottom: none !important;
+    border: 1px solid #000 !important;
+    padding: 0 2px !important;
+    font-weight: normal !important;
+}
+
+.re-table a:hover {
+    color: #000 !important;
+    background-color: #ff0000 !important;
+    border-color: #ff0000 !important;
+}
+
+/* ===== RESPONSIVE / MOBILE ===== */
+.desktop-only {
+    display: block;
+}
+.mobile-only {
+    display: none;
 }
 
 @media (max-width: 1000px) {
     body {
-        flex-direction: column;
+        /* no flex, just normal block */
     }
 
     main.content {
         max-width: 100%;
         margin: 2rem auto;
         padding: 0 0 2rem 0;
-    }
-
-    aside {
-        display: none;
     }
 
     #full-graph {
@@ -153,15 +206,7 @@ a[data-note-icon]::before {
     body > a[style*="position:fixed"][style*="top:2rem"][style*="right:2rem"] {
         display: none !important;
     }
-}
-.desktop-only {
-    display: block;
-}
-.mobile-only {
-    display: none;
-}
 
-@media (max-width: 1000px) {
     .desktop-only {
         display: none;
     }
@@ -169,81 +214,23 @@ a[data-note-icon]::before {
         display: block;
     }
 }
-table, tr, td, th {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-.re-table td {
-    font-weight: normal !important;
-}
-
-.re-table a {
-    font-weight: normal !important;
-}
-.re-table a {
-    color: #000 !important;
-    text-decoration: none !important;
-    border: 1px solid #000 !important;
-    padding: 0 2px !important;
-}
-
-.re-table a:hover {
-    color: #000 !important;
-    background-color: #ff0000 !important;
-    border-color: #ff0000 !important;
-}
-a {
-    color: #000 !important;
-    text-decoration: none !important;
-    text-decoration-line: none !important;
-    text-decoration-color: transparent !important;
-    border: 1px solid #000;
-    padding: 0 2px;
-    font-family: 'Garamond', 'Times New Roman', serif;
-    border-bottom: 1px solid #000 !important;
-}
-
-a:hover {
-    color: #000 !important;
-    background-color: #ff0000;
-    border-color: #ff0000;
-    border-bottom: 1px solid #ff0000 !important;
-}
-a.internal-link[href*="%5C"] {
-    pointer-events: none;
-    text-decoration: none !important;
-    border: none !important;
-    color: #000 !important;
-    cursor: default;
-    padding: 0 !important;
-}
-a.is-unresolved,
-a.is-unresolved:link,
-a.is-unresolved:visited,
-a.is-unresolved:hover,
-a.is-unresolved:active {
-    pointer-events: none;
-    text-decoration: none !important;
-    border: none !important;
-    color: #000 !important;
-    cursor: default;
-    background-color: transparent !important;
-    padding: 0 !important;
-}
 
 /* ===== IMAGE PREVIEW SYSTEM ===== */
-
-/* Image preview overlay - behind text, above background */
 #image-preview-overlay {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 15vh;
+    left: 30vw;
+    width: 50vw;
+    height: 70vh;
     z-index: 0;
     pointer-events: none;
+}
+
+#image-preview-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Remove "t-k-n" title and header from all preview tooltips */
@@ -258,16 +245,8 @@ a.is-unresolved:active {
         display: none !important;
     }
 }
-/* Hide graph title and controls everywhere */
-.graph-title-container,
-#graph-controls,
-#graph-component {
-    display: none !important;
-}
-/* Completely hide the local graph component and its title */
-.graph,
-.graph-title-container,
-#graph-controls,
-#graph-component {
-    display: none !important;
+
+/* ===== GLOBAL RESETS ===== */
+* {
+    font-family: 'Garamond', 'Times New Roman', serif;
 }
