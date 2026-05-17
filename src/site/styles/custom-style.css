@@ -251,3 +251,13 @@ table, tr, td, th {
 * {
     font-family: 'Garamond', 'Times New Roman', serif;
 }
+/* Hide duplicate graph/sidebar elements anywhere they shouldn't be */
+body > .graph,
+body > #graph-component,
+body > .graph-title-container,
+body > #graph-controls,
+body > .sidebar-container:not(aside .sidebar-container),
+body > .backlinks,
+body > .sidebar:not(aside) {
+    display: none !important;
+}
