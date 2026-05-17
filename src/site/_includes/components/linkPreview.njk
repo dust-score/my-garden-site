@@ -113,8 +113,8 @@
     var elem = event.currentTarget || event.target;
     if (!elem) return;
     
-    // Skip if this is an image-note link
-    if (elem.classList.contains('image-note-link') || elem.getAttribute('href').indexOf('data-imgprev') > -1) {
+    // Skip native preview for image-note links
+    if (elem.classList.contains('image-note-link')) {
       return;
     }
     
