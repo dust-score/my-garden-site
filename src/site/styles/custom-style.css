@@ -258,3 +258,9 @@ a.is-unresolved:active {
         display: none !important;
     }
 }
+/* Hide graph title and controls everywhere */
+.graph-title-container,
+#graph-controls,
+#graph-component {
+    display: none !important;
+}
