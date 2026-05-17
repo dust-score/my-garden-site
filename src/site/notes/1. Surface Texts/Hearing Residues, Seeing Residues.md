@@ -12,3 +12,18 @@ they are reschooling you,
 
 you are becoming 
 he again.
+
+Amos Weisz, translation 
+
+_HÖRRESTE, SEHRESTE, im  
+Schlafsaal eintausendundeins,_
+
+_tagnächtlich  
+die Bären-Polka:_
+
+_sie schulen dich um,_
+
+_du wirst wieder  
+er._
+
+Paul Celan

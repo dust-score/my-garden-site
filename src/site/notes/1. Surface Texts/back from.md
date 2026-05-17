@@ -16,6 +16,6 @@ Reconciliation… What does that mean? Retribution seems sufficient, as a word, 
 
 It appeared that I could find a consolation to my etymological quandary in the idea of _implication_. Re- acknowledges a turning back, but without implication. 
 
-[[3. Concepts/implication\|Implication]]: the fact that time passed as we moved about our orbit, this orbit being a spiral form hurtling through space. We cannot re-turn to what was left behind, but only to a new iteration of it, to which we are [[1. Surface Texts/Hearing Residues, Seeing Residues\|re]]-newedly, and in grown form, attached.
+[[3. Concepts/implication\|Implication]]: the fact that time passed as we moved about our orbit, this orbit being a spiral form hurtling through space. [[1. Surface Texts/Hearing Residues, Seeing Residues\|Re]]-turn to what was left behind and love the accelerated flurry of intermittent change that taunts your conception of what should have been instead. 
 
 
