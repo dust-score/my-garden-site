@@ -1,0 +1,8 @@
+---
+{"dg-publish":true,"permalink":"/3-concepts/tsimtsum-nahman/","tags":["concept","luria","finitude","tsimtsum","citation"],"dg-note-properties":{"type":"concept","tags":["concept","luria","finitude","tsimtsum","citation"],"author":"Nahman of Bratzlav","source":"Zvi Mark, Mysticism and Madness, The Religious Thought of Rabbi Nachman of Braslav; Chapter 2, Silence and Melody Facing the Void: On the Place of the Mystic Melody in the Confrontation with Heresy in the Writings of R. Nachman of Bratslav","pages":"156","site":null}}
+---
+
+“When Hashem, be He blessed, wished to create the world, there was no place in which to create it, for everything was infinite. He therefore constricted the light to the sides, and via this constriction (tzimtzum) a void was formed. And inside this void, all the ‘days’ and ‘measures’ came to be, which are the creation of the world. Now this void was essential for Creation, for without the void, there would have been no room for the world to exist. And this constriction of the void is incomprehensible and will remain so until the end of time. This is because two contradictory statements must be made in its regard: being and non-being. On the one hand, the void comes about through constriction – God, as it were, constricted His divinity from there. Thus, God is not there. Were that not to be the case, this would not be a void but all would be the Infinite One and there would be absolutely no room for Creation. Yet in a deeper sense, divinity surely does exist there, for nothing exists without [God’s] life-force.” 
+
+[[Silence, Song and Screaming Really Loud\|Silence, Song and Screaming Really Loud]]
+[[3. Concepts/Nahman On Paradox\|Nahman On Paradox]]

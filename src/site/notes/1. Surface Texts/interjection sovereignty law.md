@@ -1,0 +1,23 @@
+---
+{"dg-publish":true,"permalink":"/1-surface-texts/interjection-sovereignty-law/","dg-note-properties":{}}
+---
+
+When a sovereign claims the authority to decide that the conditions under which the Law was binding have been superseded, they inhabit the role of the   messianic figure. 
+
+This   _Aufhebung_ (sublation, a simultaneous negation, preservation, and lifting-above) of the Law renders it inoperative for specific contexts while preserving its structure for future re-engagement. The declaration by a sovereign power of a state of exception, consequently of messianic time, is structurally antinomian. It is what Carl Schmitt terms the sovereign exception: a decision that suspends the normative  order in its entirety while claiming to stand both inside and outside that order as its ultimate guarantor. The declaration of “messianic time” is thus a performative speech  act that justifies the suspension of the very Law whose observance was, within the normative model (i.e. the theosophical-theurgical model of Tikkun), meant to bring about just that, the eschatonic end of necessary limitations.
+
+The essential quandary in regards to this question is that of the extent of a sovereign’s sovereignty, the topography that their speech has jurisdiction over. The state of exception proclaimed by the sovereign power does not, after all, transform the condition of finitude within reality for its subjects; it merely demands faith in the redeemer’s sovereign authority, thereby reinforcing their power. The believer is required to hand over their moral and interpretive agency to the judgment of one who claims to stand beyond the Law. This produces the condition Agamben terms _bare life_: existence exposed to power without the protection of a normative order. This is what I understand as exteriorised messianism: the abdication of the messianic function to a redeemptive power, arbiter of agency, and ultimate authority.
+
+Agamben’s _inoperativity_ is one answer, by way of refusal, to this imposition by the sovereign on the subject: it is a  disarmament within the domicile of the self of the forces which would act upon it, and by extension a refusal of the reproduction of their productive machinery. This is, however, a mode of agency representative of that last residue of autonomy available to the subject of _bare life_. My personal position is not that limited.
+
+What does it mean for the subject, the comparatively powerless individual, to internalise the messianic, by way of implication, into their life? 
+
+To profane, in Agamben’s sense, is  to return what has been relegated to the sphere of the sacred back to common use. This is the messianic act of Tikkun that the agentic subject performs: the abolition of the Law within the conditions of the self, performing an _Aufhebung_ of the purview of sovereign power. This renders the machine of the reproduction of the conditions of separation between human and sacred inoperative: an internal state of exception. 
+
+In the Midrash of Moses ascending to receive the Torah, the angels object to a creature born of woman receiving the Law. In order to obtain it nevertheless, Moses does not claim sovereign authority over the angels. Instead, he demonstrates by an act of interpretation that a Law addressing murder, theft, and adultery has no purchase on beings for whom death, property, and desire are irrelevant categories.
+
+The figure Moses both understands the necessity of the Law for human life and establishes his non-beholdenness to the angels’ claim of jurisdiction over it. By exposing the categorical inapplicability of the angels’ exclusive claim to the Law, Moses  brings something from the  sacred, that which is held as separate to the mortal, inaccessible  and therefore inarticulated,  back into the realm of common use. 
+
+The act of Tikkun here is this: the implication of the sacred into an accessible context of use through the discernment of its shape and function within the constraints of finitude. Here, the “messianic subject” articulates that which emerges from the realm of the inarticulable by engaging their self with this — the ineffable or unutterable: that which lies beyond the walls. 
+
+It is in this way that a “messianic mode of being” can be assumed. It requires an ongoing engagement in the labour of distinguishing the Law’s life-giving order from its imposition by structures that claim its authority in furtherance of their own reproductive power.

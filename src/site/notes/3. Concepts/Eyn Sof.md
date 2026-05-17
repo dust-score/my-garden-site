@@ -3,7 +3,7 @@
 ---
 
 <div style="text-align: right;">
-_Eyn Sof_<br>
+Eyn Sof<br>
 </div>
 
 _eyn_ (אין) = "there is no" / _sof_ (סוף) = "end"
