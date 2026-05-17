@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
+ 
 nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-meta, header h1 {
     display: none;
 }
