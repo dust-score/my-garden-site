@@ -129,5 +129,39 @@ document.body.insertBefore(overlay, document.body.firstChild);
   }
 })();
 </script>
+<script>
+(function() {
+  // Ensure Lucide is available before the Map button uses it
+  if (typeof lucide === 'undefined') {
+    var script = document.createElement('script');
+    script.src = 'https://unpkg.com/lucide@latest';
+    script.onload = function() {
+      if (window.__graph) {
+        // Override openFullGraph to avoid lucide errors
+        var origOpen = window.__graph.openFullGraph;
+        window.__graph.openFullGraph = function() {
+          try { origOpen(); } catch(e) {
+            // If lucide still fails, just show the graph container
+            var full = document.getElementById('full-graph');
+            if (full) full.style.display = '';
+          }
+        };
+      }
+    };
+    document.head.appendChild(script);
+  } else {
+    // Already loaded – just patch
+    if (window.__graph) {
+      var origOpen = window.__graph.openFullGraph;
+      window.__graph.openFullGraph = function() {
+        try { origOpen(); } catch(e) {
+          var full = document.getElementById('full-graph');
+          if (full) full.style.display = '';
+        }
+      };
+    }
+  }
+})();
+</script>
   </body>
 </html>
