@@ -7,9 +7,10 @@ body {
     -moz-osx-font-smoothing: unset;
     --accent-color: #ff0000;
     --link-color: #000000;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -20,12 +21,15 @@ nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-m
 }
 
 main.content {
-    flex: 1;
+    grid-column: 1;
     max-width: 700px;
+    width: 100%;
+    justify-self: start;
     margin: 2rem 0 2rem 2rem;
     padding: 0 1rem;
     font-size: 15px;
     text-align: justify;
+    overflow-wrap: break-word;
 }
 
 main.content p {
@@ -33,25 +37,22 @@ main.content p {
     text-align: justify;
 }
 
-/* Empty aside stays visible on desktop to preserve the right column */
 aside {
-    flex: 1;
-    max-width: 50%;
-    position: sticky;
-    top: 2rem;
-    height: 80vh;
-    margin: 2rem 2rem 1rem 1rem;
-}
-
-aside .sidebar {
-    display: block;
-    border: none;
+    grid-column: 2;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
     padding: 0;
-    height: 100%;
-    font-size: 14px;
 }
 
-/* ❌ Removed: aside:empty { display: none; } */
+aside .sidebar,
+aside .graph,
+aside .backlinks,
+aside .graph-title-container,
+aside #link-graph {
+    display: none !important;
+}
 
 h1, h2, h3, h4 {
     font-family: 'Garamond', 'Times New Roman', serif !important;
@@ -106,6 +107,11 @@ body.links-note-icon .internal-link[data-note-icon]::before {
     left: auto !important;
     width: 50% !important;
     height: 100vh !important;
+    display: none; /* hidden by default, shown by Map button */
+}
+
+#full-graph.show {
+    display: block !important;
 }
 
 #full-graph #full-graph-container {
@@ -126,13 +132,13 @@ a[data-note-icon]::before {
     border-bottom: none !important;
 }
 
-/* ========= MOBILE ========= */
 @media (max-width: 1000px) {
     body {
-        flex-direction: column;
+        display: block;
     }
 
     main.content {
+        grid-column: auto;
         max-width: 100%;
         margin: 2rem auto;
         padding: 0 0 2rem 0;
@@ -142,12 +148,10 @@ a[data-note-icon]::before {
         display: none;
     }
 
-    /* Hides the Map button */
     body > a[style*="position:fixed"][style*="top:2rem"][style*="right:2rem"] {
         display: none !important;
     }
 
-    /* *** NO MAP AT ALL ON MOBILE *** */
     #full-graph {
         display: none !important;
     }
@@ -180,14 +184,11 @@ table, tr, td, th {
 }
 
 .re-table a {
-    font-weight: normal !important;
-}
-
-.re-table a {
     color: #000 !important;
     text-decoration: none !important;
     border: 1px solid #000 !important;
     padding: 0 2px !important;
+    font-weight: normal !important;
 }
 
 .re-table a:hover {
@@ -237,14 +238,14 @@ a.is-unresolved:active {
     padding: 0 !important;
 }
 
-/* ===== IMAGE PREVIEW SYSTEM ===== */
+/* Image preview overlay */
 #image-preview-overlay {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 15vh;
+    left: 30vw;
+    width: 50vw;
+    height: 70vh;
     z-index: 0;
     pointer-events: none;
 }
