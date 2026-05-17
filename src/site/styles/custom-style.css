@@ -264,3 +264,10 @@ a.is-unresolved:active {
 #graph-component {
     display: none !important;
 }
+/* Completely hide the local graph component and its title */
+.graph,
+.graph-title-container,
+#graph-controls,
+#graph-component {
+    display: none !important;
+}
