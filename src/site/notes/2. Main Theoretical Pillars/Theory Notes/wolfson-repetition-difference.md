@@ -1,5 +1,5 @@
 ---
-{"type":"theory","tags":["theory","deleuze","repetition","wolfson","unfinished"],"dg-publish":true,"site":null,"permalink":"/2-main-theoretical-pillars/theory-notes/wolfson-repetition-difference/","dgPassFrontmatter":true,"dg-note-properties":{"type":"theory","tags":["theory","deleuze","repetition","wolfson","unfinished"],"site":null}}
+{"dg-publish":true,"permalink":"/2-main-theoretical-pillars/theory-notes/wolfson-repetition-difference/","tags":["theory","deleuze","repetition","wolfson","unfinished"],"dg-note-properties":{"type":"theory","tags":["theory","deleuze","repetition","wolfson","unfinished"],"site":null}}
 ---
 
 Wolfson delineates compossible thought on the matter of repetition in motion through time constituting novelty, in Derrida and [[2. Main Theoretical Pillars/Theory Notes/deleuze-repetition\|Deleuze]]. 

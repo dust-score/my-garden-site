@@ -1,5 +1,5 @@
 ---
-{"type":"concept","tags":["concept","mythical"],"site":null,"dg-publish":true,"permalink":"/3-concepts/tsimtsum/","dgPassFrontmatter":true,"dg-note-properties":{"type":"concept","tags":["concept","mythical"],"site":null}}
+{"dg-publish":true,"permalink":"/3-concepts/tsimtsum/","tags":["concept","mythical"],"dg-note-properties":{"type":"concept","tags":["concept","mythical"],"site":null}}
 ---
 
 Tsimtsum is the creation of [[2. Main Theoretical Pillars/Theory Notes/Weiss-citation-empty-space\|_the empty space_]] which was formed when [[3. Concepts/Eyn Sof\|Eyn Sof]] retracted from itself in order to [[1. Surface Texts/to turn\|re]]-enter its own absence with distinction. If the realm of _[[1. Surface Texts/Tohu_ (chaos)\|tohu va vohu]]_ was undifferentiated, which was chaos, retraction was the first necessary step for the emergence of order, or differentiation between aspects.

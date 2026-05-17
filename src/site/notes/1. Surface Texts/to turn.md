@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/to-turn/","dgPassFrontmatter":true,"dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/1-surface-texts/to-turn/","dg-note-properties":{}}
 ---
 
 

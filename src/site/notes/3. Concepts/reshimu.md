@@ -1,5 +1,5 @@
 ---
-{"type":"concept","tags":["concept"],"site":null,"dg-publish":true,"permalink":"/3-concepts/reshimu/","dgPassFrontmatter":true,"dg-note-properties":{"type":"concept","tags":["concept"],"site":null}}
+{"dg-publish":true,"permalink":"/3-concepts/reshimu/","tags":["concept"],"dg-note-properties":{"type":"concept","tags":["concept"],"site":null}}
 ---
 
 reshimu (רשימו)

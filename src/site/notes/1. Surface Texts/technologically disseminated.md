@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"tags":["citation"],"permalink":"/1-surface-texts/technologically-disseminated/","dgPassFrontmatter":true,"dg-note-properties":{"tags":["citation"]}}
+{"dg-publish":true,"permalink":"/1-surface-texts/technologically-disseminated/","tags":["citation"],"dg-note-properties":{"tags":["citation"]}}
 ---
 
 <div id="imgnote-marker" style="display:none"></div>

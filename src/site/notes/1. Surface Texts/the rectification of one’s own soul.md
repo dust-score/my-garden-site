@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/the-rectification-of-one-s-own-soul/","dgPassFrontmatter":true,"dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/1-surface-texts/the-rectification-of-one-s-own-soul/","dg-note-properties":{}}
 ---
 
 <div style="text-align: right;">

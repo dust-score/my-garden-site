@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/tohu-chaos/","dgPassFrontmatter":true,"dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/1-surface-texts/tohu-chaos/","dg-note-properties":{}}
 ---
 
 <div style="text-align: right;">

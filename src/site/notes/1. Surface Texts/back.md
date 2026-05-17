@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/back/","dgPassFrontmatter":true,"dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/1-surface-texts/back/","dg-note-properties":{}}
 ---
 
 <div id="imgnote-marker" style="display:none"></div>

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"tags":["concept"],"permalink":"/1-surface-texts/back-from/","dgPassFrontmatter":true,"dg-note-properties":{"tags":["concept"]}}
+{"dg-publish":true,"permalink":"/1-surface-texts/back-from/","tags":["concept"],"dg-note-properties":{"tags":["concept"]}}
 ---
 
 Re- is described by Watkins as a Latin combining form conceivably deriving from the Indo-European root *wret-* , a metathetical variant of *wert-*, “[[1. Surface Texts/to turn\|to turn]]”. 

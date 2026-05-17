@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/kavanot/","dgPassFrontmatter":true,"dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/1-surface-texts/kavanot/","dg-note-properties":{}}
 ---
 
 _Kavvanah_ denotes the intentionality and purposeful aim of the heart in the performance of ritual and other acts. As Rosslyn Brown shows in “Kabbalah and Creativity”, _kavvanah_ in Kabbalah came to hold theurgic power, constituting a requisite component in the rectification of the world.

@@ -1,5 +1,5 @@
 ---
-{"type":"concept","tags":["concept","mythical"],"site":null,"dg-publish":true,"permalink":"/3-concepts/shevirat-ha-kelim/","dgPassFrontmatter":true,"dg-note-properties":{"type":"concept","tags":["concept","mythical"],"site":null}}
+{"dg-publish":true,"permalink":"/3-concepts/shevirat-ha-kelim/","tags":["concept","mythical"],"dg-note-properties":{"type":"concept","tags":["concept","mythical"],"site":null}}
 ---
 
 In [[3. Concepts/Luria's Safed Circle\|Lurianic]] Kabbalah, _kelim_ (כלים, singular _kli_) are the vessels [[1. Surface Texts/On Creation\|formed]] from the _[[3. Concepts/reshimu\|reshimu]]_ (the trace of divine light left in the vacated space after _[[3. Concepts/tsimtsum\|tsimtsum]]_). They were created to contain the divine light (_or_) that re-entered the void through the _qaw_ (the line of controlled divine emanation).

@@ -1,5 +1,5 @@
 ---
-{"tags":["alpha","surface","unfinished","gardenEntry"],"dg-publish":true,"dg-home":true,"permalink":"/1-surface-texts/tikkun/","dgPassFrontmatter":true,"dg-note-properties":{"tags":["alpha","surface","unfinished","gardenEntry"]}}
+{"dg-publish":true,"permalink":"/1-surface-texts/tikkun/","tags":["alpha","surface","unfinished","gardenEntry"],"dg-note-properties":{"tags":["alpha","surface","unfinished","gardenEntry"]}}
 ---
 
 

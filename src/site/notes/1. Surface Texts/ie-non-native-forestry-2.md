@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/ie-non-native-forestry-2/","dgPassFrontmatter":true,"dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/1-surface-texts/ie-non-native-forestry-2/","dg-note-properties":{}}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-surface-texts/tikkun-olam/","dgPassFrontmatter":true,"dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/1-surface-texts/tikkun-olam/","dg-note-properties":{}}
 ---
 
 <div style="text-align: right;">

@@ -1,5 +1,5 @@
 ---
-{"type":"concept","tags":["citation","concept","implication","unfinished"],"used_in":["[[TIKKUN]]"],"dg-publish":true,"site":null,"permalink":"/3-concepts/on-folding/","dgPassFrontmatter":true,"dg-note-properties":{"type":"concept","tags":["citation","concept","implication","unfinished"],"used_in":["[[TIKKUN]]"],"site":null}}
+{"dg-publish":true,"permalink":"/3-concepts/on-folding/","tags":["citation","concept","implication","unfinished"],"dg-note-properties":{"type":"concept","tags":["citation","concept","implication","unfinished"],"used_in":["[[TIKKUN]]"],"site":null}}
 ---
 
 *A fold is always folded within a fold, like a cavern in a cavern. The unit of matter. the smallest element of the labyrinth, is the fold, not the point which is never a part, but a simple extremity of the line.[^1]

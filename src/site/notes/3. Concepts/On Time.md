@@ -1,5 +1,5 @@
 ---
-{"type":"concept","tags":["finitude","implication","time","unfinished"],"citations":null,"site":null,"dg-publish":true,"permalink":"/3-concepts/on-time/","dgPassFrontmatter":true,"dg-note-properties":{"type":"concept","tags":["finitude","implication","time","unfinished"],"citations":null,"site":null}}
+{"dg-publish":true,"permalink":"/3-concepts/on-time/","tags":["finitude","implication","time","unfinished"],"dg-note-properties":{"type":"concept","tags":["finitude","implication","time","unfinished"],"citations":null,"site":null}}
 ---
 
 "The beginning is embedded in the end, and the end in the beginning." [^1]

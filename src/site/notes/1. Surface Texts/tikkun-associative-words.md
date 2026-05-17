@@ -1,5 +1,5 @@
 ---
-{"type":"surface","tags":["surface","tikkun","concept"],"site":null,"dg-publish":true,"permalink":"/1-surface-texts/tikkun-associative-words/","dgPassFrontmatter":true,"dg-note-properties":{"type":"surface","tags":["surface","tikkun","concept"],"site":null}}
+{"dg-publish":true,"permalink":"/1-surface-texts/tikkun-associative-words/","tags":["surface","tikkun","concept"],"dg-note-properties":{"type":"surface","tags":["surface","tikkun","concept"],"site":null}}
 ---
 
 angst<br>

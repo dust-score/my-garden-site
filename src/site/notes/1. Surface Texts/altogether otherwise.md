@@ -1,5 +1,5 @@
 ---
-{"type":"citation","author":"Elliot R. Wolfson","site":null,"dg-publish":true,"permalink":"/1-surface-texts/altogether-otherwise/","dgPassFrontmatter":true,"dg-note-properties":{"type":"citation","author":"Elliot R. Wolfson","site":null}}
+{"dg-publish":true,"permalink":"/1-surface-texts/altogether-otherwise/","dg-note-properties":{"type":"citation","author":"Elliot R. Wolfson","site":null}}
 ---
 
 _"at the end there is a retrieval of the unity of the beginning, but, paraphrasing the words of Heidegger, what is achieved again is altogether otherwise; that is, the return of all things to the one is not the reverberation of the same but the reclamation of divergence."_

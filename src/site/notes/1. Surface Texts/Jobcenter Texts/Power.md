@@ -1,5 +1,5 @@
 ---
-{"type":"surface","dg-publish":true,"site":null,"dg-home":false,"permalink":"/1-surface-texts/jobcenter-texts/power/","dgPassFrontmatter":true,"dg-note-properties":{"type":"surface","site":null}}
+{"dg-publish":true,"permalink":"/1-surface-texts/jobcenter-texts/power/","dg-note-properties":{"type":"surface","site":null}}
 ---
 
 [[2. Main Theoretical Pillars/Sovereignty\|Power]] gurgles down fluorescent halls adjoining [[2. Main Theoretical Pillars/Entropic Love Letter\| rectangular prism]] one to the next, neither culminating nor abating but only trundling, steadily, [[1. Surface Texts/Jobcenter Texts/Friction\|held back]]. Jobcenter aesthetosphere: easeless, banal, compensatory. 

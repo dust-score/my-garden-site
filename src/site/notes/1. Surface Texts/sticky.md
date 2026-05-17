@@ -1,5 +1,5 @@
 ---
-{"type":"surface","tags":["vignette","surface","unfinished"],"site":null,"dg-publish":true,"image":"/10-attachments/20260512174434.png","permalink":"/1-surface-texts/sticky/","dgPassFrontmatter":true,"dg-note-properties":{"type":"surface","tags":["vignette","surface","unfinished"],"site":null,"image":"/10-attachments/20260512174434.png"}}
+{"dg-publish":true,"permalink":"/1-surface-texts/sticky/","tags":["vignette","surface","unfinished"],"dg-note-properties":{"type":"surface","tags":["vignette","surface","unfinished"],"site":null,"image":"/10-attachments/20260512174434.png"}}
 ---
 
 

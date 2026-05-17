@@ -1,5 +1,5 @@
 ---
-{"type":"concept","tags":["unfinished","mythical","concept","etymology"],"site":null,"dg-publish":true,"permalink":"/3-concepts/olam/","dgPassFrontmatter":true,"dg-note-properties":{"type":"concept","tags":["unfinished","mythical","concept","etymology"],"site":null}}
+{"dg-publish":true,"permalink":"/3-concepts/olam/","tags":["unfinished","mythical","concept","etymology"],"dg-note-properties":{"type":"concept","tags":["unfinished","mythical","concept","etymology"],"site":null}}
 ---
 
 

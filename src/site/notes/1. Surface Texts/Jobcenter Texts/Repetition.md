@@ -1,5 +1,5 @@
 ---
-{"type":"surface","tags":["unfinished"],"site":null,"dg-publish":true,"permalink":"/1-surface-texts/jobcenter-texts/repetition/","dgPassFrontmatter":true,"dg-note-properties":{"type":"surface","tags":["unfinished"],"site":null}}
+{"dg-publish":true,"permalink":"/1-surface-texts/jobcenter-texts/repetition/","tags":["unfinished"],"dg-note-properties":{"type":"surface","tags":["unfinished"],"site":null}}
 ---
 
 [[1. Surface Texts/TIKKUN\|Dusty]] subsides. [[2. Main Theoretical Pillars/Theory Notes/wolfson-repetition-difference\|Repetition]] is the foot of all growth, that stomps and stomps the dusty path. 

@@ -1,5 +1,5 @@
 ---
-{"type":"concept","used_in":["[[historical-kabbalah-and-philosophy]]"],"tags":["concept","mythical"],"site":null,"dg-publish":true,"permalink":"/3-concepts/eyn-sof/","dgPassFrontmatter":true,"dg-note-properties":{"type":"concept","used_in":["[[historical-kabbalah-and-philosophy]]"],"tags":["concept","mythical"],"site":null}}
+{"dg-publish":true,"permalink":"/3-concepts/eyn-sof/","tags":["concept","mythical"],"dg-note-properties":{"type":"concept","used_in":["[[historical-kabbalah-and-philosophy]]"],"tags":["concept","mythical"],"site":null}}
 ---
 
 <div style="text-align: right;">

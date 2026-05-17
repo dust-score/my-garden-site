@@ -1,5 +1,5 @@
 ---
-{"type":"citation","translation by":"Artificial Intelligence","pages":"26","source":"Joseph Weiss, The Empty Space","author":"Joseph Weiss","tags":["citation"],"site":null,"dg-publish":true,"permalink":"/2-main-theoretical-pillars/theory-notes/weiss-citation-empty-space/","dgPassFrontmatter":true,"dg-note-properties":{"type":"citation","translation by":"Artificial Intelligence","pages":"26","source":"Joseph Weiss, The Empty Space","author":"Joseph Weiss","tags":["citation"],"site":null}}
+{"dg-publish":true,"permalink":"/2-main-theoretical-pillars/theory-notes/weiss-citation-empty-space/","tags":["citation"],"dg-note-properties":{"type":"citation","translation by":"Artificial Intelligence","pages":"26","source":"Joseph Weiss, The Empty Space","author":"Joseph Weiss","tags":["citation"],"site":null}}
 ---
 
 
