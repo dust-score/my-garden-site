@@ -2,7 +2,7 @@
 {"dg-publish":true,"tags":["concept"],"permalink":"/1-surface-texts/back-from/","dgPassFrontmatter":true,"dg-note-properties":{"tags":["concept"]}}
 ---
 
-Re- is described by Watkins as a Latin combining form conceivably deriving from the Indo-European root *wret-* , a metathetical variant of *wert-*, “to turn”. 
+Re- is described by Watkins as a Latin combining form conceivably deriving from the Indo-European root *wret-* , a metathetical variant of *wert-*, “[[1. Surface Texts/to turn\|to turn]]”. 
 
 It [[3. Concepts/On Folding\|implies]] a turning back, an undoing, a return to an [[1. Surface Texts/ie-non-native-forestry\|original]]; [[1. Surface Texts/ie-non-native-forestry-2\|repetition]] as in once more, restoration to a former state. This small wordlet has come for me to delineate the outline of a right, a natural desire, and also the point at which isms can intermingle and skew off-track along the axis of power. 
 
@@ -16,6 +16,6 @@ Reconciliation… What does that mean? Retribution seems sufficient, as a word, 
 
 It appeared that I could find a consolation to my etymological quandary in the idea of _implication_. Re- acknowledges a turning back, but without implication. 
 
-Implication: the fact that time passed as we moved about our orbit, this orbit being a spiral form hurtling through space. We cannot re-turn to what was left behind, but only to a new iteration of it, to which we are re-newedly, and in grown form, attached.
+[[3. Concepts/implication\|Implication]]: the fact that time passed as we moved about our orbit, this orbit being a spiral form hurtling through space. We cannot re-turn to what was left behind, but only to a new iteration of it, to which we are [[1. Surface Texts/Hearing Residues, Seeing Residues\|re]]-newedly, and in grown form, attached.
 
 
