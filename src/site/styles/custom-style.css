@@ -7,13 +7,6 @@ body {
     -moz-osx-font-smoothing: unset;
     --accent-color: #ff0000;
     --link-color: #000000;
-}
-
-nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-meta, header h1 {
-    display: none;
-}
- 
-body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -21,7 +14,11 @@ body {
     margin: 0;
     padding: 0;
 }
- 
+
+nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-meta, header h1 {
+    display: none;
+}
+
 main.content {
     flex: 1;
     max-width: 700px;
@@ -30,12 +27,13 @@ main.content {
     font-size: 15px;
     text-align: justify;
 }
- 
+
 main.content p {
     font-size: 15px;
     text-align: justify;
 }
 
+/* Empty aside stays visible on desktop to preserve the right column */
 aside {
     flex: 1;
     max-width: 50%;
@@ -52,10 +50,8 @@ aside .sidebar {
     height: 100%;
     font-size: 14px;
 }
-/* Collapse empty aside so text doesn't appear shifted */
-aside:empty {
-    display: none;
-}
+
+/* ❌ Removed: aside:empty { display: none; } */
 
 h1, h2, h3, h4 {
     font-family: 'Garamond', 'Times New Roman', serif !important;
@@ -130,6 +126,7 @@ a[data-note-icon]::before {
     border-bottom: none !important;
 }
 
+/* ========= MOBILE ========= */
 @media (max-width: 1000px) {
     body {
         flex-direction: column;
@@ -145,19 +142,17 @@ a[data-note-icon]::before {
         display: none;
     }
 
-    #full-graph {
-        position: relative !important;
-        width: 100% !important;
-        height: 60vh !important;
-        top: auto !important;
-        right: auto !important;
-        margin-top: 1rem;
-    }
-
+    /* Hides the Map button */
     body > a[style*="position:fixed"][style*="top:2rem"][style*="right:2rem"] {
         display: none !important;
     }
+
+    /* *** NO MAP AT ALL ON MOBILE *** */
+    #full-graph {
+        display: none !important;
+    }
 }
+
 .desktop-only {
     display: block;
 }
@@ -173,11 +168,13 @@ a[data-note-icon]::before {
         display: block;
     }
 }
+
 table, tr, td, th {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }
+
 .re-table td {
     font-weight: normal !important;
 }
@@ -185,6 +182,7 @@ table, tr, td, th {
 .re-table a {
     font-weight: normal !important;
 }
+
 .re-table a {
     color: #000 !important;
     text-decoration: none !important;
@@ -197,6 +195,7 @@ table, tr, td, th {
     background-color: #ff0000 !important;
     border-color: #ff0000 !important;
 }
+
 a {
     color: #000 !important;
     text-decoration: none !important;
@@ -214,6 +213,7 @@ a:hover {
     border-color: #ff0000;
     border-bottom: 1px solid #ff0000 !important;
 }
+
 a.internal-link[href*="%5C"] {
     pointer-events: none;
     text-decoration: none !important;
@@ -222,6 +222,7 @@ a.internal-link[href*="%5C"] {
     cursor: default;
     padding: 0 !important;
 }
+
 a.is-unresolved,
 a.is-unresolved:link,
 a.is-unresolved:visited,
@@ -237,8 +238,6 @@ a.is-unresolved:active {
 }
 
 /* ===== IMAGE PREVIEW SYSTEM ===== */
-
-/* Image preview overlay - behind text, above background */
 #image-preview-overlay {
     display: none;
     position: fixed;
@@ -250,13 +249,11 @@ a.is-unresolved:active {
     pointer-events: none;
 }
 
-/* Remove "t-k-n" title and header from all preview tooltips */
 #tooltip-content > div:first-child,
 #tooltip-content > header {
     display: none !important;
 }
 
-/* Disable image preview overlay on mobile */
 @media (max-width: 1000px) {
     #image-preview-overlay {
         display: none !important;
