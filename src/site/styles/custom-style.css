@@ -8,7 +8,9 @@ body {
     -moz-osx-font-smoothing: unset;
     --accent-color: #ff0000;
     --link-color: #000000;
-    display: block;          /* ← overwrite the flex that created two columns */
+    display: flex;               /* ← Keep the original flex layout */
+    flex-direction: row;
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -27,13 +29,12 @@ header h1 {
 
 /* ===== MAIN CONTENT ===== */
 main.content {
+    flex: 1;
     max-width: 700px;
     margin: 2rem 0 2rem 2rem;
     padding: 0 1rem;
     font-size: 15px;
     text-align: justify;
-    float: none;             /* ensure it's not affected by leftover floats */
-    width: auto;
 }
 
 main.content p {
@@ -73,18 +74,6 @@ a:hover {
     border-color: #ff0000;
 }
 
-a.internal-link {
-    /* keep consistent with other links */
-}
-
-a.internal-link[data-note-icon]::before,
-.internal-link::before,
-a[data-note-icon]::before {
-    display: none !important;
-    content: none !important;
-    background-image: none !important;
-}
-
 body.links-note-icon .internal-link[data-note-icon]::before {
     display: none !important;
 }
@@ -94,9 +83,26 @@ body.links-note-icon .internal-link[data-note-icon]::before {
     padding-right: 0 !important;
 }
 
+.internal-link[data-note-icon]::before,
+.internal-link::before,
+a[data-note-icon]::before {
+    display: none !important;
+    content: none !important;
+    background-image: none !important;
+}
+
 .markdown-preview-view a.is-unresolved {
     text-decoration: none !important;
     border-bottom: none !important;
+}
+
+a.internal-link[href*="%5C"] {
+    pointer-events: none;
+    text-decoration: none !important;
+    border: none !important;
+    color: #000 !important;
+    cursor: default;
+    padding: 0 !important;
 }
 
 a.is-unresolved,
@@ -110,15 +116,6 @@ a.is-unresolved:active {
     color: #000 !important;
     cursor: default;
     background-color: transparent !important;
-    padding: 0 !important;
-}
-
-a.internal-link[href*="%5C"] {
-    pointer-events: none;
-    text-decoration: none !important;
-    border: none !important;
-    color: #000 !important;
-    cursor: default;
     padding: 0 !important;
 }
 
@@ -185,13 +182,17 @@ table, tr, td, th {
 
 @media (max-width: 1000px) {
     body {
-        /* no flex, just normal block */
+        flex-direction: column;
     }
 
     main.content {
         max-width: 100%;
         margin: 2rem auto;
         padding: 0 0 2rem 0;
+    }
+
+    aside {
+        display: none;
     }
 
     #full-graph {
