@@ -4,9 +4,9 @@
 
 "The beginning is embedded in the end, and the end in the beginning." [^1]
 
-The cadence of time is discerned as the encircling line of the future that continuously unpacks all that was contained in the impenetrable point of the past.[^2]
+>The cadence of time is discerned as the encircling line of the future that continuously unpacks all that was contained in the impenetrable point of the past.[^2]
 
 
 [^1]: Sefer Yetzirah 1:7
 
-[^2]: Retroactive Not Yet, Elliot Wolfson, p. 22
+[^2]: [[5. Citations/6. Papers/Retroactive Not Yet, Linear Circularity and Kabbalistic Temporality, Elliot R. Wolfson\|Retroactive Not Yet]], Elliot Wolfson, p. 22
