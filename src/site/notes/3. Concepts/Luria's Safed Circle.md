@@ -1,0 +1,9 @@
+---
+{"dg-publish":true,"permalink":"/3-concepts/luria-s-safed-circle/","tags":["history","theory","unfinished"],"dg-note-properties":{"type":"theory","tags":["history","theory","unfinished"],"site":null}}
+---
+
+[[2. Main Theoretical Pillars/Theory Notes/A Historical Introduction to Kabbalah\|A Historical Introduction to Kabbalah]]
+
+The Safed circle in sixteenth-century Ottoman Palestine provided the immediate context for Isaac Luria’s (1534–1572) reformulation of Kabbalah. Although Luria himself produced almost no written works, he transmitted a highly original system centered on tzimtzum (divine contraction), shevirat ha-kelim (shattering of the vessels), and tikkun (cosmic repair) to a small circle of disciples. Upon Luria’s premature death, his foremost student, Ḥayyim Vital (1543–1620), assumed the role of gatekeeper and systematizer, compiling his master’s oral teachings into monumental texts such as _Etz Ḥayyim_ (“Tree of Life”). It was primarily through Vital’s meticulous redaction and his disciples’ subsequent copying of manuscripts that Lurianic Kabbalah transitioned from an esoteric Safed circle into the dominant mystical doctrine of early modern Jewry.
+
+In pre-Lurianic Kabbalah, tikkun as a concept was present, albeit in unsystematised form, and spoke primarily to the reunification of the masculine and feminine divine aspects through human action. After 1570, tikkun became a central and systematic principle, as it was integral to Luria’s conception of the rectification of the divine flaw (_shevirat ha-kelim_, the shattering of the vessels) through human action in _nitzotzot_, the elevation of the sparks. Indeed, as a principle it is foundational and often more so implied than explicitly named, when investigating functional systems within Kabbalistic thought.
