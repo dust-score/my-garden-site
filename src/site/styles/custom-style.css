@@ -8,7 +8,7 @@ body {
     -moz-osx-font-smoothing: unset;
     --accent-color: #ff0000;
     --link-color: #000000;
-    display: flex;               /* ← Keep the original flex layout */
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
     min-height: 100vh;
@@ -27,7 +27,7 @@ header h1 {
     display: none;
 }
 
-/* ===== MAIN CONTENT ===== */
+/* ===== MAIN CONTENT (left column) ===== */
 main.content {
     flex: 1;
     max-width: 700px;
@@ -42,13 +42,44 @@ main.content p {
     text-align: justify;
 }
 
-/* ===== SIDEBAR (hide completely) ===== */
-aside {
+/* ===== SIDEBAR & GRAPH – hidden completely ===== */
+aside,
+aside .sidebar,
+aside .sidebar-container,
+.graph,
+.graph-title-container,
+#graph-controls,
+#graph-component,
+#link-graph,
+.backlinks {
     display: none !important;
 }
 
-aside .sidebar {
-    display: none;
+/* Hide any stray graph/sidebar elements that might appear outside the aside */
+body > .graph,
+body > #graph-component,
+body > .graph-title-container,
+body > #graph-controls,
+body > .sidebar-container,
+body > .backlinks,
+body > .sidebar {
+    display: none !important;
+}
+
+/* The full‑screen map overlay (shown only when Map button is clicked) */
+#full-graph {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 50% !important;
+    height: 100vh !important;
+    display: none;                /* hidden by default, toggled by inline style */
+}
+
+#full-graph #full-graph-container {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* ===== HEADINGS ===== */
@@ -117,34 +148,6 @@ a.is-unresolved:active {
     cursor: default;
     background-color: transparent !important;
     padding: 0 !important;
-}
-
-/* ===== BACKLINKS ===== */
-.backlinks {
-    display: none;
-}
-
-/* ===== GRAPH ===== */
-.graph,
-.graph-title-container,
-#graph-controls,
-#graph-component,
-#link-graph {
-    display: none !important;
-}
-
-#full-graph {
-    position: fixed !important;
-    top: 0 !important;
-    right: 0 !important;
-    left: auto !important;
-    width: 50% !important;
-    height: 100vh !important;
-}
-
-#full-graph #full-graph-container {
-    width: 100% !important;
-    height: 100% !important;
 }
 
 /* ===== TABLES ===== */
@@ -216,7 +219,7 @@ table, tr, td, th {
     }
 }
 
-/* ===== IMAGE PREVIEW SYSTEM ===== */
+/* ===== IMAGE PREVIEW OVERLAY ===== */
 #image-preview-overlay {
     display: none;
     position: fixed;
@@ -234,13 +237,13 @@ table, tr, td, th {
     object-fit: contain;
 }
 
-/* Remove "t-k-n" title and header from all preview tooltips */
+/* Remove the "t-k-n" title and header from all link‑preview tooltips */
 #tooltip-content > div:first-child,
 #tooltip-content > header {
     display: none !important;
 }
 
-/* Disable image preview overlay on mobile */
+/* Disable the image overlay on mobile */
 @media (max-width: 1000px) {
     #image-preview-overlay {
         display: none !important;
@@ -250,14 +253,4 @@ table, tr, td, th {
 /* ===== GLOBAL RESETS ===== */
 * {
     font-family: 'Garamond', 'Times New Roman', serif;
-}
-/* Hide duplicate graph/sidebar elements anywhere they shouldn't be */
-body > .graph,
-body > #graph-component,
-body > .graph-title-container,
-body > #graph-controls,
-body > .sidebar-container:not(aside .sidebar-container),
-body > .backlinks,
-body > .sidebar:not(aside) {
-    display: none !important;
 }
