@@ -6,7 +6,7 @@
 <div class="desktop-only">
 <div class="re-table">
 <table style="border:none;border-collapse:collapse;margin-left:0;">
-<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/re/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td></td><td></td><td></td><td></td><td></td><td style="border:none;text-align:right;">plete</td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/re/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td></td><td></td><td></td><td></td><td></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/on-creation/" class="internal-link">plete</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td></td><td></td><td></td><td></td><td style="border:none;text-align:right;">stitution</td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td></td><td></td><td></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">paration</td></tr>

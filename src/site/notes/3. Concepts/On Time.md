@@ -4,7 +4,7 @@
 
 "The beginning is embedded in the end, and the end in the beginning." [^1]
 
->The cadence of time is discerned as the encircling line of the future that continuously unpacks all that was contained in the impenetrable point of the past.[^2]
+_The cadence of time is discerned as the encircling line of the future that continuously unpacks all that was contained in the impenetrable point of the past._[^2]
 
 
 [^1]: Sefer Yetzirah 1:7
