@@ -5,4 +5,4 @@
 
 <div id="imgnote-marker" style="display:none"></div>
 
-![Pasted image 20260426173759.png](/img/user/10.%20_attachments/Pasted%20image%2020260426173759.png)
+![jcwipe.png](/img/user/10.%20_attachments/jcwipe.png)

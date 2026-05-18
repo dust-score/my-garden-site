@@ -13,15 +13,15 @@ they are reschooling you,
 you are becoming 
 he again.
 
-Amos Weisz, translation 
+Amos Weisz, translation of
 
 <div style="text-align: right;">
-_HÖRRESTE, SEHRESTE, im<br>
-Schlafsaal eintausendundeins,_<br><br>
-_tagnächtlich<br>
-die Bären-Polka:_<br><br>
-_sie schulen dich um,_<br><br>
-_du wirst wieder<br>
-er._<br><br>
-_Paul Celan_
+HÖRRESTE, SEHRESTE, im<br>
+Schlafsaal eintausendundeins,<br><br>
+tagnächtlich<br>
+die Bären-Polka:<br><br>
+sie schulen dich um,<br><br>
+du wirst wieder<br>
+er.<br><br>
+Paul Celan
 </div>
