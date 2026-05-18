@@ -24,7 +24,7 @@
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/jobcenter-texts/straight-ahead/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td></td><td></td><td style="border:none;text-align:right;"><a href="/3-concepts/on-folding/" class="internal-link">plicare</a></td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/jobcenter-texts/power/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td></td><td></td><td style="border:none;text-align:right;"><a href="/3-concepts/on-folding/" class="internal-link">plicare</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">parare</td></tr>
 <tr><td></td><td></td><td></td></tr>
