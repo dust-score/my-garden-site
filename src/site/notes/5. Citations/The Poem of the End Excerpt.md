@@ -5,7 +5,7 @@
 
 
 <div style="text-align: right;">
-[[1. Surface Texts/On Creation\|Nowhere]]        is lying ahead.<br>
+<a href="/1-surface-texts/on-creation/" class="internal-link">Nowhere</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is lying ahead.<br>
 And here        is where we fall.<br><br>
 A field with. A fence and.<br>
 Brother and sister. Standing.<br>
