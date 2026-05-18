@@ -11,9 +11,7 @@ A field with. A fence and.<br>
 Brother and sister. Standing.<br>
 Life is        only a suburb:<br>
 so you must build elsewhere.<br><br>
-
 [ …]<br><br>
-
 Beyond it! Understand? Outside!<br>
 That means        we've passed the walls.<br>
 Life is a place where it's forbidden to live.<br>
