@@ -4,10 +4,6 @@
 
 
 
-
-
-
-
 <div style="text-align: right;">
 [[1. Surface Texts/On Creation\|Nowhere]]        is lying ahead.<br>
 And here        is where we fall.<br><br>
