@@ -6,4 +6,4 @@
 Eyn Sof<br>
 </div>
 
-_eyn_ (אין) = "there is no" / _sof_ (סוף) = "end"
+_eyn_ (אין) = "there is no" / _sof_ (סוף) = "end" 
