@@ -46,11 +46,9 @@ aside {
     padding: 0;
 }
 
-aside .sidebar,
-aside .graph,
-aside .backlinks,
 aside .graph-title-container,
-aside #link-graph {
+aside #link-graph,
+aside .backlinks {
     display: none !important;
 }
 
