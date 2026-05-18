@@ -137,10 +137,12 @@ a[data-note-icon]::before {
 
     main.content {
         grid-column: auto;
-        max-width: 100%;
-        margin: 2rem auto;
-        padding: 0 0 2rem 0;
+        max-width: 700px;        /* fixed readable width */
+        margin: 2rem auto;       /* centers the block */
+        padding: 0 1rem;         /* side breathing room */
     }
+    /* ... rest of mobile rules */
+}
 
     aside {
         display: none;
