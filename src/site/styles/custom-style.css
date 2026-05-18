@@ -152,9 +152,6 @@ a[data-note-icon]::before {
         display: none !important;
     }
 
-    #full-graph {
-        display: none !important;
-    }
 }
 
 .desktop-only {
