@@ -13,7 +13,7 @@ they are reschooling you,
 you are becoming 
 he again.
 
-Amos Weisz, translation of
+[Amos](/img/user/10.%20_attachments/daddylir.jpg) [Weisz](/img/user/10.%20_attachments/daddylir1.jpg), translation of
 
 <div style="text-align: right;">
 HÖRRESTE, SEHRESTE, im<br>
