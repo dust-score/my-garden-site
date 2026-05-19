@@ -3,4 +3,4 @@
 ---
 
 <iframe src="/img/user/10.%20_attachments/Bielik-Robson%20-%202023%20-%20The%20Culture%20of%20the%20End%20Tarrying%20with%20the%20Apocalypse.pdf" width="100%" height="900px" title="Bielik-Robson - 2023 - The Culture of the End Tarrying with the Apocalypse.pdf" style="border:1px solid #ccc;"></iframe>
-[[On Finitude\|On Finitude]]
+[[3. Concepts/On Finitude\|On Finitude]]
