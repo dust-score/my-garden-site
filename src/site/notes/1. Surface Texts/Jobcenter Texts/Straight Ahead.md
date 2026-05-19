@@ -10,4 +10,4 @@ Thank God for podcasts, walk [[1. Surface Texts/Jobcenter Texts/Repetition\|spir
 
 I had always meant to take a spin through family history, but perhaps had not been [[5. Citations/askew-on-natural-terrain\|askew]] enough yet on flat terrain to recognise its [[5. Citations/The Metaphysics of Misinterpretation\|wonky face]].
 
-Joseph was associated with a forbidding lineage of pursed lips and suicide, of Judaism, a self-eviscerating bourgeois that I had [[1. Surface Texts/with-in\| stepped outside of, had never been inside of, had renounced the tools for entry into]], and yet that was [[3. Concepts/implication\|implicated]] in me like a [[3. Concepts/reshimu\|re—sidue]].
+Joseph was associated with a forbidding lineage of pursed lips and suicide, of Judaism, a self-eviscerating bourgeois that I had [[1. Surface Texts/with-in\| stepped outside of, had never been inside of, had renounced the tools for entry into]], and yet that was [[3. Concepts/implication\|implicated]] in me like a [[1. Surface Texts/Hearing Residues, Seeing Residues\|re—sidue]].

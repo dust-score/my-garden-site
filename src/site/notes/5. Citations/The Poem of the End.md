@@ -4,7 +4,7 @@
 
 1  
   
-A single post, a point of rusting  
+A single post, [[5. Citations/askew-on-natural-terrain\|a point of rusting]]  [^1]
 tin in the sky  
 marks the fated place we  
 move to, he and I  
@@ -830,3 +830,6 @@ And into the hollow waves of
 darkness---hunched and level---  
 without trace---in silence---  
 something sinks like a ship.
+
+[^1]: Marina Tsvetaeva, 1923
+https://allpoetry.com/poem/14072497-Poem-Of-The-End-by-Marina-Ivanova-Tsvetaeva
