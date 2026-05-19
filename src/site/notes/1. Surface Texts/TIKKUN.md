@@ -16,10 +16,10 @@
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">demption</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/iesun9/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciliation</td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/iesun9/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/iemoonc/" class="internal-link">con</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciliation</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/iemoonc/" class="internal-link">con</a><a href="/1-surface-texts/daddyfjord/" class="internal-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stitution</a></td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stitution</td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">integration</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
