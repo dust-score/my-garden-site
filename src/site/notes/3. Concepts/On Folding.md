@@ -8,15 +8,7 @@ The Latin verb _plicare_—"to fold, to lay, to twist"—arrives in English alo
 
 The English _ply_ also names a layer, a thickness, a single fold in a material composed of many—plywood, two-ply, three-ply. This sense arrives through French _pli_, itself from the past participle of _plier_, "to bend." A fold is at once a joining and a division: it brings two surfaces into contact while holding them apart, creates an interior where there was none, distinguishes one layer from the next without severing them.[^2]
 
-
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
-
-
-
-
-
-</div></div>
-
+![[Pasted image 20260517173617.png\|Pasted image 20260517173617.png]]
 _Fig. 6 Author’s photograph, 2026_
 
 [^1]: Deleuze, "The Fold," 228.
