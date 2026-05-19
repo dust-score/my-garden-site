@@ -10,7 +10,9 @@ This appears to be a point upon which many [[1. Surface Texts/devils can dance\|
 
 The Hebrew noun _tikkun_ (תִּקּוּן) derives etymologically from the verbal root [[1. Surface Texts/ת־ק־ן (t-q-n — to straighten that which is crooked\|ת־ק־ן (t-q-n — to straighten that which is crooked]]. This, a straightening, is often translated as redemption, restitution, or repair, implying the return to a previous state. Perhaps I can straighten a candle wick or a piece of wood, but can I repair a broken vessel to its original state? Can I return what has been lost to time in its entirety; can this be restitution? I have never heard of a wound that healed to having never been; I have never become again who I was before. In this sense I may be having  a quarrel with the limitations of translation — or perhaps it is a contention with the terms I find available in thinking about injury and healing, and, in a further step, creation, throughout damaged time.
 
-It was with the English translation of Tikkun that I continued to take issue as I considered the topic. In my omnivalent (/s) experience, nothing has ever been returned to a former state.
+It was with the English translation of Tikkun that I continued to take issue as I considered the topic. In my [[1. Surface Texts/omnivalent\|omnivalent]] (/s) experience, nothing has ever been returned to a former state.
+
+
 
 Reconciliation… What does that mean? Retribution seems sufficient, as a word, since it is well known that there can never be a final blow when retribution runs the game. Restitution… To what state? What whole could ever be re-covered in its entirety from the dank and muggy past?
 
