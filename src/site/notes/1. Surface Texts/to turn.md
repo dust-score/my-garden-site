@@ -5,4 +5,4 @@
 
 <div id="imgnote-marker" style="display:none"></div>
 
-![jcwipe.png](/img/user/10.%20_attachments/jcwipe.png)
+![jcwipe.webp](/img/user/10.%20_attachments/jcwipe.webp)

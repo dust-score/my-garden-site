@@ -4,4 +4,4 @@
 
 <div id="imgnote-marker" style="display:none"></div>
 
-![ieforectclouds.jpg](/img/user/10.%20_attachments/ieforectclouds.jpg)
+![ieforectclouds.webp](/img/user/10.%20_attachments/ieforectclouds.webp)

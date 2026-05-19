@@ -5,4 +5,4 @@
 
 <div id="imgnote-marker" style="display:none"></div>
 
-![redimere.png](/img/user/10.%20_attachments/redimere.png)
+![redimere.webp](/img/user/10.%20_attachments/redimere.webp)

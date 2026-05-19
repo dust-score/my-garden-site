@@ -5,4 +5,4 @@
 
 <div id="imgnote-marker" style="display:none"></div>
 
-![daddylir.jpg](/img/user/10.%20_attachments/daddylir.jpg)
+![daddylir.webp](/img/user/10.%20_attachments/daddylir.webp)

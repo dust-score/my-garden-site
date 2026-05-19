@@ -5,4 +5,4 @@
 
 <div id="imgnote-marker" style="display:none"></div>
 
-![nihilunbound.jpg](/img/user/10.%20_attachments/nihilunbound.jpg)
+![nihilunbound.webp](/img/user/10.%20_attachments/nihilunbound.webp)

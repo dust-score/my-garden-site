@@ -5,4 +5,4 @@
 
 <div id="imgnote-marker" style="display:none"></div>
 
-![snow.jpg](/img/user/10.%20_attachments/snow.jpg)
+![snow.webp](/img/user/10.%20_attachments/snow.webp)

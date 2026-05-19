@@ -4,5 +4,5 @@
 
 <div id="imgnote-marker" style="display:none"></div>
 
-![hermreparative.png](/img/user/10.%20_attachments/hermreparative.png)
+![hermreparative.webp](/img/user/10.%20_attachments/hermreparative.webp)
 Screenshot of Instagram Story, Friday, April 3. 2026, 17:00  Author Juliana Gleeson @herm.logic
