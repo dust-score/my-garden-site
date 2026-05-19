@@ -131,6 +131,122 @@ permalink: "{{ page.filePathStem }}/"
             if (!img) return;
             var imgSrc = img.src;
             
+            // Preload the image so it appears instantly on hover
+            var preload = new Image();
+            preload.src = imgSrc;
+            
+            link.addEventListener('mouseenter', function() {
+              overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+              overlay.style.display = 'block';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+              overlay.style.display = 'none';
+            });
+          }
+        });
+    });
+  }
+})();
+</script>
+  </body>
+</html>            <div class="header-tags">
+              {% for tag in tags %}
+                {% if tag != 'gardenEntry' and tag !='note' %}
+                  <a class="tag" onclick="toggleTagSearch(this)">
+                    #{{tag}}
+                  </a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+          {%- if meta.timestampSettings.showCreated or meta.timestampSettings.showUpdated -%}
+          <div class="timestamps">
+            {%- if meta.timestampSettings.showCreated and created -%}
+            <div><i data-lucide="calendar-plus"></i> <span class="human-date" data-date="{{created}}"></span></div>
+            {%- endif -%}
+            {%- if meta.timestampSettings.showUpdated and updated -%}
+            <div><i data-lucide="calendar-clock"></i> <span class="human-date" data-date="{{updated}}"></span></div>
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+        </div>
+      {% for imp in dynamics.common.header %}
+        {% include imp %}
+      {% endfor %}
+      {% for imp in dynamics.notes.header %}
+        {% include imp %}
+      {% endfor %}
+      </header>
+      {% for imp in dynamics.common.beforeContent %}
+        {% include imp %}
+      {% endfor %}
+      {% for imp in dynamics.notes.beforeContent %}
+        {% include imp %}
+      {% endfor %}
+      {{ content | hideDataview | taggify | link | safe}}
+      {% for imp in dynamics.common.afterContent %}
+        {% include imp %}
+      {% endfor %}
+      {% for imp in dynamics.notes.afterContent %}
+        {% include imp %}
+      {% endfor %}
+    </main>
+
+    {% if settings.dgShowBacklinks === true or settings.dgShowLocalGraph === true or settings.dgShowToc === true or dynamics.sidebar.top.length > 0 or dynamics.sidebar.bottom.length > 0%}
+      {%include "components/sidebar.njk"%}
+    {% endif %}
+
+    {% if settings.dgLinkPreview === true %}
+      {%include "components/linkPreview.njk"%}
+    {% endif %}
+    {% include "components/references.njk" %}
+    {% include "components/timestamps.njk" %}
+    {% for imp in dynamics.common.footer %}
+      {% include imp %}
+    {% endfor %}
+    {% for imp in dynamics.notes.footer %}
+      {% include imp %}
+    {% endfor %}
+    {%include "components/lucideIcons.njk"%}
+    {% if contentClasses and "canvas-page" in contentClasses %}
+      {%include "components/canvasScript.njk"%}
+    {% endif %}
+    {% include "components/basesScript.njk" %}
+<script>
+(function() {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  
+  function init() {
+    if (window.innerWidth <= 1000) return;
+    
+    var overlay = document.createElement('div');
+    overlay.id = 'image-preview-overlay';
+    overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:0;pointer-events:none;display:none;';
+    document.body.insertBefore(overlay, document.body.firstChild);
+    
+    var links = document.querySelectorAll('a.internal-link');
+    
+    links.forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (!href) return;
+      
+      fetch(href)
+        .then(function(res) { return res.text(); })
+        .then(function(html) {
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(html, 'text/html');
+          
+          if (doc.getElementById('imgnote-marker')) {
+            link.classList.add('image-note-link');
+            var img = doc.querySelector('img');
+            if (!img) return;
+            var imgSrc = img.src;
+            
             link.addEventListener('mouseenter', function() {
               overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
               overlay.style.display = 'block';
