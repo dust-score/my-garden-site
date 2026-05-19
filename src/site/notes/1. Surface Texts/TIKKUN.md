@@ -44,7 +44,7 @@
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/altogether-otherwise/" class="internal-link">ctification</a></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/tikkun-associative-words/" class="internal-link">demption</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/iesun9/" class="internal-link">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con ciliation</a></td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con ciliation</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con stitution</td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">integration</td></tr>
