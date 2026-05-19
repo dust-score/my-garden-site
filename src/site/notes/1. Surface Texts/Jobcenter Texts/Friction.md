@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/jobcenter-texts/friction/","dg-note-properties":{"type":"surface","site":null}}
 ---
 
-[[1. Surface Texts/TIKKUN\|Dusty]] is granular, she is [[2. Main Theoretical Pillars/Entropic Love Letter\|friction]]. She is neither gear nor speed. If you are bumping around the far end of a [[3. Concepts/Turning Around\|parabolic orbit]], be sure to keep an eye out for Dusty! She will set you right. Dusty carries mounds of dirt in her socks, for to empathise. 
+[[1. Surface Texts/TIKKUN\|Dusty]] is granular, she is [[2. Main Theoretical Pillars/Entropic Love Letter\|friction]]. She is neither gear nor speed. If you are bumping around the far end of a [[1. Surface Texts/back from\|parabolic orbit]], be sure to keep an eye out for Dusty! She will set you right. Dusty carries mounds of dirt in her socks, for to empathise. 
 
 There is no acceleration in the Jobcenter. Jobcenter is [[2. Main Theoretical Pillars/Entropic Love Letter\|friction ontology]]. It’s not quite care and it’s not quite neglect. Jobcenter is maintenance velocity. Jobcenter is [[1. Surface Texts/Jobcenter Texts/Straight Ahead\|material coil]] and me, [[3. Concepts/On Folding\|circling each countervailing spiral force]].  
 

@@ -14,6 +14,6 @@ When [[1. Surface Texts/it snowed this winter\|it snowed this winter]] I could w
 
 The nature of the past that we recognise in the contemporary is sticky, physical and complicit. 
 
-It reaches [[1. Surface Texts/back\|back]] into something inarticulable. To see it moves me from an adolescent disidentification with the past, the rupture I had not been able to bridge, to a sense of continuity with the past, not through a missing, but only a previously unrecognised, link.
+It reaches [[1. Surface Texts/back\|back]] into something [[1. Surface Texts/The Dead End\|inarticulable]]. To see it moves me from an adolescent disidentification with the past, the rupture I had not been able to bridge, to a sense of continuity with the past, not through a missing, but only a previously unrecognised, link.
 
 From this past, buffeted by the vicissitudes of the unremembered, speaks something nonverbal. It is a question that cannot be answered. As such, it articulates itself as does a wordless scream: the question constitutes itself reflexively into an answer, which itself articulates the question it purports to solve.
