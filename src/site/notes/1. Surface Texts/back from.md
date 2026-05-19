@@ -22,6 +22,6 @@ Back, back from, back to the original place. Again, anew, once more. [[9. Footno
 
 Re- is described by Watkins as a Latin combining form conceivably deriving from the Indo-European root *wret- , a metathetical variant of *wert-, “[[1. Surface Texts/to turn\|to turn]]”. 
 
-It implies a turning back, an undoing, a return to an original; repetition as in once more, [[3. Concepts/restoration to a former state\|restoration to a former state]].
+It implies a turning back, an [[3. Concepts/restoration to a former state\|undoing]], a return to an original; repetition as in once more, [[2. Main Theoretical Pillars/Theory Notes/A Historical Introduction to Kabbalah\|restoration to a former state]].
 
 
