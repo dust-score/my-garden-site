@@ -114,6 +114,10 @@ permalink: /
             if (!img) return;
             var imgSrc = img.src;
             
+            // Preload the image so it appears instantly on hover
+            var preload = new Image();
+            preload.src = imgSrc;
+            
             link.addEventListener('mouseenter', function() {
               overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
               overlay.style.display = 'block';
