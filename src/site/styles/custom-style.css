@@ -259,3 +259,7 @@ a.is-unresolved:active {
         display: none !important;
     }
 }
+/* Hide the block‑id marker (the "^name" text) */
+.block-id {
+  display: none !important;
+}
