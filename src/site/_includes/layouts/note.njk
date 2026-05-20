@@ -106,21 +106,19 @@ permalink: "{{ page.filePathStem }}/"
   }
   
   function init() {
-    // Create overlay once (works on all screens)
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
     overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:0;pointer-events:none;display:none;';
     document.body.insertBefore(overlay, document.body.firstChild);
-
-    // Store image‑note data: href -> { imgSrc }
-    var imageNotes = {};
-
-    // Pre‑fetch all internal links to detect image notes
+    
+    // Store imgSrc for each image‑note link
+    var imageSrcMap = new WeakMap();
+    
     var links = document.querySelectorAll('a.internal-link');
     links.forEach(function(link) {
       var href = link.getAttribute('href');
       if (!href) return;
-
+      
       fetch(href)
         .then(function(res) { return res.text(); })
         .then(function(html) {
@@ -128,57 +126,68 @@ permalink: "{{ page.filePathStem }}/"
           if (doc.getElementById('imgnote-marker')) {
             var img = doc.querySelector('img');
             if (!img) return;
-            var imgSrc = img.src;
-
-            // Mark link and store data
             link.classList.add('image-note-link');
-            imageNotes[href] = { imgSrc: imgSrc };
-
-            // Preload image in background
-            var preload = new Image();
-            preload.src = imgSrc;
-
-            // Attach mobile‑first tap handler directly to this link
-            link.addEventListener('click', function(e) {
-              if (window.innerWidth <= 1000) {
-                // Mobile: first tap shows overlay, second tap navigates
-                if (overlay.style.display !== 'block' || overlay.getAttribute('data-current-href') !== href) {
-                  e.preventDefault();               // stop navigation
-                  overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-                  overlay.style.display = 'block';
-                  overlay.setAttribute('data-current-href', href);
-                } else {
-                  // Overlay already showing this image – let the link navigate
-                  overlay.style.display = 'none';
-                  overlay.removeAttribute('data-current-href');
-                  // Don't preventDefault, browser will follow the link
-                }
-              }
-              // On desktop (>1000px) we never preventDefault – normal navigation
-            });
-
-            // Desktop hover (keeps working exactly as before)
-            link.addEventListener('mouseenter', function() {
-              overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-              overlay.style.display = 'block';
-              overlay.setAttribute('data-current-href', href);
-            });
-            link.addEventListener('mouseleave', function() {
-              // Only hide if we're not in a mobile tap‑hold state
-              if (window.innerWidth > 1000) {
-                overlay.style.display = 'none';
-                overlay.removeAttribute('data-current-href');
-              }
-            });
+            imageSrcMap.set(link, img.src);
+            
+            // Preload
+            new Image().src = img.src;
           }
         });
     });
-
-    // Hide overlay when tapping anywhere else on mobile
+    
+    // Universal click handler
     document.addEventListener('click', function(e) {
-      if (window.innerWidth <= 1000 && !e.target.closest('a.image-note-link')) {
+      var link = e.target.closest('a.image-note-link');
+      if (!link) {
+        if (window.innerWidth <= 1000) overlay.style.display = 'none';
+        return;
+      }
+      
+      var imgSrc = imageSrcMap.get(link);
+      if (!imgSrc) return; // not ready yet (fetch still loading)
+      
+      if (window.innerWidth <= 1000) {
+        // Mobile: always prevent first tap, show overlay
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // If overlay already showing this image, allow navigation (second tap)
+        if (overlay.style.display === 'block' && overlay.getAttribute('data-href') === link.href) {
+          // Second tap – navigate!
+          overlay.style.display = 'none';
+          window.location.href = link.href; // explicit navigation
+          return;
+        }
+        
+        // First tap: show overlay
+        overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+        overlay.style.display = 'block';
+        overlay.setAttribute('data-href', link.href);
+        
+        // Debug banner (remove after testing)
+        var banner = document.createElement('div');
+        banner.textContent = 'Image preview shown – tap again to open';
+        banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:red;color:white;text-align:center;padding:10px;z-index:99999;';
+        document.body.appendChild(banner);
+        setTimeout(function() { banner.remove(); }, 2000);
+      }
+      // Desktop: normal behavior (hover shows, click navigates)
+    }, true);
+    
+    // Desktop hover (unchanged)
+    document.addEventListener('mouseover', function(e) {
+      var link = e.target.closest('a.image-note-link');
+      if (!link) return;
+      var imgSrc = imageSrcMap.get(link);
+      if (imgSrc) {
+        overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+        overlay.style.display = 'block';
+      }
+    });
+    document.addEventListener('mouseout', function(e) {
+      var link = e.target.closest('a.image-note-link');
+      if (!link || !e.relatedTarget || !e.relatedTarget.closest('a.image-note-link')) {
         overlay.style.display = 'none';
-        overlay.removeAttribute('data-current-href');
       }
     });
   }
