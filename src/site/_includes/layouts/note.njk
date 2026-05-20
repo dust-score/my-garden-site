@@ -106,62 +106,84 @@ permalink: "{{ page.filePathStem }}/"
   }
   
   function init() {
-    // Run on all screen sizes now
+    // Create the overlay once – now works on all screen sizes
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
     overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:0;pointer-events:none;display:none;';
     document.body.insertBefore(overlay, document.body.firstChild);
     
-    document.querySelectorAll('a.internal-link').forEach(function(link) {
+    // Store image note data here
+    var imageNotes = {};  // key: href, value: { imgSrc, detected }
+    
+    var links = document.querySelectorAll('a.internal-link');
+    links.forEach(function(link) {
       var href = link.getAttribute('href');
       if (!href) return;
       
+      // Immediately fetch the target page (only HTML, no heavy images)
       fetch(href)
         .then(function(res) { return res.text(); })
         .then(function(html) {
           var doc = new DOMParser().parseFromString(html, 'text/html');
           if (doc.getElementById('imgnote-marker')) {
-            link.classList.add('image-note-link');
             var img = doc.querySelector('img');
             if (!img) return;
             var imgSrc = img.src;
             
-            // Preload image for instant appearance
+            // Mark this link as an image note
+            link.classList.add('image-note-link');
+            imageNotes[href] = { imgSrc: imgSrc };
+            
+            // Preload the actual image in the background (so it’s cached)
             var preload = new Image();
             preload.src = imgSrc;
-            
-            // Desktop hover
-            link.addEventListener('mouseenter', function() {
-              overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-              overlay.style.display = 'block';
-            });
-            link.addEventListener('mouseleave', function() {
-              overlay.style.display = 'none';
-            });
-            
-            // Mobile tap / click behavior
-            link.addEventListener('click', function(e) {
-              // Only intercept if screen is mobile‑sized (optional, can be always)
-              // Remove the innerWidth check if you want the same tap behavior on desktop too
-              if (window.innerWidth <= 1000) {
-                if (overlay.style.display !== 'block') {
-                  // First tap: show overlay, don't navigate
-                  e.preventDefault();
-                  overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-                  overlay.style.display = 'block';
-                }
-                // If overlay already visible, let the click navigate normally (no preventDefault)
-              }
-            });
-            
-            // Hide overlay when tapping elsewhere (optional, for mobile UX)
-            document.addEventListener('click', function(e) {
-              if (!e.target.closest('a.image-note-link') && window.innerWidth <= 1000) {
-                overlay.style.display = 'none';
-              }
-            });
           }
         });
+    });
+    
+    // ---------- desktop hover ----------
+    document.addEventListener('mouseover', function(e) {
+      var link = e.target.closest('a.image-note-link');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      var data = imageNotes[href];
+      if (data) {
+        overlay.innerHTML = '<img src="' + data.imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+        overlay.style.display = 'block';
+      }
+    });
+    document.addEventListener('mouseout', function(e) {
+      var link = e.target.closest('a.image-note-link');
+      if (!link || !e.relatedTarget || !e.relatedTarget.closest('a.image-note-link')) {
+        overlay.style.display = 'none';
+      }
+    });
+    
+    // ---------- mobile tap (and click fallback) ----------
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a.image-note-link');
+      if (!link) {
+        // Tap outside an image link → hide the overlay (mobile only)
+        if (window.innerWidth <= 1000) {
+          overlay.style.display = 'none';
+        }
+        return;
+      }
+      
+      var href = link.getAttribute('href');
+      var data = imageNotes[href];
+      if (!data) return;
+      
+      // On mobile: first tap shows the image, second tap navigates
+      if (window.innerWidth <= 1000) {
+        if (overlay.style.display !== 'block') {
+          e.preventDefault();          // stop navigation
+          overlay.innerHTML = '<img src="' + data.imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+          overlay.style.display = 'block';
+        }
+        // else: overlay already visible → let the browser follow the link normally
+      }
+      // On desktop (>1000px) the click always navigates – no change needed
     });
   }
 })();
