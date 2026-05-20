@@ -106,15 +106,17 @@ permalink: "{{ page.filePathStem }}/"
   }
   
   function init() {
+    // DON'T create multiple overlays
+    if (document.getElementById('image-preview-overlay')) return;
+    
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:1;pointer-events:none;display:none;border:5px solid red;';
+    overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:0;pointer-events:none;display:none;';
     document.body.insertBefore(overlay, document.body.firstChild);
     
     var imageSrcMap = new WeakMap();
     
-    var links = document.querySelectorAll('a.internal-link');
-    links.forEach(function(link) {
+    document.querySelectorAll('a.internal-link').forEach(function(link) {
       var href = link.getAttribute('href');
       if (!href) return;
       
@@ -125,51 +127,35 @@ permalink: "{{ page.filePathStem }}/"
           if (doc.getElementById('imgnote-marker')) {
             var img = doc.querySelector('img');
             if (!img) return;
-            // Resolve to absolute URL
-            var rawSrc = img.getAttribute('src');
-            var absoluteSrc = new URL(rawSrc, window.location.origin).href;
+            var absoluteSrc = new URL(img.getAttribute('src'), window.location.origin).href;
             link.classList.add('image-note-link');
             imageSrcMap.set(link, absoluteSrc);
-            
-            // Preload
             new Image().src = absoluteSrc;
+            
+            // Click handler directly on this link
+            link.addEventListener('click', function(e) {
+              if (window.innerWidth <= 1000) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (overlay.style.display === 'block' && overlay.getAttribute('data-href') === href) {
+                  // Second tap: navigate
+                  overlay.style.display = 'none';
+                  overlay.removeAttribute('data-href');
+                  window.location.href = href;
+                } else {
+                  // First tap: show image
+                  overlay.innerHTML = '<img src="' + absoluteSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+                  overlay.style.display = 'block';
+                  overlay.setAttribute('data-href', href);
+                }
+              }
+            });
           }
         });
     });
     
-    document.addEventListener('click', function(e) {
-      var link = e.target.closest('a.image-note-link');
-      if (!link) {
-        if (window.innerWidth <= 1000) overlay.style.display = 'none';
-        return;
-      }
-      
-      var imgSrc = imageSrcMap.get(link);
-      if (!imgSrc) return;
-      
-      if (window.innerWidth <= 1000) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        if (overlay.style.display === 'block' && overlay.getAttribute('data-href') === link.href) {
-          overlay.style.display = 'none';
-          window.location.href = link.href;
-          return;
-        }
-        
-        overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-        overlay.style.display = 'block';
-        overlay.setAttribute('data-href', link.href);
-        
-        console.log('Image src:', imgSrc);
-        var banner = document.createElement('div');
-        banner.textContent = 'Image preview shown – tap again to open';
-        banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:red;color:white;text-align:center;padding:10px;z-index:99999;';
-        document.body.appendChild(banner);
-        setTimeout(function() { banner.remove(); }, 2000);
-      }
-    }, true);
-    
+    // Desktop hover
     document.addEventListener('mouseover', function(e) {
       var link = e.target.closest('a.image-note-link');
       if (!link) return;
@@ -180,8 +166,14 @@ permalink: "{{ page.filePathStem }}/"
       }
     });
     document.addEventListener('mouseout', function(e) {
-      var link = e.target.closest('a.image-note-link');
-      if (!link || !e.relatedTarget || !e.relatedTarget.closest('a.image-note-link')) {
+      if (!e.relatedTarget || !e.relatedTarget.closest('a.image-note-link')) {
+        overlay.style.display = 'none';
+      }
+    });
+    
+    // Hide on outside tap (mobile)
+    document.addEventListener('click', function(e) {
+      if (window.innerWidth <= 1000 && !e.target.closest('a.image-note-link')) {
         overlay.style.display = 'none';
       }
     });
