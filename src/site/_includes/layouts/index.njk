@@ -89,42 +89,59 @@ permalink: /
   }
   
   function init() {
-    if (window.innerWidth <= 1000) return;
-    
+    // Run on all screen sizes now
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
     overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:0;pointer-events:none;display:none;';
     document.body.insertBefore(overlay, document.body.firstChild);
     
-    var links = document.querySelectorAll('a.internal-link');
-    
-    links.forEach(function(link) {
+    document.querySelectorAll('a.internal-link').forEach(function(link) {
       var href = link.getAttribute('href');
       if (!href) return;
       
       fetch(href)
         .then(function(res) { return res.text(); })
         .then(function(html) {
-          var parser = new DOMParser();
-          var doc = parser.parseFromString(html, 'text/html');
-          
+          var doc = new DOMParser().parseFromString(html, 'text/html');
           if (doc.getElementById('imgnote-marker')) {
             link.classList.add('image-note-link');
             var img = doc.querySelector('img');
             if (!img) return;
             var imgSrc = img.src;
             
-            // Preload the image so it appears instantly on hover
+            // Preload image for instant appearance
             var preload = new Image();
             preload.src = imgSrc;
             
+            // Desktop hover
             link.addEventListener('mouseenter', function() {
               overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
               overlay.style.display = 'block';
             });
-            
             link.addEventListener('mouseleave', function() {
               overlay.style.display = 'none';
+            });
+            
+            // Mobile tap / click behavior
+            link.addEventListener('click', function(e) {
+              // Only intercept if screen is mobile‑sized (optional, can be always)
+              // Remove the innerWidth check if you want the same tap behavior on desktop too
+              if (window.innerWidth <= 1000) {
+                if (overlay.style.display !== 'block') {
+                  // First tap: show overlay, don't navigate
+                  e.preventDefault();
+                  overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+                  overlay.style.display = 'block';
+                }
+                // If overlay already visible, let the click navigate normally (no preventDefault)
+              }
+            });
+            
+            // Hide overlay when tapping elsewhere (optional, for mobile UX)
+            document.addEventListener('click', function(e) {
+              if (!e.target.closest('a.image-note-link') && window.innerWidth <= 1000) {
+                overlay.style.display = 'none';
+              }
             });
           }
         });
