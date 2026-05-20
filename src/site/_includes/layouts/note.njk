@@ -108,10 +108,9 @@ permalink: "{{ page.filePathStem }}/"
   function init() {
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:0;pointer-events:none;display:none;';
+    overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:1;pointer-events:none;display:none;border:5px solid red;';
     document.body.insertBefore(overlay, document.body.firstChild);
     
-    // Store imgSrc for each image‑note link
     var imageSrcMap = new WeakMap();
     
     var links = document.querySelectorAll('a.internal-link');
@@ -126,16 +125,18 @@ permalink: "{{ page.filePathStem }}/"
           if (doc.getElementById('imgnote-marker')) {
             var img = doc.querySelector('img');
             if (!img) return;
+            // Resolve to absolute URL
+            var rawSrc = img.getAttribute('src');
+            var absoluteSrc = new URL(rawSrc, window.location.origin).href;
             link.classList.add('image-note-link');
-            imageSrcMap.set(link, img.src);
+            imageSrcMap.set(link, absoluteSrc);
             
             // Preload
-            new Image().src = img.src;
+            new Image().src = absoluteSrc;
           }
         });
     });
     
-    // Universal click handler
     document.addEventListener('click', function(e) {
       var link = e.target.closest('a.image-note-link');
       if (!link) {
@@ -144,37 +145,31 @@ permalink: "{{ page.filePathStem }}/"
       }
       
       var imgSrc = imageSrcMap.get(link);
-      if (!imgSrc) return; // not ready yet (fetch still loading)
+      if (!imgSrc) return;
       
       if (window.innerWidth <= 1000) {
-        // Mobile: always prevent first tap, show overlay
         e.preventDefault();
         e.stopPropagation();
         
-        // If overlay already showing this image, allow navigation (second tap)
         if (overlay.style.display === 'block' && overlay.getAttribute('data-href') === link.href) {
-          // Second tap – navigate!
           overlay.style.display = 'none';
-          window.location.href = link.href; // explicit navigation
+          window.location.href = link.href;
           return;
         }
         
-        // First tap: show overlay
         overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
         overlay.style.display = 'block';
         overlay.setAttribute('data-href', link.href);
         
-        // Debug banner (remove after testing)
+        console.log('Image src:', imgSrc);
         var banner = document.createElement('div');
         banner.textContent = 'Image preview shown – tap again to open';
         banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:red;color:white;text-align:center;padding:10px;z-index:99999;';
         document.body.appendChild(banner);
         setTimeout(function() { banner.remove(); }, 2000);
       }
-      // Desktop: normal behavior (hover shows, click navigates)
     }, true);
     
-    // Desktop hover (unchanged)
     document.addEventListener('mouseover', function(e) {
       var link = e.target.closest('a.image-note-link');
       if (!link) return;
