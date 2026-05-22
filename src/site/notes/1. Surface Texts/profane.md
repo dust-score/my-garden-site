@@ -6,4 +6,4 @@ In the Midrash of Moses ascending to receive the Torah, [[1. Surface Texts/the a
 
 To profane, in Agamben’s sense, is  to return what has been relegated to the sphere of the sacred, i.e. the inarticulate, unutterable, back to common use. The speech act becomes a tool in accessing the unspeakable.
 
-The act of Tikkun here is this: the [[1. Surface Texts/silence song screaming\|implication of the sacred]] into an accessible context of use through the discernment of its shape and function within the constraints of finitude. In this interpretative nook, the “messianic subject” articulates that which emerges from the realm of the inarticulable by engaging their self with this, the ineffable or unutterable: that which lies beyond the walls. 
+ In this interpretative nook, the “messianic subject” articulates that which emerges from the realm of the inarticulable by engaging their self with something unutterable. This could be conceived as the [[1. Surface Texts/silence song screaming\|implication of the sacred]], therefore that exceeding explanation, into the realm of mortal existence, which operates on terms of material reality.
