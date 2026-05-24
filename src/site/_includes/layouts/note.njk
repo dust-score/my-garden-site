@@ -108,16 +108,25 @@ permalink: "{{ page.filePathStem }}/"
   function init() {
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    overlay.style.cssText = 'position:fixed;top:2vh;left:2vw;width:96vw;height:90vh;z-index:10;pointer-events:none;display:none;';
+    overlay.style.cssText = 'position:fixed;top:2vh;left:2vw;width:96vw;height:90vh;z-index:1000;pointer-events:none;display:none;';
     document.body.insertBefore(overlay, document.body.firstChild);
 
     var links = document.querySelectorAll('a.internal-link');
+
+    function showOverlayWithImage(src) {
+      var img = new Image();
+      img.onload = function() {
+        overlay.innerHTML = '<img src="' + src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+        overlay.style.display = 'block';
+      };
+      img.onerror = function() {};
+      img.src = src;
+    }
 
     links.forEach(function(link) {
       var href = link.getAttribute('href');
       if (!href) return;
 
-      // Mark as pending until we know if it’s an image note
       link.classList.add('preview-pending');
 
       var imgSrc = null;
@@ -137,59 +146,45 @@ permalink: "{{ page.filePathStem }}/"
               var img = doc.querySelector('img');
               if (img) {
                 imgSrc = img.src;
-                new Image().src = imgSrc; // preload
+                new Image().src = imgSrc;
               }
             }
             link.classList.remove('preview-pending');
-            return imgSrc; // resolves to image URL or undefined
+            return imgSrc;
           });
         return fetchPromise;
       }
 
-      // Start fetching immediately
       startFetch();
 
       link.addEventListener('click', function(e) {
-        // 1. Already confirmed as image note → toggle preview
         if (link.classList.contains('image-note-link')) {
           e.preventDefault();
           if (overlay.style.display === 'block') {
             overlay.style.display = 'none';
           } else {
-            overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-            overlay.style.display = 'block';
+            showOverlayWithImage(imgSrc);
           }
           return;
         }
 
-        // 2. Still pending → wait for result
         if (link.classList.contains('preview-pending')) {
           e.preventDefault();
-          overlay.innerHTML = '<div style="color:#000;text-align:center;padding-top:40vh;">...</div>';
-          overlay.style.display = 'block';
-
           startFetch().then(function(result) {
             if (result) {
-              // It is an image note – show it
               imgSrc = result;
-              overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+              showOverlayWithImage(imgSrc);
             } else {
-              // Not an image – navigate to the original link
-              overlay.style.display = 'none';
               window.location.href = href;
             }
           });
           return;
         }
-
-        // 3. Normal link – let the browser navigate (do nothing)
       });
 
-      // Desktop hover
       link.addEventListener('mouseenter', function() {
         if (imgSrc) {
-          overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-          overlay.style.display = 'block';
+          showOverlayWithImage(imgSrc);
         }
       });
       link.addEventListener('mouseleave', function() {
