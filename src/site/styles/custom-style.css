@@ -151,6 +151,14 @@ a[data-note-icon]::before {
     #full-graph {
         display: none !important;
     }
+
+    /* Make the image preview larger on mobile */
+    #image-preview-overlay {
+        top: 5vh;
+        left: 5vw;
+        width: 90vw;
+        height: 90vh;
+    }
 }
 
 .desktop-only {
@@ -237,7 +245,7 @@ a.is-unresolved:active {
     padding: 0 !important;
 }
 
-/* Image preview overlay */
+/* Image preview overlay – now placed behind the text */
 #image-preview-overlay {
     display: none;
     position: fixed;
@@ -245,17 +253,11 @@ a.is-unresolved:active {
     left: 30vw;
     width: 50vw;
     height: 70vh;
-    z-index: 0;
+    z-index: -1;          /* behind the main content */
     pointer-events: none;
 }
 
 #tooltip-content > div:first-child,
 #tooltip-content > header {
     display: none !important;
-}
-
-@media (max-width: 1000px) {
-    #image-preview-overlay {
-        display: none !important;
-    }
 }
