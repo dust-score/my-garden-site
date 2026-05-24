@@ -91,11 +91,13 @@ permalink: /
   function init() {
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    // Dark translucent background with white text – clearly visible
     overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10000;pointer-events:none;display:none;background:rgba(0,0,0,0.6);color:#fff;font-family:Garamond,serif;font-size:20px;text-align:center;';
     document.body.insertBefore(overlay, document.body.firstChild);
 
     var links = document.querySelectorAll('a.internal-link');
+
+    // track which image is currently shown (if any)
+    var currentImgSrc = null;
 
     function showOverlay(html) {
       overlay.innerHTML = html;
@@ -104,6 +106,15 @@ permalink: /
 
     function hideOverlay() {
       overlay.style.display = 'none';
+      currentImgSrc = null;
+    }
+
+    function showImage(imgSrc) {
+      // make overlay nearly transparent for the faint preview
+      overlay.style.background = 'rgba(255,255,255,0.01)';
+      overlay.style.color = '#000';
+      showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+      currentImgSrc = imgSrc;
     }
 
     links.forEach(function(link) {
@@ -129,7 +140,7 @@ permalink: /
               var img = doc.querySelector('img');
               if (img) {
                 imgSrc = img.src;
-                console.log('Image note found:', imgSrc);  // diagnostic
+                console.log('Image note found:', imgSrc);
                 new Image().src = imgSrc; // preload
               }
             }
@@ -142,20 +153,32 @@ permalink: /
       startFetch();
 
       link.addEventListener('click', function(e) {
-        // Image note confirmed
+        // ── Image note confirmed ──
         if (link.classList.contains('image-note-link')) {
           e.preventDefault();
+          // If overlay is already showing a *different* image, immediately switch
           if (overlay.style.display === 'block') {
-            hideOverlay();
+            if (imgSrc !== currentImgSrc) {
+              // Different image → show loading, then the new image
+              showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;"><span>Loading…</span></div>');
+              var img = new Image();
+              img.onload = function() {
+                showImage(imgSrc);
+              };
+              img.onerror = function() {
+                hideOverlay();
+              };
+              img.src = imgSrc;
+            } else {
+              // Same image → close overlay
+              hideOverlay();
+            }
           } else {
-            // Show dark loading state
+            // Overlay not visible → show loading, then image
             showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;"><span>Loading…</span></div>');
             var img = new Image();
             img.onload = function() {
-              // Replace with the faint image
-              overlay.style.background = 'rgba(255,255,255,0.01)'; // make background almost transparent
-              overlay.style.color = '#000'; // reset text color
-              showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+              showImage(imgSrc);
             };
             img.onerror = function() {
               hideOverlay();
@@ -165,49 +188,45 @@ permalink: /
           return;
         }
 
-        // Still pending – show loading, wait for result
+        // ── Still pending ──
         if (link.classList.contains('preview-pending')) {
           e.preventDefault();
           showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;"><span>Loading…</span></div>');
-
           startFetch().then(function(result) {
             if (result) {
               imgSrc = result;
               var img = new Image();
               img.onload = function() {
-                overlay.style.background = 'rgba(255,255,255,0.01)';
-                overlay.style.color = '#000';
-                showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+                showImage(imgSrc);
               };
               img.onerror = function() {
                 hideOverlay();
               };
               img.src = imgSrc;
             } else {
-              // Not an image – navigate
               window.location.href = href;
             }
           });
           return;
         }
 
-        // Normal link – no action
+        // Normal link – let it navigate
       });
 
       // Desktop hover
       link.addEventListener('mouseenter', function() {
-        if (imgSrc) {
-          overlay.style.background = 'rgba(255,255,255,0.01)';
-          overlay.style.color = '#000';
+        if (imgSrc && imgSrc !== currentImgSrc) {
           var img = new Image();
           img.onload = function() {
-            showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+            showImage(imgSrc);
           };
           img.src = imgSrc;
+        } else if (imgSrc && imgSrc === currentImgSrc && overlay.style.display === 'none') {
+          showImage(imgSrc);
         }
       });
       link.addEventListener('mouseleave', function() {
-        if (imgSrc) {
+        if (imgSrc && imgSrc === currentImgSrc) {
           hideOverlay();
         }
       });
