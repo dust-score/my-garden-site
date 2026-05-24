@@ -100,47 +100,72 @@ permalink: /
       var href = link.getAttribute('href');
       if (!href) return;
 
-      // Immediately suppress the native tooltip (white box)
+      // Mark as pending until we know if it’s an image note
       link.classList.add('preview-pending');
 
       var imgSrc = null;
+      var fetchStarted = false;
+      var fetchPromise = null;
 
-      // Pre-fetch the linked page right away
-      fetch(href)
-        .then(function(res) { return res.text(); })
-        .then(function(html) {
-          var parser = new DOMParser();
-          var doc = parser.parseFromString(html, 'text/html');
-
-          if (doc.getElementById('imgnote-marker')) {
-            // This is an image note
-            link.classList.add('image-note-link');
-            var img = doc.querySelector('img');
-            if (img) {
-              imgSrc = img.src;
-              var preload = new Image();
-              preload.src = imgSrc;
+      function startFetch() {
+        if (fetchStarted) return fetchPromise;
+        fetchStarted = true;
+        fetchPromise = fetch(href)
+          .then(function(res) { return res.text(); })
+          .then(function(html) {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(html, 'text/html');
+            if (doc.getElementById('imgnote-marker')) {
+              link.classList.add('image-note-link');
+              var img = doc.querySelector('img');
+              if (img) {
+                imgSrc = img.src;
+                new Image().src = imgSrc; // preload
+              }
             }
-          }
-          // Re-enable the native tooltip for non-image links
-          link.classList.remove('preview-pending');
-        });
+            link.classList.remove('preview-pending');
+            return imgSrc; // resolves to image URL or undefined
+          });
+        return fetchPromise;
+      }
 
-      // Click handler – no navigation, only toggle preview
+      // Start fetching immediately
+      startFetch();
+
       link.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (imgSrc) {
+        // 1. Already confirmed as image note → toggle preview
+        if (link.classList.contains('image-note-link')) {
+          e.preventDefault();
           if (overlay.style.display === 'block') {
             overlay.style.display = 'none';
           } else {
             overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
             overlay.style.display = 'block';
           }
-        } else {
-          // Image still loading – show a minimal wait indicator
+          return;
+        }
+
+        // 2. Still pending → wait for result
+        if (link.classList.contains('preview-pending')) {
+          e.preventDefault();
           overlay.innerHTML = '<div style="color:#000;text-align:center;padding-top:40vh;">...</div>';
           overlay.style.display = 'block';
+
+          startFetch().then(function(result) {
+            if (result) {
+              // It is an image note – show it
+              imgSrc = result;
+              overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+            } else {
+              // Not an image – navigate to the original link
+              overlay.style.display = 'none';
+              window.location.href = href;
+            }
+          });
+          return;
         }
+
+        // 3. Normal link – let the browser navigate (do nothing)
       });
 
       // Desktop hover
