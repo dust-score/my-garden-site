@@ -19,6 +19,7 @@ nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-m
     display: none;
 }
 
+/* ── Text layer ── */
 main.content {
     flex: 1;
     max-width: 700px;
@@ -26,6 +27,10 @@ main.content {
     padding: 0 1rem;
     font-size: 15px;
     text-align: justify;
+    /* 🔽 New: keep text on top of the preview */
+    position: relative;
+    z-index: 2;
+    background: #fff;
 }
 
 main.content p {
@@ -50,8 +55,6 @@ aside .sidebar {
     height: 100%;
     font-size: 14px;
 }
-
-/* ❌ Removed: aside:empty { display: none; } */
 
 h1, h2, h3, h4 {
     font-family: 'Garamond', 'Times New Roman', serif !important;
@@ -136,6 +139,10 @@ a[data-note-icon]::before {
         max-width: 100%;
         margin: 2rem auto;
         padding: 0 0 2rem 0;
+        /* keep the stacking fix on mobile */
+        position: relative;
+        z-index: 2;
+        background: #fff;
     }
 
     aside {
@@ -147,12 +154,11 @@ a[data-note-icon]::before {
         display: none !important;
     }
 
-    /* *** NO MAP AT ALL ON MOBILE *** */
     #full-graph {
         display: none !important;
     }
 
-    /* Make the image preview larger on mobile */
+    /* Image preview already large on mobile – keep it */
     #image-preview-overlay {
         top: 5vh;
         left: 5vw;
@@ -245,15 +251,16 @@ a.is-unresolved:active {
     padding: 0 !important;
 }
 
-/* Image preview overlay – now placed behind the text */
+/* ── Image preview overlay ── */
 #image-preview-overlay {
     display: none;
     position: fixed;
-    top: 15vh;
-    left: 30vw;
-    width: 50vw;
-    height: 70vh;
-    z-index: -1;          /* behind the main content */
+    /* 70% larger: 85vw × 85vh */
+    top: 7.5vh;
+    left: 7.5vw;
+    width: 85vw;
+    height: 85vh;
+    z-index: 1;            /* above body background, behind text */
     pointer-events: none;
 }
 
