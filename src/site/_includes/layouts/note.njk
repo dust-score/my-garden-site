@@ -108,71 +108,108 @@ permalink: "{{ page.filePathStem }}/"
   function init() {
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10000;pointer-events:none;display:none;background:rgba(255,255,255,0.01);';
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10000;pointer-events:none;display:none;background:rgba(0,0,0,0.1);';
     document.body.insertBefore(overlay, document.body.firstChild);
 
     var links = document.querySelectorAll('a.internal-link');
+
+    function showOverlay(html) {
+      overlay.innerHTML = html;
+      overlay.style.display = 'block';
+    }
+
+    function hideOverlay() {
+      overlay.style.display = 'none';
+    }
 
     links.forEach(function(link) {
       var href = link.getAttribute('href');
       if (!href) return;
 
-      fetch(href)
-        .then(function(res) { return res.text(); })
-        .then(function(html) {
-          var doc = new DOMParser().parseFromString(html, 'text/html');
-          if (doc.getElementById('imgnote-marker')) {
-            link.classList.add('image-note-link');
-            var img = doc.querySelector('img');
-            if (img) {
-              link._imgSrc = img.src;
-              new Image().src = img.src;
+      link.classList.add('preview-pending');
+
+      var imgSrc = null;
+      var fetchStarted = false;
+      var fetchPromise = null;
+
+      function startFetch() {
+        if (fetchStarted) return fetchPromise;
+        fetchStarted = true;
+        fetchPromise = fetch(href)
+          .then(function(res) { return res.text(); })
+          .then(function(html) {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(html, 'text/html');
+            if (doc.getElementById('imgnote-marker')) {
+              link.classList.add('image-note-link');
+              var img = doc.querySelector('img');
+              if (img) {
+                imgSrc = img.src;
+                new Image().src = imgSrc;
+              }
             }
-          }
-        });
+            link.classList.remove('preview-pending');
+            return imgSrc;
+          });
+        return fetchPromise;
+      }
+
+      startFetch();
 
       link.addEventListener('click', function(e) {
         if (link.classList.contains('image-note-link')) {
           e.preventDefault();
           if (overlay.style.display === 'block') {
-            overlay.style.display = 'none';
+            hideOverlay();
           } else {
-            overlay.innerHTML = '<img src="' + link._imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-            overlay.style.display = 'block';
+            showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#000;font-family:Garamond,serif;font-size:20px;">Loading…</div>');
+            var img = new Image();
+            img.onload = function() {
+              showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+            };
+            img.onerror = function() {
+              hideOverlay();
+            };
+            img.src = imgSrc;
           }
           return;
         }
 
-        e.preventDefault();
-        var href = link.getAttribute('href');
-        fetch(href)
-          .then(function(res) { return res.text(); })
-          .then(function(html) {
-            var doc = new DOMParser().parseFromString(html, 'text/html');
-            if (doc.getElementById('imgnote-marker')) {
-              link.classList.add('image-note-link');
-              var img = doc.querySelector('img');
-              if (img) {
-                link._imgSrc = img.src;
-                new Image().src = img.src;
-                overlay.innerHTML = '<img src="' + img.src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-                overlay.style.display = 'block';
-              }
+        if (link.classList.contains('preview-pending')) {
+          e.preventDefault();
+          showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#000;font-family:Garamond,serif;font-size:20px;">Loading…</div>');
+
+          startFetch().then(function(result) {
+            if (result) {
+              imgSrc = result;
+              var img = new Image();
+              img.onload = function() {
+                showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+              };
+              img.onerror = function() {
+                hideOverlay();
+              };
+              img.src = imgSrc;
             } else {
               window.location.href = href;
             }
           });
+          return;
+        }
       });
 
       link.addEventListener('mouseenter', function() {
-        if (link._imgSrc) {
-          overlay.innerHTML = '<img src="' + link._imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-          overlay.style.display = 'block';
+        if (imgSrc) {
+          var img = new Image();
+          img.onload = function() {
+            showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+          };
+          img.src = imgSrc;
         }
       });
       link.addEventListener('mouseleave', function() {
-        if (link._imgSrc) {
-          overlay.style.display = 'none';
+        if (imgSrc) {
+          hideOverlay();
         }
       });
     });
