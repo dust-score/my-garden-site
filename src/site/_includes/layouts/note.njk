@@ -117,55 +117,50 @@ permalink: "{{ page.filePathStem }}/"
       var href = link.getAttribute('href');
       if (!href) return;
 
-      var imgSrc = null;
-      var fetchStarted = false;
+      // Immediately suppress the native tooltip (white box)
+      link.classList.add('preview-pending');
 
-      // Immediately block navigation – first tap toggles / fetches
+      var imgSrc = null;
+
+      // Pre-fetch the linked page right away
+      fetch(href)
+        .then(function(res) { return res.text(); })
+        .then(function(html) {
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(html, 'text/html');
+
+          if (doc.getElementById('imgnote-marker')) {
+            // This is an image note
+            link.classList.add('image-note-link');
+            var img = doc.querySelector('img');
+            if (img) {
+              imgSrc = img.src;
+              var preload = new Image();
+              preload.src = imgSrc;
+            }
+          }
+          // Re-enable the native tooltip for non-image links
+          link.classList.remove('preview-pending');
+        });
+
+      // Click handler – no navigation, only toggle preview
       link.addEventListener('click', function(e) {
         e.preventDefault();
-
         if (imgSrc) {
-          // Image already loaded – toggle preview
           if (overlay.style.display === 'block') {
             overlay.style.display = 'none';
           } else {
             overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
             overlay.style.display = 'block';
           }
-          return;
-        }
-
-        // First tap: start fetching if not already started
-        if (!fetchStarted) {
-          fetchStarted = true;
+        } else {
+          // Image still loading – show a minimal wait indicator
           overlay.innerHTML = '<div style="color:#000;text-align:center;padding-top:40vh;">...</div>';
           overlay.style.display = 'block';
-
-          fetch(href)
-            .then(function(res) { return res.text(); })
-            .then(function(html) {
-              var parser = new DOMParser();
-              var doc = parser.parseFromString(html, 'text/html');
-
-              if (doc.getElementById('imgnote-marker')) {
-                link.classList.add('image-note-link');
-                var img = doc.querySelector('img');
-                if (img) {
-                  imgSrc = img.src;
-                  var preload = new Image();
-                  preload.src = imgSrc;
-                  overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-                } else {
-                  overlay.style.display = 'none';
-                }
-              } else {
-                overlay.style.display = 'none';
-              }
-            });
         }
       });
 
-      // Desktop hover – only if image is already cached
+      // Desktop hover
       link.addEventListener('mouseenter', function() {
         if (imgSrc) {
           overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
