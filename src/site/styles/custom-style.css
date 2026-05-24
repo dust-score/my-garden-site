@@ -19,7 +19,7 @@ nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-m
     display: none;
 }
 
-/* ── Text layer ── */
+/* ── Text layer – NO white background, no z-index conflict ── */
 main.content {
     flex: 1;
     max-width: 700px;
@@ -27,10 +27,6 @@ main.content {
     padding: 0 1rem;
     font-size: 15px;
     text-align: justify;
-    /* 🔽 New: keep text on top of the preview */
-    position: relative;
-    z-index: 2;
-    background: #fff;
 }
 
 main.content p {
@@ -38,7 +34,6 @@ main.content p {
     text-align: justify;
 }
 
-/* Empty aside stays visible on desktop to preserve the right column */
 aside {
     flex: 1;
     max-width: 50%;
@@ -135,21 +130,17 @@ a[data-note-icon]::before {
         flex-direction: column;
     }
 
+    /* Remove max-width so table can stretch */
     main.content {
         max-width: 100%;
         margin: 2rem auto;
-        padding: 0 0 2rem 0;
-        /* keep the stacking fix on mobile */
-        position: relative;
-        z-index: 2;
-        background: #fff;
+        padding: 0 1rem 2rem 1rem;
     }
 
     aside {
         display: none;
     }
 
-    /* Hides the Map button */
     body > a[style*="position:fixed"][style*="top:2rem"][style*="right:2rem"] {
         display: none !important;
     }
@@ -158,11 +149,17 @@ a[data-note-icon]::before {
         display: none !important;
     }
 
-    /* Image preview already large on mobile – keep it */
+    /* Let the mobile table fill the width */
+    .mobile-only .re-table table {
+        width: 100%;
+        table-layout: fixed;   /* columns share space evenly */
+    }
+
+    /* Overlay sizing on mobile – keep it full */
     #image-preview-overlay {
-        top: 5vh;
-        left: 5vw;
-        width: 90vw;
+        top: 2vh;
+        left: 2vw;
+        width: 96vw;
         height: 90vh;
     }
 }
@@ -195,9 +192,6 @@ table, tr, td, th {
 
 .re-table a {
     font-weight: normal !important;
-}
-
-.re-table a {
     color: #000 !important;
     text-decoration: none !important;
     border: 1px solid #000 !important;
@@ -251,16 +245,16 @@ a.is-unresolved:active {
     padding: 0 !important;
 }
 
-/* ── Image preview overlay ── */
+/* ── Image preview overlay – ON TOP, low opacity ── */
 #image-preview-overlay {
     display: none;
     position: fixed;
-    /* 70% larger: 85vw × 85vh */
-    top: 7.5vh;
-    left: 7.5vw;
-    width: 85vw;
-    height: 85vh;
-    z-index: 1;            /* above body background, behind text */
+    /* Large default (desktop) */
+    top: 2vh;
+    left: 2vw;
+    width: 96vw;
+    height: 90vh;
+    z-index: 10;               /* above everything */
     pointer-events: none;
 }
 
