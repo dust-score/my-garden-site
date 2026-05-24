@@ -91,29 +91,24 @@ permalink: /
   function init() {
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    overlay.style.cssText = 'position:fixed;top:2vh;left:2vw;width:96vw;height:90vh;z-index:1000;pointer-events:none;display:none;';
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10000;pointer-events:none;display:none;background:rgba(0,0,0,0.1);';
     document.body.insertBefore(overlay, document.body.firstChild);
 
     var links = document.querySelectorAll('a.internal-link');
 
-    function showOverlayWithImage(src) {
-      // Create a new Image to ensure it's fully loaded before showing
-      var img = new Image();
-      img.onload = function() {
-        overlay.innerHTML = '<img src="' + src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-        overlay.style.display = 'block';
-      };
-      img.onerror = function() {
-        // silently ignore broken images
-      };
-      img.src = src;
+    function showOverlay(html) {
+      overlay.innerHTML = html;
+      overlay.style.display = 'block';
+    }
+
+    function hideOverlay() {
+      overlay.style.display = 'none';
     }
 
     links.forEach(function(link) {
       var href = link.getAttribute('href');
       if (!href) return;
 
-      // Mark as pending while we check the page
       link.classList.add('preview-pending');
 
       var imgSrc = null;
@@ -133,7 +128,7 @@ permalink: /
               var img = doc.querySelector('img');
               if (img) {
                 imgSrc = img.src;
-                // preload in background
+                // preload
                 new Image().src = imgSrc;
               }
             }
@@ -143,48 +138,69 @@ permalink: /
         return fetchPromise;
       }
 
-      // Start background fetch
       startFetch();
 
       link.addEventListener('click', function(e) {
-        // 1. Already confirmed as image note
+        // Image note confirmed
         if (link.classList.contains('image-note-link')) {
           e.preventDefault();
           if (overlay.style.display === 'block') {
-            overlay.style.display = 'none';
+            hideOverlay();
           } else {
-            showOverlayWithImage(imgSrc);
+            // show loading while image decodes
+            showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#000;font-family:Garamond,serif;font-size:20px;">Loading…</div>');
+            var img = new Image();
+            img.onload = function() {
+              showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+            };
+            img.onerror = function() {
+              hideOverlay();
+            };
+            img.src = imgSrc;
           }
           return;
         }
 
-        // 2. Still pending – wait for fetch result
+        // Still pending – show loading, wait for result
         if (link.classList.contains('preview-pending')) {
           e.preventDefault();
+          showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#000;font-family:Garamond,serif;font-size:20px;">Loading…</div>');
+
           startFetch().then(function(result) {
             if (result) {
               imgSrc = result;
-              showOverlayWithImage(imgSrc);
+              var img = new Image();
+              img.onload = function() {
+                showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+              };
+              img.onerror = function() {
+                hideOverlay();
+              };
+              img.src = imgSrc;
             } else {
-              // not an image – navigate to the link
+              // Not an image – navigate
               window.location.href = href;
             }
           });
           return;
         }
 
-        // 3. Normal link – let the browser navigate
+        // Normal link – no action
       });
 
       // Desktop hover
       link.addEventListener('mouseenter', function() {
         if (imgSrc) {
-          showOverlayWithImage(imgSrc);
+          var img = new Image();
+          img.onload = function() {
+            showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
+          };
+          img.src = imgSrc;
         }
       });
       link.addEventListener('mouseleave', function() {
         if (imgSrc) {
-          overlay.style.display = 'none';
+          hideOverlay();
         }
       });
     });
