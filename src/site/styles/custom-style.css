@@ -19,7 +19,6 @@ nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-m
     display: none;
 }
 
-/* ── Text layer must stay ABOVE the overlay ── */
 main.content {
     flex: 1;
     max-width: 700px;
@@ -27,9 +26,7 @@ main.content {
     padding: 0 1rem;
     font-size: 15px;
     text-align: justify;
-    position: relative;
-    z-index: 2;               /* above overlay */
-    background: transparent;  /* crucial: no white block */
+    /* no background, no special z-index */
 }
 
 main.content p {
@@ -137,9 +134,6 @@ a[data-note-icon]::before {
         max-width: 100%;
         margin: 2rem auto;
         padding: 0 1rem 2rem 1rem;
-        position: relative;
-        z-index: 2;
-        background: transparent;
     }
 
     aside {
@@ -241,7 +235,7 @@ a.is-unresolved:active {
     padding: 0 !important;
 }
 
-/* ── Overlay: behind text, above body white ── */
+/* ── Image preview overlay ── */
 #image-preview-overlay {
     display: none;
     position: fixed;
@@ -249,7 +243,7 @@ a.is-unresolved:active {
     left: 2vw;
     width: 96vw;
     height: 90vh;
-    z-index: 1;               /* between body and text */
+    z-index: 1000;            /* on top of everything */
     pointer-events: none;
 }
 
