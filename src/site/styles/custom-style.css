@@ -235,3 +235,29 @@ a.is-unresolved:active {
 }
 
 /* No extra overlay CSS needed – all defined inline */
+/* ── Image preview overlay ── */
+#image-preview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  pointer-events: none;
+  /* default look for “Loading…” */
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-family: Garamond, serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Tablet / desktop / larger touchscreens – shrink the preview */
+@media (min-width: 1001px) {
+  #image-preview-overlay {
+    width: 50vw;
+    height: 70vh;
+    top: 15vh;
+    left: 25vw;
+  }
+}
