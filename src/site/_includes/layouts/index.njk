@@ -89,118 +89,83 @@ permalink: /
   }
 
   function init() {
+    // Create overlay once
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10000;pointer-events:none;display:none;background:rgba(0,0,0,0.1);';
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10000;pointer-events:none;display:none;background:rgba(255,255,255,0.01);';
     document.body.insertBefore(overlay, document.body.firstChild);
 
     var links = document.querySelectorAll('a.internal-link');
 
-    function showOverlay(html) {
-      overlay.innerHTML = html;
-      overlay.style.display = 'block';
-    }
-
-    function hideOverlay() {
-      overlay.style.display = 'none';
-    }
-
+    // For each link, pre-fetch to detect image notes
     links.forEach(function(link) {
       var href = link.getAttribute('href');
       if (!href) return;
 
-      link.classList.add('preview-pending');
-
-      var imgSrc = null;
-      var fetchStarted = false;
-      var fetchPromise = null;
-
-      function startFetch() {
-        if (fetchStarted) return fetchPromise;
-        fetchStarted = true;
-        fetchPromise = fetch(href)
-          .then(function(res) { return res.text(); })
-          .then(function(html) {
-            var parser = new DOMParser();
-            var doc = parser.parseFromString(html, 'text/html');
-            if (doc.getElementById('imgnote-marker')) {
-              link.classList.add('image-note-link');
-              var img = doc.querySelector('img');
-              if (img) {
-                imgSrc = img.src;
-                // preload
-                new Image().src = imgSrc;
-              }
+      // Start background fetch immediately
+      fetch(href)
+        .then(function(res) { return res.text(); })
+        .then(function(html) {
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          if (doc.getElementById('imgnote-marker')) {
+            link.classList.add('image-note-link');
+            var img = doc.querySelector('img');
+            if (img) {
+              // Store the image URL directly on the link element
+              link._imgSrc = img.src;
+              // Preload image
+              new Image().src = img.src;
             }
-            link.classList.remove('preview-pending');
-            return imgSrc;
-          });
-        return fetchPromise;
-      }
+          }
+        });
 
-      startFetch();
-
+      // Click handler
       link.addEventListener('click', function(e) {
-        // Image note confirmed
+        // If we already know it's an image note, toggle preview
         if (link.classList.contains('image-note-link')) {
           e.preventDefault();
           if (overlay.style.display === 'block') {
-            hideOverlay();
+            overlay.style.display = 'none';
           } else {
-            // show loading while image decodes
-            showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#000;font-family:Garamond,serif;font-size:20px;">Loading…</div>');
-            var img = new Image();
-            img.onload = function() {
-              showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
-            };
-            img.onerror = function() {
-              hideOverlay();
-            };
-            img.src = imgSrc;
+            overlay.innerHTML = '<img src="' + link._imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+            overlay.style.display = 'block';
           }
           return;
         }
 
-        // Still pending – show loading, wait for result
-        if (link.classList.contains('preview-pending')) {
-          e.preventDefault();
-          showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#000;font-family:Garamond,serif;font-size:20px;">Loading…</div>');
-
-          startFetch().then(function(result) {
-            if (result) {
-              imgSrc = result;
-              var img = new Image();
-              img.onload = function() {
-                showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
-              };
-              img.onerror = function() {
-                hideOverlay();
-              };
-              img.src = imgSrc;
+        // Still pending – prevent navigation and wait for fetch to resolve
+        e.preventDefault();
+        var href = link.getAttribute('href');
+        fetch(href)
+          .then(function(res) { return res.text(); })
+          .then(function(html) {
+            var doc = new DOMParser().parseFromString(html, 'text/html');
+            if (doc.getElementById('imgnote-marker')) {
+              link.classList.add('image-note-link');
+              var img = doc.querySelector('img');
+              if (img) {
+                link._imgSrc = img.src;
+                new Image().src = img.src;
+                overlay.innerHTML = '<img src="' + img.src + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+                overlay.style.display = 'block';
+              }
             } else {
-              // Not an image – navigate
+              // Not an image note – navigate to the original destination
               window.location.href = href;
             }
           });
-          return;
-        }
-
-        // Normal link – no action
       });
 
       // Desktop hover
       link.addEventListener('mouseenter', function() {
-        if (imgSrc) {
-          var img = new Image();
-          img.onload = function() {
-            showOverlay('<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">');
-          };
-          img.src = imgSrc;
+        if (link._imgSrc) {
+          overlay.innerHTML = '<img src="' + link._imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+          overlay.style.display = 'block';
         }
       });
       link.addEventListener('mouseleave', function() {
-        if (imgSrc) {
-          hideOverlay();
+        if (link._imgSrc) {
+          overlay.style.display = 'none';
         }
       });
     });
