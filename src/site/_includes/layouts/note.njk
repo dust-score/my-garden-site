@@ -106,10 +106,9 @@ permalink: "{{ page.filePathStem }}/"
   }
 
   function init() {
-    // Create overlay (hidden by default)
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-    overlay.style.cssText = 'position:fixed;top:15vh;left:30vw;width:50vw;height:70vh;z-index:-1;pointer-events:none;display:none;';
+    overlay.style.cssText = 'position:fixed;top:2vh;left:2vw;width:96vw;height:90vh;z-index:10;pointer-events:none;display:none;';
     document.body.insertBefore(overlay, document.body.firstChild);
 
     var links = document.querySelectorAll('a.internal-link');
@@ -118,44 +117,66 @@ permalink: "{{ page.filePathStem }}/"
       var href = link.getAttribute('href');
       if (!href) return;
 
-      fetch(href)
-        .then(function(res) { return res.text(); })
-        .then(function(html) {
-          var parser = new DOMParser();
-          var doc = parser.parseFromString(html, 'text/html');
+      var imgSrc = null;
+      var fetchStarted = false;
 
-          // Only links pointing to pages with an #imgnote-marker (image notes)
-          if (doc.getElementById('imgnote-marker')) {
-            link.classList.add('image-note-link');
-            var img = doc.querySelector('img');
-            if (!img) return;
-            var imgSrc = img.src;
+      // Immediately block navigation – first tap toggles / fetches
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
 
-            // Preload the image for instant display
-            var preload = new Image();
-            preload.src = imgSrc;
+        if (imgSrc) {
+          // Image already loaded – toggle preview
+          if (overlay.style.display === 'block') {
+            overlay.style.display = 'none';
+          } else {
+            overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+            overlay.style.display = 'block';
+          }
+          return;
+        }
 
-            // Desktop hover
-            link.addEventListener('mouseenter', function() {
-              overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-              overlay.style.display = 'block';
-            });
-            link.addEventListener('mouseleave', function() {
-              overlay.style.display = 'none';
-            });
+        // First tap: start fetching if not already started
+        if (!fetchStarted) {
+          fetchStarted = true;
+          overlay.innerHTML = '<div style="color:#000;text-align:center;padding-top:40vh;">...</div>';
+          overlay.style.display = 'block';
 
-            // Mobile touch – toggle preview and prevent navigation
-            link.addEventListener('click', function(e) {
-              e.preventDefault();  // never follow the link
-              if (overlay.style.display === 'block') {
-                overlay.style.display = 'none';
+          fetch(href)
+            .then(function(res) { return res.text(); })
+            .then(function(html) {
+              var parser = new DOMParser();
+              var doc = parser.parseFromString(html, 'text/html');
+
+              if (doc.getElementById('imgnote-marker')) {
+                link.classList.add('image-note-link');
+                var img = doc.querySelector('img');
+                if (img) {
+                  imgSrc = img.src;
+                  var preload = new Image();
+                  preload.src = imgSrc;
+                  overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+                } else {
+                  overlay.style.display = 'none';
+                }
               } else {
-                overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
-                overlay.style.display = 'block';
+                overlay.style.display = 'none';
               }
             });
-          }
-        });
+        }
+      });
+
+      // Desktop hover – only if image is already cached
+      link.addEventListener('mouseenter', function() {
+        if (imgSrc) {
+          overlay.innerHTML = '<img src="' + imgSrc + '" style="width:100%;height:100%;object-fit:contain;opacity:0.3;">';
+          overlay.style.display = 'block';
+        }
+      });
+      link.addEventListener('mouseleave', function() {
+        if (imgSrc) {
+          overlay.style.display = 'none';
+        }
+      });
     });
   }
 })();
