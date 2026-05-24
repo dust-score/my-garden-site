@@ -26,7 +26,6 @@ main.content {
     padding: 0 1rem;
     font-size: 15px;
     text-align: justify;
-    /* no background, no special z-index */
 }
 
 main.content p {
@@ -235,19 +234,4 @@ a.is-unresolved:active {
     padding: 0 !important;
 }
 
-/* ── Image preview overlay ── */
-#image-preview-overlay {
-    display: none;
-    position: fixed;
-    top: 2vh;
-    left: 2vw;
-    width: 96vw;
-    height: 90vh;
-    z-index: 1000;            /* on top of everything */
-    pointer-events: none;
-}
-
-#tooltip-content > div:first-child,
-#tooltip-content > header {
-    display: none !important;
-}
+/* No extra overlay CSS needed – all defined inline */
