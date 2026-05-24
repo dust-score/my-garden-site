@@ -19,7 +19,7 @@ nav.navbar, .filetree-wrapper, .site-header, .site-title, .page-title, .header-m
     display: none;
 }
 
-/* ── Text layer – NO white background, no z-index conflict ── */
+/* ── Text layer must stay ABOVE the overlay ── */
 main.content {
     flex: 1;
     max-width: 700px;
@@ -27,6 +27,9 @@ main.content {
     padding: 0 1rem;
     font-size: 15px;
     text-align: justify;
+    position: relative;
+    z-index: 2;               /* above overlay */
+    background: transparent;  /* crucial: no white block */
 }
 
 main.content p {
@@ -130,11 +133,13 @@ a[data-note-icon]::before {
         flex-direction: column;
     }
 
-    /* Remove max-width so table can stretch */
     main.content {
         max-width: 100%;
         margin: 2rem auto;
         padding: 0 1rem 2rem 1rem;
+        position: relative;
+        z-index: 2;
+        background: transparent;
     }
 
     aside {
@@ -149,18 +154,9 @@ a[data-note-icon]::before {
         display: none !important;
     }
 
-    /* Let the mobile table fill the width */
     .mobile-only .re-table table {
         width: 100%;
-        table-layout: fixed;   /* columns share space evenly */
-    }
-
-    /* Overlay sizing on mobile – keep it full */
-    #image-preview-overlay {
-        top: 2vh;
-        left: 2vw;
-        width: 96vw;
-        height: 90vh;
+        table-layout: fixed;
     }
 }
 
@@ -245,16 +241,15 @@ a.is-unresolved:active {
     padding: 0 !important;
 }
 
-/* ── Image preview overlay – ON TOP, low opacity ── */
+/* ── Overlay: behind text, above body white ── */
 #image-preview-overlay {
     display: none;
     position: fixed;
-    /* Large default (desktop) */
     top: 2vh;
     left: 2vw;
     width: 96vw;
     height: 90vh;
-    z-index: 10;               /* above everything */
+    z-index: 1;               /* between body and text */
     pointer-events: none;
 }
 
