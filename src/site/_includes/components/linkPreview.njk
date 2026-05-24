@@ -113,8 +113,8 @@
     var elem = event.currentTarget || event.target;
     if (!elem) return;
     
-    // Skip native preview for image-note links
-    if (elem.classList.contains('image-note-link')) {
+    // Suppress tooltip for image-note links and for links still being checked
+    if (elem.classList.contains('image-note-link') || elem.classList.contains('preview-pending')) {
       return;
     }
     
