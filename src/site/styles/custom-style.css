@@ -234,4 +234,4 @@ a.is-unresolved:active {
     padding: 0 !important;
 }
 
-/* Overlay is defined inline; no extra rules needed */
+/* No extra overlay CSS needed – all defined inline */
