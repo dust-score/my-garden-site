@@ -36,6 +36,12 @@
   height: 260px;
   border: 0;
 }
+
+/* ── Hide the page title in tooltip previews ── */
+#tooltip-content > div:first-child,
+#tooltip-content > header {
+  display: none !important;
+}
 </style>
 <div style="opacity: 0; display: none;" id='tooltip-wrapper'>
   <div id='tooltip-content'>
@@ -113,8 +119,8 @@
     var elem = event.currentTarget || event.target;
     if (!elem) return;
     
-    // Suppress tooltip for image-note links and for links still being checked
-    if (elem.classList.contains('image-note-link') || elem.classList.contains('preview-pending')) {
+    // Suppress tooltip only for image-note links (image previews)
+    if (elem.classList.contains('image-note-link')) {
       return;
     }
     
