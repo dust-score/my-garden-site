@@ -108,9 +108,8 @@ permalink: "{{ page.filePathStem }}/"
   function init() {
     var overlay = document.createElement('div');
     overlay.id = 'image-preview-overlay';
-// base styles are now in CSS – only keep display:none inline
-overlay.style.cssText = 'display:none;';
-document.body.insertBefore(overlay, document.body.firstChild);
+    overlay.style.cssText = 'display:none;';
+    document.body.insertBefore(overlay, document.body.firstChild);
 
     var links = document.querySelectorAll('a.internal-link');
     var currentImgSrc = null;
@@ -136,10 +135,8 @@ document.body.insertBefore(overlay, document.body.firstChild);
     function displayImage(src) {
       var img = new Image();
       if (img.complete) {
-        // Already cached – show instantly
         showImage(src);
       } else {
-        // Not cached – wait for it
         img.onload = function() { showImage(src); };
         img.onerror = function() { hideOverlay(); };
         img.src = src;
@@ -160,7 +157,10 @@ document.body.insertBefore(overlay, document.body.firstChild);
         if (fetchStarted) return fetchPromise;
         fetchStarted = true;
         fetchPromise = fetch(href)
-          .then(function(res) { return res.text(); })
+          .then(function(res) {
+            if (!res.ok) throw new Error('Failed to fetch');
+            return res.text();
+          })
           .then(function(html) {
             var parser = new DOMParser();
             var doc = parser.parseFromString(html, 'text/html');
@@ -170,10 +170,14 @@ document.body.insertBefore(overlay, document.body.firstChild);
               if (img) {
                 imgSrc = img.src;
                 console.log('Image note found:', imgSrc);
-                // Preload in background
                 new Image().src = imgSrc;
               }
             }
+          })
+          .catch(function(err) {
+            console.log('Could not check', href, err);
+          })
+          .finally(function() {
             link.classList.remove('preview-pending');
             return imgSrc;
           });
@@ -184,7 +188,6 @@ document.body.insertBefore(overlay, document.body.firstChild);
 
       // Touch‑screen: fire immediately on finger lift
       link.addEventListener('touchend', function(e) {
-        // Avoid double‑firing with click
         e.preventDefault();
         link.click();
       });
@@ -195,7 +198,6 @@ document.body.insertBefore(overlay, document.body.firstChild);
           e.preventDefault();
           if (overlay.style.display === 'block') {
             if (imgSrc !== currentImgSrc) {
-              // Switch to new image
               showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;"><span>Loading…</span></div>');
               displayImage(imgSrc);
             } else {
