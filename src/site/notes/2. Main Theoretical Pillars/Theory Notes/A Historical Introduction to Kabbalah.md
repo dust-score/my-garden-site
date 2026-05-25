@@ -16,7 +16,7 @@ Among other things, the Zohar emphasises the concept of reflection, all things b
 
 It is a Scholemian claim[^12] that the persecution of Spanish Jewry in the fifteenth century, culminating in the exile of the Jews from Spain in 1492, transformed the spiritual climate within the Jewish communities, leading to the decline of the previously dominant rationalist philosophy and a growing interest in Kabbalah. It was in this context of intensely messianic and apocalyptic inclinations that several kabbalistic [[2. Main Theoretical Pillars/Theory Notes/xcf\|circles]] developed.
 
-This initiated a process that, by the [[3. Concepts/Luria's Safed Circle\|sixteenth century]], would elevate Kabbalah from the purview of isolated esoteric groups to the foremost spiritual doctrine of the Jewish people in [[1. Surface Texts/Hasidism\|early modern times]].
+This initiated a process that, by the [[3. Concepts/Luria's Safed Circle\|sixteenth century]], would elevate Kabbalah from the purview of isolated esoteric groups to the foremost [[1. Surface Texts/On Creation\|spiritual]] doctrine of the Jewish people in [[1. Surface Texts/Hasidism\|early modern times]].
 
 [^1]:  [[2. Main Theoretical Pillars/Theory Notes/Mishnah Hagigah\|Mishnah Hagigah]] 2:1
 
