@@ -20,7 +20,7 @@
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stitution</td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">integration</td></tr>
+<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/2-main-theoretical-pillars/theory-notes/a-historical-introduction-to-kabbalah" class="internal-link">integration</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
