@@ -8,8 +8,8 @@
 <table style="border:none;border-collapse:collapse;margin-left:0;">
 <tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/re/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td></td><td></td><td></td><td></td><td></td><td style="border:none;text-align:right;"><a href="/5-citations/the-poem-of-the-end-excerpt/" class="internal-link">plete</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td></td><td></td><td></td><td></td><td style="border:none;text-align:right;">stitution</td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td></td><td></td><td></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">paration</td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/jobcenter-texts/repetition/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td></td><td></td><td></td><td></td><td style="border:none;text-align:right;">stitution</td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/5-citations/the-poem-of-the-end-excerpt/" class="internal-link">Re</a></td><td></td><td></td><td></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/5-citations/the-metaphysics-of-misinterpretation/" class="internal-link">paration</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/tikkun-associative-words/" class="internal-link">Re</a></td><td></td><td></td><td></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/altogether-otherwise/" class="internal-link">ctification</a></td></tr>
@@ -20,7 +20,7 @@
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stitution</td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/2-main-theoretical-pillars/theory-notes/a-historical-introduction-to-kabbalah" class="internal-link">integration</a></td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/jobcenter-texts/straight-ahead/" class="internal-link">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/2-main-theoretical-pillars/theory-notes/a-historical-introduction-to-kabbalah" class="internal-link">integration</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
