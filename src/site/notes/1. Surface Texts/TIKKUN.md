@@ -2,7 +2,6 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/tikkun/","tags":["alpha","surface","unfinished","gardenEntry"],"dg-note-properties":{"tags":["alpha","surface","unfinished","gardenEntry"]}}
 ---
 
-
 <div class="desktop-only">
 <div class="re-table">
 <table style="border:none;border-collapse:collapse;margin-left:0;">
@@ -20,7 +19,7 @@
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stitution</td></tr>
-<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/jobcenter-texts/straight-ahead/" class="internal-link">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/2-main-theoretical-pillars/theory-notes/a-historical-introduction-to-kabbalah" class="internal-link">integration</a></td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/jobcenter-texts/straight-ahead/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/2-main-theoretical-pillars/theory-notes/a-historical-introduction-to-kabbalah" class="internal-link">integration</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
@@ -28,7 +27,7 @@
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">parare</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;"><a href="/3-concepts/on-time/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td><td></td><td></td><td></td></td><td></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/hearing-residues-seeing-residues/" class="internal-link">con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciliare</a></td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/3-concepts/on-time/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td></td><td></td><td></td><td></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/hearing-residues-seeing-residues/" class="internal-link">con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciliare</a></td></tr>
 </table>
 </div>
 </div>
@@ -38,8 +37,8 @@
 <table style="border:none;border-collapse:collapse;margin-left:0;">
 <tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/re/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/5-citations/the-poem-of-the-end-excerpt/" class="internal-link">plete</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">stitution</td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">paration</td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/jobcenter-texts/repetition/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">stitution</td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/5-citations/the-poem-of-the-end-excerpt/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/5-citations/the-metaphysics-of-misinterpretation/" class="internal-link">paration</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/tikkun-associative-words/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/altogether-otherwise/" class="internal-link">ctification</a></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">demption</td></tr>
@@ -47,7 +46,7 @@
 <tr><td style="border:none;padding-right:10px;" colspan="3"><a href="/1-surface-texts/iesun9/" class="internal-link">Re</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/1-surface-texts/iemoonc/" class="internal-link">con</a>ciliation</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">con stitution</td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">integration</td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/jobcenter-texts/straight-ahead/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/2-main-theoretical-pillars/theory-notes/a-historical-introduction-to-kabbalah" class="internal-link">integration</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/jobcenter-texts/power/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/3-concepts/on-folding/" class="internal-link">plicare</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
