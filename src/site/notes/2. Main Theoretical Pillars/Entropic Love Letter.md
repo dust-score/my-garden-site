@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/2-main-theoretical-pillars/entropic-love-letter/","tags":["theory","beta","Zwick","tikkun","philosophy"],"dg-note-properties":{"type":"theory","tags":["theory","beta","Zwick","tikkun","philosophy"],"site":null}}
 ---
 
-In “Tikkun Viewed from the Perspective of Systems Philosophy,” Martin Zwick expresses finitude, in [[3. Concepts/Luria's Safed Circle\|Lurianic]] [[1. Surface Texts/On Creation\|Kabbalah]] the [[3. Concepts/shevirat ha-kelim\|breaking of the vessels]], as a necessary prerequisite for the existence of such a complex system as life on [[3. Concepts/Olam\|earth]].
+In “Tikkun Viewed from the Perspective of Systems Philosophy,” Martin Zwick expresses limitation, in [[3. Concepts/Luria's Safed Circle\|Lurianic]] [[1. Surface Texts/On Creation\|Kabbalah]] the [[3. Concepts/shevirat ha-kelim\|breaking of the vessels]], as a necessary prerequisite for the existence of such a complex system as life on [[3. Concepts/Olam\|earth]].
 
 Without the flaw experienced as [[1. Surface Texts/The Dead End\|the dead end]], there could be no [[1. Surface Texts/Jobcenter Texts/Power\|motion]], therefore there could only be stasis: [[1. Surface Texts/Peace Down To The Last Sparrow's Cry\|the eternal eschaton]]. It is therefore an interesting tension that life requires entropy, requires its own limitation, and that this existence within a limited state gives rise to the necessity of _[[1. Surface Texts/TIKKUN\|tikkun]]_, repair, or [[1. Surface Texts/back from\|rectification]]—and yet that _tikkun_ itself is conceptualised as actualising the eschaton, the cessation of finitude and therefore of motion within time, ergo (mortal, physical) life itself.
 
