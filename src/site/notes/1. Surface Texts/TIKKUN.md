@@ -32,7 +32,7 @@
 </table>
 </div>
 </div>
-
+ 
 <div class="mobile-only">
 <div class="re-table">
 <table style="border:none;border-collapse:collapse;margin-left:0;">
