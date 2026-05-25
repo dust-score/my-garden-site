@@ -149,7 +149,7 @@ a[data-note-icon]::before {
 
     .mobile-only .re-table table {
         width: 100%;
-        table-layout: fixed;
+        table-layout: auto;
     }
 }
 
