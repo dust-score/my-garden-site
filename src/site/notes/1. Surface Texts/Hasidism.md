@@ -22,5 +22,3 @@ Idel is explicit that Hasidism marks a shifting of the understanding of Tikkun a
 In these Hasidic sources, _tikkun_ becomes an [[1. Surface Texts/silence song screaming\|individually available techne]], as opposed to an externalised,  redemptive force.  
 
 >The Hasidic emphasis on experience should be  understood as a move from hope to experience… In the ecstatic and Hasidic treatments of messianism we may presuppose the availability of the messianic mode of existence which offers an [[1. Surface Texts/nahman paradox\|immediate experience]] as much informed by hope as by real attempts to actualize the messianic potentiality of religious life.
-
-[[2. Main Theoretical Pillars/Theory Notes/wolfson-time-becoming\|wolfson-time-becoming]]

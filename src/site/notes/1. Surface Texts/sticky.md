@@ -10,7 +10,7 @@ There is a place that engenders just so much talk or none at all. This is a plac
 
 It's true that the constitution of this despair is specific to its present, [[1. Surface Texts/technologically disseminated\|technologically disseminated]] precursors. In its special contemporary flavour it's an experience specific to the present moment; through it, however, I move closer and closer to an oceanic and boundless past.
 
-When [[1. Surface Texts/it snowed this winter\|it snowed this winter]] I could walk through the falling snow in a posture that had lain dormant in my arsenal since childhood: hunched forward, feeling obliquely British in that the stance was almost ironical. There was  life for a small self lost to a decade of wet winters.
+When [[1. Surface Texts/it snowed this winter\|it snowed this winter]] I could walk through the falling snow in a posture that had lain dormant in my arsenal since childhood: hunched forward, feeling obliquely British in that the stance was almost ironical. There was life for a small self lost to a decade of wet winters.
 
 The nature of the past that we recognise in the contemporary is sticky, physical and complicit. 
 
