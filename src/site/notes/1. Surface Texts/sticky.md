@@ -2,7 +2,6 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/sticky/","tags":["vignette","surface","unfinished"],"dg-note-properties":{"type":"surface","tags":["vignette","surface","unfinished"],"site":null,"image":"/10-attachments/20260512174434.png"}}
 ---
 
-
 We are a part of history, and history—as it is well known—is a condition and an action in the past. Except us: [[5. Citations/On Parallel Time\|We are a past continuous and never ending.]] We address you all from it presently, so that it does not become your future. 
 *Walid Daqqa, Palestinian political prisoner; trans. Nour Eldin Hussein*
 
@@ -16,4 +15,4 @@ The nature of the past that we recognise in the contemporary is sticky, physical
 
 It reaches [[1. Surface Texts/back\|back]] into something [[1. Surface Texts/The Dead End\|inarticulable]]. To see it moves me from an adolescent disidentification with the past, the rupture I had not been able to bridge, to a sense of continuity with the past, not through a missing, but only a previously unrecognised, link.
 
-From this past, buffeted by the vicissitudes of the unremembered, speaks something nonverbal. It is a question that cannot be answered. As such, it articulates itself as does a wordless scream: the question constitutes itself reflexively into an answer, which itself articulates the question it purports to solve.
+From this past, buffeted by the vicissitudes of the unremembered, speaks something nonverbal. It is a question that cannot be answered. As such, it articulates itself as does a [[1. Surface Texts/silence song screaming\|wordless scream]]: the question constitutes itself reflexively into an answer, which itself articulates the question it purports to solve.

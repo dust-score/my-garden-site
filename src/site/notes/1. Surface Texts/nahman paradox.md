@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/nahman-paradox/","dg-note-properties":{}}
 ---
 
-Nahman of Bratzlav (1772-1810), the grandson of the Baal Shem Tov, was an especially provocative Hasidic thinker who regularly deviated from the doctrinal norm.
+Nahman of Bratzlav (1772-1810), the grandson of the [[1. Surface Texts/Hasidism\|Baal Shem Tov]], was an especially provocative Hasidic thinker who regularly deviated from the doctrinal norm.
 
 As opposed to Luzzato, who adopted what Magid calls a more acosmic stance, viewing the experience of God’s absence as an illusion to be overcome by means of devotion, which could culminate in an experience of communion with God, Nahman approached the engagement with faith despite the experience of its empirical contradiction repeatedly in his work. His sensitivity lay precisely in an understanding of the existential suffering implied in the pursuit of God despite the experience of his absence. As such, he represents a broader paradigm shift, (of which he was unaware,) in which the medieval sense of God’s _incomprehensibility_ gave way to the more modern experience of humanity’s _estrangement_ from God. This shift, in turn, reflected the contemporaneous reorientation of western modern thought from the cosmos to the individual.
 
