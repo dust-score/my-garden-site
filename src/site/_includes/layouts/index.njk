@@ -97,6 +97,35 @@ permalink: /
     var links = document.querySelectorAll('a.internal-link');
     var currentImgSrc = null;
 
+    // ── history helpers for the image overlay ──
+    var overlayPushed = false;
+
+    function pushOverlayState() {
+      if (overlayPushed) return;
+      history.pushState({ imageOverlay: true }, '', '#image-overlay');
+      overlayPushed = true;
+    }
+
+    function popOverlayState() {
+      if (overlayPushed) {
+        history.back();      // triggers the popstate handler below
+        overlayPushed = false;
+      }
+    }
+
+    window.addEventListener('popstate', function(event) {
+      if (overlayPushed && overlay.style.display === 'block' && !(event.state && event.state.imageOverlay)) {
+        // We moved back from the pushed state → close the overlay
+        hideOverlay();
+        overlayPushed = false;
+      }
+    });
+
+    // Clean up any leftover hash on initial load
+    if (window.location.hash === '#image-overlay') {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
     function showOverlay(html) {
       overlay.innerHTML = html;
       overlay.style.display = 'block';
@@ -181,26 +210,37 @@ permalink: /
           e.preventDefault();
           if (overlay.style.display === 'block') {
             if (imgSrc !== currentImgSrc) {
+              // Different image – just swap the content, no history change
               showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;"><span>Loading…</span></div>');
               displayImage(imgSrc);
             } else {
+              // Same image – close the overlay and pop the history state
               hideOverlay();
+              popOverlayState();
             }
-          } else {
-            showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;"><span>Loading…</span></div>');
-            displayImage(imgSrc);
+            return;
           }
+
+          // Overlay was hidden → show it and push a new history state
+          showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;"><span>Loading…</span></div>');
+          displayImage(imgSrc);
+          pushOverlayState();
           return;
         }
 
         // ── Still pending ──
         if (link.classList.contains('preview-pending')) {
           e.preventDefault();
+          var wasHidden = (overlay.style.display !== 'block');
           showOverlay('<div style="display:flex;align-items:center;justify-content:center;height:100%;"><span>Loading…</span></div>');
+
           startFetch().then(function(result) {
             if (result) {
               imgSrc = result;
               displayImage(imgSrc);
+              if (wasHidden) {
+                pushOverlayState();
+              }
             } else {
               window.location.href = href;
             }
