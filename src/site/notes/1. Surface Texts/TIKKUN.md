@@ -12,7 +12,7 @@
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/tikkun-associative-words/" class="internal-link">Re</a></td><td></td><td></td><td></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/altogether-otherwise/" class="internal-link">ctification</a></td></tr>
-<tr><td style="border:none;padding-right:10px;">Re</td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">demption</td></tr>
+<tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/peace-down-to-the-last-sparrows-cry/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;">demption</td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td style="border:none;padding-right:10px;"><a href="/1-surface-texts/iesun9/" class="internal-link">Re</a></td><td style="border:none;width:5px;"></td><td style="border:none;text-align:right;"><a href="/1-surface-texts/iemoonc/" class="internal-link">con</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciliation</td></tr>
