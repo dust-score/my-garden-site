@@ -2,26 +2,25 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/tikkun-associative-words/","tags":["surface","tikkun","concept"],"dg-note-properties":{"type":"surface","tags":["surface","tikkun","concept"],"site":null}}
 ---
 
-```
-[[1-surface-texts/the-dead-end|angst]]
+[[1. Surface Texts/The Dead End\|angst]]
 apostolate
 attainment
-[[1-surface-texts/on-creation|belief]]
-[[3-concepts/reshimu|blueprint]]
-[[3-concepts/shevirat-ha-kelim|catastrophe]]
+[[1. Surface Texts/On Creation\|belief]]
+[[3. Concepts/reshimu\|blueprint]]
+[[3. Concepts/shevirat ha-kelim\|catastrophe]]
 complicity
 consciousness
-[[2-main-theoretical-pillars/theory-notes/a-historical-introduction-to-kabbalah|covenant]]
+covenant
 culpability
 declension
-[[1-surface-texts/interjection-sovereignty-law|emancipation]]
+[[1. Surface Texts/interjection sovereignty law\|emancipation]]
 enfranchisement
 enlightenment
 liberation
-[[1-surface-texts/silence-song-screaming|mourning]]
-[[3-concepts/turning-around|reconciliation]]
-[[3-concepts/redemption|redemption]]
-```
+[[1. Surface Texts/silence song screaming\|mourning]]
+reconciliation
+[[3. Concepts/redemption\|redemption]]
+
 
 Related words for tikkun, according to the Merriam-Webster online dictionary, declining in frequency of use.[^1]
               
