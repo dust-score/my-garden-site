@@ -1,5 +1,0 @@
----
-{"dg-publish":true,"permalink":"/2-main-theoretical-pillars/theory-notes/that-which-is-before-and-that-which-is-after-brian-ogren/","tags":["footnote"],"dg-note-properties":{"type":"citation","tags":["footnote"],"site":null}}
----
-
-“Within the realm of kabbalah, for example, this tripartite passage came to represent ideas of divine Eros, cosmogony, and the experiential realm of visions and ascent, respectively, while philosophers sometimes related the emblems to gendered hylomorphism, physics, and metaphysics, respectively. According to esoteric thinkers of various stripes, if these secret elements legitimately exist but are restricted, either by authority or by their ontically secretive nature,3 then they must by nature be special. In such a case, they are worthy of exploration by those who are worthy. In this manner, explicitly stated limitations bred full branches of esoteric expositions, which formed the foundations of much kabbalistic and philosophical thought.” - That Which is Before [And That Which is After], Brian Ogren; from Time and Eternity in Jewish Mysticism, edited by the same
