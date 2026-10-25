@@ -2,7 +2,6 @@
 {"dg-publish":true,"permalink":"/1-surface-texts/tikkun/","tags":["alpha","surface","unfinished","gardenEntry"],"dg-note-properties":{"tags":["alpha","surface","unfinished","gardenEntry"]}}
 ---
 
-The rectification is unification of what appears separate, not by the abolition of difference but by its infolding into a unity that is "[[1. Surface Texts/altogether otherwise\|altogether otherwise]]" than the indifferent oneness of homogeneity.  
 
 [[3. Concepts/Turning Around\|Re]]     plete
 
