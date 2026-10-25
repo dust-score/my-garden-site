@@ -9,7 +9,7 @@ Re                                                    
 Re             paration
 
 Re                                              ctification  
-[[1. Surface Texts/altogether otherwise\|Re                        demption]]
+[[1. Surface Texts/altogether otherwise\|Re]]                        demption
 
 Re                        con        ciliation
 
