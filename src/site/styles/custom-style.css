@@ -149,43 +149,72 @@ a[data-note-icon]::before {
         display: none !important;
     }
 
-    /* ── Full-bleed re-table on mobile ── */
+    /* ── Mobile re-table: full-bleed top-to-bottom fill ── */
     .mobile-only {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        width: calc(100% + 2rem);
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;          /* dynamic viewport (handles mobile browser bars) */
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        z-index: 1;              /* below link-preview tooltip (z-index: 10) */
+    }
+
+    .mobile-only .re-table {
+        width: 100%;
+        height: 100%;
     }
 
     .mobile-only .re-table table {
         width: 100%;
+        height: 100%;
         table-layout: fixed;
         border-collapse: collapse;
         margin: 0;
     }
 
+    /* Remove vertical padding so rows resolve to their set height */
+    .mobile-only .re-table td {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        vertical-align: middle;
+    }
+
+    .mobile-only .re-table tr {
+        height: calc(100vh / 18);   /* 18 rows in the table → equal distribution */
+        height: calc(100dvh / 18);
+    }
+
+    /* Left column: tight, flush to screen edge */
     .mobile-only .re-table td:first-child {
         width: 2.5em;
-        padding-left: 2px !important;
+        padding-left: 4px !important;
         padding-right: 10px !important;
         white-space: nowrap;
         text-align: left;
     }
 
+    /* Spacer column: exactly 5px on every row */
     .mobile-only .re-table td:nth-child(2) {
         width: 5px;
         padding: 0 !important;
     }
 
+    /* Right column: flush with right edge */
     .mobile-only .re-table td:nth-child(3) {
         width: auto;
-        padding-right: 2px !important;
+        padding-right: 4px !important;
         text-align: right;
         white-space: nowrap;
     }
 
+    /* Merged row (colspan="3"): full width, left aligned */
     .mobile-only .re-table td[colspan="3"] {
         width: 100%;
-        padding-right: 2px !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
         text-align: left;
         white-space: nowrap;
     }
