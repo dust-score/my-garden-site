@@ -23,7 +23,7 @@ Re                                                    
 
 Re                                                                                               [[3. Concepts/On Folding\|plicare]]
 
-Re           parare
+Re                                                                                                       parare
 
 Re                                                                                                                 con ciliare
 
