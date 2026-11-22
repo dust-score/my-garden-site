@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/sh-w/abject-object-body-image/","dg-note-properties":{}}
 ---
 
-eenie weenie hapless creatures, drawn on GDR Randlochkarte (data entry card) sourced from the paper bin of the Jobcenter in Berlin Lichtenberg.
+eenie weenie hapless creatures, drawn on GDR [[sh-w/Randlochkarte\|Randlochkarte]] (data entry card) sourced from the paper bin of the Jobcenter in Berlin Lichtenberg.
 
 The building was, before the reunification of west and east Germany,
 HQ of the GDR secret police, aka the Stasi (Staatssicherheit).
