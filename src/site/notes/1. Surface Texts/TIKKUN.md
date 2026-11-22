@@ -5,7 +5,7 @@
 
 [[3. Concepts/Turning Around\|Re]]     plete
 
-Re                                                                       [[sh-w/abject-object-body-image\|stitution]]  
+Re                                                                       stitution  
 Re             paration
 
 Re                                              ctification  
