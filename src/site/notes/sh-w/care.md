@@ -6,4 +6,4 @@
 
 
 
-![DSC00065_.jpg](/img/user/images/DSC00065_.jpg)
+![DSC00065_.webp](/img/user/images/DSC00065_.webp)
