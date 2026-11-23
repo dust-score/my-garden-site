@@ -28,8 +28,7 @@ permalink: "{{ page.filePathStem }}/"
     {% endif %}
 
     <main class="content cm-s-obsidian print {{contentClasses}}">
-  {% if imgnote %}<span id="imgnote-marker" hidden></span>{% endif %}
-  <header>
+      {% if imgnote %}<span id="imgnote-marker" hidden></span>{% endif %}
       <header>
         {% if settings.dgShowInlineTitle === true %}
           <h1 data-note-icon="{% if noteIcon %}{{noteIcon}}{% else %}{{meta.noteIconsSettings.default}}{% endif %}">{% if title %}{{ title }}{% else %}{{ page.fileSlug }}{% endif %}</h1>
