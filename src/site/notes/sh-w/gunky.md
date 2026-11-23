@@ -1,0 +1,6 @@
+---
+{"dg-publish":true,"permalink":"/sh-w/gunky/","dg-note-properties":{}}
+---
+
+<div id="imgnote-marker"></div>
+![DSC00063_.jpg](/img/user/images/DSC00063_.jpg)
