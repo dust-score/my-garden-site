@@ -6,8 +6,11 @@
   border-radius: 4px;
   overflow: hidden;
   position: fixed;
-  width: 80%;
-  max-width: 400px;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  width: 400px;
+  max-width: calc(100vw - 4rem);
   height: auto;
   max-height: 300px;
   font-size: 0.8em;
@@ -16,7 +19,7 @@
   transition: opacity 100ms;
   unicode-bidi: plaintext;
   overflow-y: scroll;
-  z-index: 10;
+  z-index: 100;
 }
 
 #tooltip-wrapper:after {
@@ -73,57 +76,19 @@
   }
 
   function positionTooltip(elem) {
-    var elem_props = elem.getClientRects()[elem.getClientRects().length - 1];
-    var viewportWidth = document.documentElement.clientWidth;
-    var viewportHeight = window.innerHeight;
-    var gap = 12;
-    var edgePadding = 10;
-
-    var spaceAbove = elem_props.top;
-    var spaceBelow = viewportHeight - (elem_props.top + elem_props.height);
-    var spaceLeft = elem_props.left;
-    var spaceRight = viewportWidth - (elem_props.left + elem_props.width);
-
-    var placeVertical = spaceBelow >= tooltipWrapper.offsetHeight + gap ? "bottom" : "top";
-    var placeHorizontal = spaceRight >= tooltipWrapper.offsetWidth + gap ? "right" : "left";
-
-    if (placeVertical === "bottom") {
-      tooltipWrapper.style.top = (elem_props.top + elem_props.height + gap) + "px";
-    } else {
-      tooltipWrapper.style.top = (elem_props.top - tooltipWrapper.offsetHeight - gap) + "px";
-    }
-
-    if (placeHorizontal === "right") {
-      tooltipWrapper.style.left = (elem_props.left + elem_props.width + gap) + "px";
-    } else {
-      tooltipWrapper.style.left = (elem_props.left - tooltipWrapper.offsetWidth - gap) + "px";
-    }
-
-    var currentTop = parseFloat(tooltipWrapper.style.top);
-    var currentLeft = parseFloat(tooltipWrapper.style.left);
-
-    if (currentTop < edgePadding) {
-      tooltipWrapper.style.top = edgePadding + "px";
-    } else if (currentTop + tooltipWrapper.offsetHeight + edgePadding > viewportHeight) {
-      tooltipWrapper.style.top = (viewportHeight - tooltipWrapper.offsetHeight - edgePadding) + "px";
-    }
-
-    if (currentLeft < edgePadding) {
-      tooltipWrapper.style.left = edgePadding + "px";
-    } else if (currentLeft + tooltipWrapper.offsetWidth + edgePadding > viewportWidth) {
-      tooltipWrapper.style.left = (viewportWidth - tooltipWrapper.offsetWidth - edgePadding) + "px";
-    }
+    // Tooltip is fixed to the right side of the viewport via CSS.
+    // Dynamic positioning is intentionally disabled.
   }
 
   function showTooltip(event) {
     var elem = event.currentTarget || event.target;
     if (!elem) return;
-    
-    // Suppress tooltip only for image-note links (image previews)
-    if (elem.classList.contains('image-note-link')) {
+
+    // Suppress tooltip for image-note links and links still being checked
+    if (elem.classList.contains('image-note-link') || elem.classList.contains('preview-pending')) {
       return;
     }
-    
+
     var url = elem.getAttribute("href");
     if (url.indexOf("http") === -1 || url.indexOf(window.location.host) !== -1) {
       tooltipWrapper.style.display = 'block';
