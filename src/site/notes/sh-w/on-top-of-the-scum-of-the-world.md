@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sh-w/on-top-of-the-scum-of-the-world/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/sh-w/on-top-of-the-scum-of-the-world/","dg-note-properties":{"imgnote":true}}
 ---
 
 <div id="imgnote-marker"></div>

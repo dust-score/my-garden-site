@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sh-w/gunky/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/sh-w/gunky/","dg-note-properties":{"imgnote":true}}
 ---
 
 <div id="imgnote-marker"></div>
