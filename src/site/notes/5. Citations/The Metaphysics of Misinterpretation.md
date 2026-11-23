@@ -8,4 +8,4 @@ _And now I see that the world is truly nothing but the metaphysics of misinterpr
 
 Joseph Weiss, 1960
   
-![](/img/user/images/RIMG0974.jpg)
+![](/img/user/images/metaphysics%20of%20misinterpretation.jpg)

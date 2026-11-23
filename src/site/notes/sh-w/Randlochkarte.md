@@ -2,4 +2,5 @@
 {"dg-publish":true,"permalink":"/sh-w/randlochkarte/","dg-note-properties":{}}
 ---
 
-https://isotype.ch/projekte/lochkarten-in-der-dokumentation/
+<div id="imgnote-marker"></div>
+![DSC00089_.jpg](/img/user/images/DSC00089_.jpg)
