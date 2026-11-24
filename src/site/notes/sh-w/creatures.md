@@ -6,4 +6,4 @@
 
 
 
-![sad clown sad person.webp](/img/user/images/sad%20clown%20sad%20person.webp)
+![sadclownsadperson.webp](/img/user/images/sh-w/sadclownsadperson.webp)

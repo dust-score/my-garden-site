@@ -5,4 +5,4 @@
 <div id="imgnote-marker"></div>
 
 
-![DSC00159.webp](/img/user/images/DSC00159.webp)
+![allright.webp](/img/user/images/sh-w/allright.webp)
