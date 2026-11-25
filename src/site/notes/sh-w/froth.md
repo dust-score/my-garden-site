@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sh-w/froth/","dg-note-properties":{"imgnote":true}}
+{"dg-publish":true,"permalink":"/sh-w/froth/","dg-note-properties":{}}
 ---
 
 <div id="imgnote-marker"></div>

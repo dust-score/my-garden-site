@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/sh-w/sh-w-friction/","dg-note-properties":{"type":"surface"}}
 ---
 
-Dusty is granular, she is friction. She is neither gear nor speed. If you are bumping around the far end of a parabolic orbit, be sure to keep an eye out for Dusty! She will set you right. Dusty carries mounds of [[sh-w/sh-w-repetition\|dirt]] in her socks, for to empathise. 
+Dusty is granular, she is [[sh-w/JC1\|friction]]. She is neither gear nor speed. If you are bumping around the far end of a parabolic orbit, be sure to keep an eye out for Dusty! She will set you right. Dusty carries mounds of [[sh-w/sh-w-repetition\|dirt]] in her socks, for to empathise. 
 
 There is no acceleration in the Jobcenter. Jobcenter is friction ontology. It’s not quite care and it’s not quite neglect. Jobcenter is maintenance velocity. Jobcenter is material coil and me, circling each countervailing spiral force.  
   
